@@ -1,0 +1,52 @@
+@import "../../../styles/colors.scss";
+
+:host {
+    width: 25%;
+}
+.container {
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.rounded-navbar {
+    height: 600px;
+    width: 300px;
+    border: 1px solid $main-theme-orange;
+    border-left: none;
+    border-top-right-radius: calc(300px + 2px);
+    border-bottom-right-radius: calc(300px + 2px);
+}
+
+.button {
+    height: 80px;
+    width: 80px;
+    border-radius: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .button-icon {
+        height: 50px;
+        width: 50px;
+    }
+}
+
+.button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+}
+
+.button-active {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.download {
+    position: relative;
+    bottom: 20px;
+    left: 40px;
+}
+.upload {
+    position: relative;
+    left: 200px;
+}

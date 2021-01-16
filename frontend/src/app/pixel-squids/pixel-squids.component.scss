@@ -1,0 +1,22 @@
+:host {
+    display: flex;
+    height: 100%;
+    min-height: 650px;
+    overflow: scroll;
+    background-image: url('../../assets/puppy.jpg');
+    background-size: cover;
+}
+
+.header {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.main-container {
+    width: 75%;
+    height: calc(100% - 32px);
+    padding: 16px;
+}
