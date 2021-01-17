@@ -1,0 +1,5 @@
+export const INSTRUMENT_TYPES = {
+    ACOUSTIC: 'ACOUSTIC',
+    BASS: 'BASS',
+    ELECTRIC: 'ELECTRIC'
+}

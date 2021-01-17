@@ -14,9 +14,12 @@ exports.create = (req, res) => {
 
     // Create a Tutorial
     const track = {
-        nem: req.body.name,
-        blob: req.body.blob,
-        notes: req.body.notes ? req.body.notes : null
+        name: req.body.name,
+        soundTrack: req.body.soundTrack,
+        notes: req.body.notes ? req.body.notes : null,
+        instrumentType: req.body.instrumentType,
+        createdAt: Date.now(),
+        updatedAt: Date.now()
     };
 
     // Save Tutorial in the database
@@ -48,7 +51,7 @@ exports.findAll = (req, res) => {
 };
 
 // Find a single Tutorial with an id
-exports.findOne = (req, res) => {
+exports.findOneById = (req, res) => {
     const id = req.params.id;
 
     Track.findByPk(id)
@@ -64,10 +67,11 @@ exports.findOne = (req, res) => {
 
 // Update a Tutorial by the id in the request
 exports.update = (req, res) => {
-    const id = req.params.id;
+    const track = req.body;
+    track.updatedAt = Date.now();
 
-    Track.update(req.body, {
-        where: { id: id }
+    Track.update(track, {
+        where: { id: track.id }
     })
         .then(num => {
             if (num == 1) {
@@ -76,7 +80,7 @@ exports.update = (req, res) => {
                 });
             } else {
                 res.send({
-                    message: `Cannot update Track with id=${id}. Maybe Track was not found or req.body is empty!`
+                    message: `Cannot update Track with id=${track.id}. Maybe Track was not found or req.body is empty!`
                 });
             }
         })

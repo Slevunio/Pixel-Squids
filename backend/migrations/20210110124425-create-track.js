@@ -11,10 +11,13 @@ module.exports = {
       name: {
         type: Sequelize.STRING
       },
-      blob: {
+      soundTrack: {
         type: Sequelize.STRING
       },
       notes: {
+        type: Sequelize.STRING
+      },
+      instrumentType: {
         type: Sequelize.STRING
       },
       createdAt: {

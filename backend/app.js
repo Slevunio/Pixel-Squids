@@ -1,11 +1,11 @@
 const express = require('express');
 const bodyParser = require("body-parser");
 const app = express();
-const port = process.env.PORT;
+const port = process.env.PORT || 3200;
 const cors = require("cors");
 
 var corsOptions = {
-    origin: "http://localhost:3001"
+    origin: "http://localhost:4200"
 };
 
 app.use(cors(corsOptions));

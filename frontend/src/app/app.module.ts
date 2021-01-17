@@ -9,6 +9,7 @@ import { NavigationMenuComponent } from './pixel-squids/navigation-menu/navigati
 import { AcousticComponent } from './pixel-squids/download-page/acoustic/acoustic.component';
 import { BassComponent } from './pixel-squids/download-page/bass/bass.component';
 import { TracksHttpService } from './services/TracksHttpService';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +21,8 @@ import { TracksHttpService } from './services/TracksHttpService';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [TracksHttpService],
   bootstrap: [AppComponent]

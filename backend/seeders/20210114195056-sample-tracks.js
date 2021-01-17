@@ -7,22 +7,25 @@ module.exports = {
       [
         {
           name: "Track1",
-          blob: "blob",
+          soundTrack: "blob",
           notes: "trututu",
+          instrumentType: "ACOUSTIC",
           createdAt: new Date(),
           updatedAt: new Date()
         },
         {
           name: "Track2",
-          blob: "blob",
+          soundTrack: "blob",
           notes: "trututu",
+          instrumentType: "BASS",
           createdAt: new Date(),
           updatedAt: new Date()
         },
         {
           name: "Track3",
-          blob: "blob",
+          soundTrack: "blob",
           notes: "trututu",
+          instrumentType: "ELECTRIC",
           createdAt: new Date(),
           updatedAt: new Date()
         }
