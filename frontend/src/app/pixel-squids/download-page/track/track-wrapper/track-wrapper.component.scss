@@ -1,0 +1,13 @@
+@import '../../../../../styles//colors.scss';
+
+.track-wrapper {
+    display: flex;
+    flex-direction: row;
+    height: 70px;
+}
+
+.track-name {
+    font-size: 48px;
+    color: white;
+    border-bottom: 2px solid $main-theme-orange;
+}

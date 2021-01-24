@@ -5,7 +5,7 @@ const Op = db.Sequelize.Op;
 // Create and Save a new Tutorial
 exports.create = (req, res) => {
     // Validate request
-    if (!req.body.name) {
+    if (!req.body.instrumentType) {
         res.status(400).send({
             message: "Content can not be empty!"
         });
@@ -15,8 +15,8 @@ exports.create = (req, res) => {
     // Create a Tutorial
     const track = {
         name: req.body.name,
-        soundTrack: req.body.soundTrack,
-        notes: req.body.notes ? req.body.notes : null,
+        soundTrack: req.file.buffer,
+        // notes: req.body.notes ? req.body.notes : null,
         instrumentType: req.body.instrumentType,
         createdAt: Date.now(),
         updatedAt: Date.now()

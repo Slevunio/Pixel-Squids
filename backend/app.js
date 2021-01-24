@@ -14,11 +14,7 @@ app.use(cors(corsOptions));
 app.use(bodyParser.json());
 
 // parse requests of content-type - application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: true }));
-
-app.get('/', (req, res) => {
-    res.send('Hello world');
-});
+app.use(bodyParser.urlencoded({ extended: false }));
 
 require("./routes/track.routes")(app);
 const db = require("./models");

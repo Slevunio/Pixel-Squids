@@ -1,10 +1,10 @@
 module.exports = app => {
     const tracks= require("../controllers/track.controller.js");
-  
+    const upload = require('../config/multer.config.js');
     var router = require("express").Router();
   
     // Create a new Tutorial
-    router.post("/", tracks.create);
+    router.post("/", upload.single("file"), tracks.create);
   
     // Retrieve all Tutorials
     router.get("/", tracks.findAll);

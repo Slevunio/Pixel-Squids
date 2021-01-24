@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'bass.component',
+    selector: 'bass-component',
     templateUrl: './bass.component.html',
     styleUrls: ['./bass.component.scss']
 })
