@@ -1,13 +1,44 @@
 @import '../../../../../styles//colors.scss';
 
+:host {
+    display: flex;
+    justify-content: flex-end;
+}
+
 .track-wrapper {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     height: 70px;
+    width: 80%;
+    padding-right: 16px;
 }
 
 .track-name {
     font-size: 48px;
+    height: 100%;
+    width: 60%;
     color: white;
     border-bottom: 2px solid $main-theme-orange;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.toggle-img, .download-img {
+    height: 50px;
+    width: 50px;
+}
+
+.notes-img {
+    height: 50px;
+    width: 90px;
 }

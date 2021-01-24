@@ -15,7 +15,7 @@ exports.create = (req, res) => {
     // Create a Tutorial
     const track = {
         name: req.body.name,
-        soundTrack: req.file.buffer,
+        soundtrack: req.file.buffer,
         // notes: req.body.notes ? req.body.notes : null,
         instrumentType: req.body.instrumentType,
         createdAt: Date.now(),

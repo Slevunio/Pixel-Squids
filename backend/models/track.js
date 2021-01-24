@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
   };
   Track.init({
     name: DataTypes.STRING,
-    soundTrack: DataTypes.BLOB,
+    soundtrack: DataTypes.BLOB,
     // notes: DataTypes.STRING,
     instrumentType: DataTypes.STRING
   }, {
