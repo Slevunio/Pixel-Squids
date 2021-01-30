@@ -2,7 +2,7 @@
     display: flex;
     height: 100%;
     min-height: 650px;
-    overflow: scroll;
+    overflow: hidden;
     background-image: url('../../assets/main_background.png');
     background-size: cover;
 }
@@ -24,6 +24,8 @@
 
 .main-container {
     width: 75%;
+    min-width: 1000px;
     height: 100%;
     padding: 26px 26px 0px 0px;
+    overflow: scroll;
 }

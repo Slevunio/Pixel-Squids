@@ -1,0 +1,35 @@
+:host {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contact-wrapper {
+    height: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.contact {
+    width: 40%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+}
+.contact-icon {
+    height: 100px;
+    width: 100px;
+}
+
+.facebook {
+    padding-left: 24px;
+    font-size: 48px;
+}
+
+.email, .phone {
+    padding-left: 24px;
+    font-size: 38px;
+}
