@@ -20,15 +20,16 @@ export class TrackWrapperComponent implements OnInit {
     public imgSrc!: string;
     private audio!: HTMLAudioElement;
     private isPlaying: boolean = false;
+    private blob!: Blob;
 
     constructor(private tracksService: TracksService, private domSanitizer: DomSanitizer, private tracksHttpService: TracksHttpService) { }
 
     public ngOnInit() {
         this.imgSrc = this.imgSrcPlay;
         var array = new Uint8Array((this.track.soundtrack! as ISoundtrack).data);
-        const blob = new Blob([array]);
+        this.blob = new Blob([array]);
 
-        this.tracksService.generateBase64Audio(blob).pipe(
+        this.tracksService.generateBase64Audio(this.blob).pipe(
             take(1)
         ).subscribe(src => {
             this.audio = new Audio(src);
@@ -44,5 +45,14 @@ export class TrackWrapperComponent implements OnInit {
         } else {
             this.audio.pause();
         }
+    }
+
+    public download() {
+        const type = this.track.name?.split('.')[1];
+        this.tracksService.downloadFile(this.blob, this.track.name!, type!);
+    }
+
+    public niepamietamco() {
+        //TODO
     }
 }

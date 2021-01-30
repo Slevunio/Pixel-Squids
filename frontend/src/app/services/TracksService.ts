@@ -18,4 +18,18 @@ export class TracksService {
             };
         });
     }
+
+    public downloadFile(blob: Blob, filename: string, type: string) {
+        const a = window.document.createElement('a');
+        const file = new Blob([blob], { type: type });
+        const url = URL.createObjectURL(file);
+        a.href = url;
+        a.download = filename;
+        window.document.body.appendChild(a);
+    
+        a.click();
+    
+        window.document.body.removeChild(a);
+        window.URL.revokeObjectURL(url);
+      }
 }
