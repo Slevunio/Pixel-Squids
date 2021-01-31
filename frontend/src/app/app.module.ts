@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -14,7 +15,10 @@ import { TracksService } from './services/TracksService';
 import { HttpClientModule } from '@angular/common/http';
 import { TrackComponent } from './pixel-squids/download-page/track/track.component';
 import { TrackWrapperComponent } from './pixel-squids/download-page/track/track-wrapper/track-wrapper.component';
+import { MainPageComponent } from './pixel-squids/main-page/main-page.component';
 import { FileUploadModule } from 'ng2-file-upload';
+import { EventService } from './services/EventService';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,15 +29,17 @@ import { FileUploadModule } from 'ng2-file-upload';
     BassComponent,
     TrackComponent,
     TrackWrapperComponent,
-    UploadPageComponent
+    UploadPageComponent,
+    MainPageComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FileUploadModule
+    FileUploadModule,
+    CommonModule
   ],
-  providers: [TracksHttpService, TracksService],
+  providers: [TracksHttpService, TracksService, EventService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
