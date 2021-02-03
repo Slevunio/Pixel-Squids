@@ -15,9 +15,7 @@ import { TracksService } from './services/TracksService';
 import { HttpClientModule } from '@angular/common/http';
 import { TrackComponent } from './pixel-squids/download-page/track/track.component';
 import { TrackWrapperComponent } from './pixel-squids/download-page/track/track-wrapper/track-wrapper.component';
-import { MainPageComponent } from './pixel-squids/main-page/main-page.component';
 import { FileUploadModule } from 'ng2-file-upload';
-import { EventService } from './services/EventService';
 
 @NgModule({
   declarations: [
@@ -30,7 +28,6 @@ import { EventService } from './services/EventService';
     TrackComponent,
     TrackWrapperComponent,
     UploadPageComponent,
-    MainPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,7 +36,7 @@ import { EventService } from './services/EventService';
     FileUploadModule,
     CommonModule
   ],
-  providers: [TracksHttpService, TracksService, EventService],
+  providers: [TracksHttpService, TracksService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

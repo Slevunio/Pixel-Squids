@@ -1,6 +1,6 @@
-<navigation-menu-component *ngIf="wasMainPageClicked"></navigation-menu-component>
-<div [ngClass]="wasMainPageClicked ? 'main-container-clicked' : 'main-container'">
-    <div class="header" *ngIf="wasMainPageClicked">
+<navigation-menu-component></navigation-menu-component>
+<div class="main-container">
+    <div class="header">
         <img class="logo" src="../../assets/Pixel Squid.png" />
     </div>
     <router-outlet></router-outlet>
