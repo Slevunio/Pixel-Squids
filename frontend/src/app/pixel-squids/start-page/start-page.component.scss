@@ -1,0 +1,14 @@
+.start-page {
+    height: 100%;
+    width: 100%;
+    background-image: url('../../../assets/999.png');
+    background-size: cover;
+}
+
+.start-page:hover {
+    cursor: pointer;
+}
+
+.start-page:focus {
+    outline: 0;
+}

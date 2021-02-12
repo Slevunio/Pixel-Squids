@@ -8,9 +8,12 @@ import { BassComponent } from './pixel-squids/download-page/bass/bass.component'
 import { LearningPageComponent } from './pixel-squids/learning-page/learning-page.component';
 import { ShoppingPageComponent } from './pixel-squids/shopping-page/shopping-page.component';
 import { ContactPageComponent } from './pixel-squids/contact-page/contact-page.component';
+import { MainPageComponent } from './pixel-squids/main-page/main-page.component';
+import { StartPageComponent } from './pixel-squids/start-page/start-page.component';
 
 const routes: Routes = [
-
+  { path: '', component: StartPageComponent },
+  { path: 'main', component: MainPageComponent },
   { path: 'download', component: DownloadPageComponent },
   { path: 'upload', component: UploadPageComponent },
   { path: 'download/acoustic', component: AcousticComponent },

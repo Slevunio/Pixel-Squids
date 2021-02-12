@@ -3,12 +3,34 @@
 :host {
     width: 25%;
 }
+
 .container {
     background-color: rgba(0, 0, 0, 0.2);
     height: 100%;
     min-width: 330px;
     display: flex;
     align-items: center;
+    width: 100%;
+}
+
+.animation-container {
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 100%;
+    min-width: 330px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    animation: navbarAnimation 1s ease-out;
+}
+
+@keyframes navbarAnimation {
+    from {
+        left: -360px;
+    }
+    to {
+        left: 0px;
+    }
 }
 
 .rounded-navbar {
@@ -44,30 +66,105 @@
 }
 
 .download {
+    position: absolute;
+    top: 340px;
+    transform: rotate(0deg) translateY(-295px) rotate(0deg);
+}
+
+.animation-download {
     position: relative;
-    bottom: 20px;
-    left: 40px;
+    top: 260px;
+    transform: rotate(0deg) translateY(-300px) rotate(0deg);
 }
 
 .upload {
+    position: absolute;
+    top: 340px;
+    transform: rotate(45deg) translateY(-275px) rotate(-45deg);
+}
+
+.animation-upload {
     position: relative;
-    left: 200px;
+    top: 180px;
+    transform: rotate(45deg) translateY(-275px) rotate(-45deg);
+
+    animation: uploadAnimation 1s linear;
+}
+
+@keyframes uploadAnimation {
+    from {
+        transform: rotate(0deg) translateY(-300px) rotate(0deg);
+    }
+    to {
+        transform: rotate(45deg) translateY(-275px) rotate(-45deg);
+    }
 }
 
 .learn {
+    position: absolute;
+    bottom: 340px;
+    transform: rotate(90deg) translateY(-265px) rotate(-90deg);
+}
+
+.animation-learn {
     position: relative;
-    left: 260px;
-    top: 110px;
+    top: 100px;
+    transform: rotate(90deg) translateY(-260px) rotate(-90deg);
+    animation: learnAnimation 2s linear;
+}
+
+@keyframes learnAnimation {
+    from {
+        transform: rotate(0deg) translateY(-300px) rotate(0deg);
+    }
+    to {
+        transform: rotate(90deg) translateY(-260px) rotate(-90deg);
+    }
 }
 
 .shop {
+    position: absolute;
+    bottom: 340px;
+    transform: rotate(135deg) translateY(-265px) rotate(-135deg);
+}
+
+.animation-shop {
     position: relative;
-    left: 190px;
-    top: 210px;
+    top: 20px;
+    transform: rotate(135deg) translateY(-275px) rotate(-135deg);
+    animation: shopAnimation 3s linear;
+}
+
+@keyframes shopAnimation {
+    0% {transform: rotate(0deg) translateY(-300px) rotate(0deg);}
+    33% {transform: rotate(45deg) translateY(-275px) rotate(-45deg);}
+    66% {transform: rotate(90deg) translateY(-260px) rotate(-90deg);}
+    100% { transform: rotate(135deg) translateY(-275px) rotate(-135deg);}
+    // from {
+    //     transform: rotate(0deg) translateY(-300px) rotate(0deg);
+    // }
+    // to {
+    //     transform: rotate(135deg) translateY(-275px) rotate(-135deg);
+    // }
 }
 
 .contact {
+    position: absolute;
+    bottom: 340px;
+    transform: rotate(180deg) translateY(-300px) rotate(-180deg);
+}
+
+.animation-contact {
     position: relative;
-    left: 40px;
-    top: 220px;
+    top: -60px;
+    transform: rotate(180deg) translateY(-300px) rotate(-180deg);
+    animation: contactAnimation 4s linear;
+}
+
+@keyframes contactAnimation {
+    0% {transform: rotate(0deg) translateY(-300px) rotate(0deg);}
+    25% {transform: rotate(45deg) translateY(-275px) rotate(-45deg);}
+    50% {transform: rotate(90deg) translateY(-260px) rotate(-90deg);}
+    75% { transform: rotate(135deg) translateY(-275px) rotate(-135deg);}
+    100% { transform: rotate(180deg) translateY(-300px) rotate(-180deg);}
 }

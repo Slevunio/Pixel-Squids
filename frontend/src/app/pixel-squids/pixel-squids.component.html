@@ -1,7 +1,9 @@
-<navigation-menu-component></navigation-menu-component>
-<div class="main-container">
-    <div class="header">
-        <img class="logo" src="../../assets/Pixel Squid.png" />
+<div [ngClass]="{'wrapper': true,'start-page': wasStartPage}">
+    <navigation-menu-component *ngIf="!isStartPage"></navigation-menu-component>
+    <div [ngClass]="{'main-container': true, 'paddings': !isStartPage}">
+        <div [ngClass]="wasStartPage ? 'animate-header' : 'header'" *ngIf="!isStartPage">
+            <img class="logo" src="../../assets/Pixel Squid.png" routerLink="/main" />
+        </div>
+        <router-outlet></router-outlet>
     </div>
-    <router-outlet></router-outlet>
 </div>

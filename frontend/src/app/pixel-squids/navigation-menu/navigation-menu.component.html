@@ -1,19 +1,21 @@
-<div class="container">
+<div [ngClass]="wasStartPage ? 'animation-container' : 'container'">
     <div class="rounded-navbar">
-        <a class="button download" routerLink="/download" routerLinkActive="button-active">
-            <img src="../../../assets/download.png" class="button-icon"/>
+        <a [ngClass]="{'animation-download': true, 'button': true}" routerLink="/download"
+            routerLinkActive="button-active">
+            <img src="../../../assets/download.png" class="button-icon" />
         </a>
-        <a class="button upload" routerLink="/upload" routerLinkActive="button-active">
-            <img src="../../../assets/upload.png" class="button-icon"/>
+        <a [ngClass]="{'animation-upload': true, 'button': true}" routerLink="/upload" routerLinkActive="button-active">
+            <img src="../../../assets/upload.png" class="button-icon" />
         </a>
-        <a class="button learn" routerLink="/learn" routerLinkActive="button-active">
-            <img src="../../../assets/learning.png" class="button-icon"/>
+        <a [ngClass]="{'animation-learn': true, 'button': true}" routerLink="/learn" routerLinkActive="button-active">
+            <img src="../../../assets/learning.png" class="button-icon" />
         </a>
-        <a class="button shop" routerLink="/shop" routerLinkActive="button-active">
-            <img src="../../../assets/shopping.png" class="button-icon"/>
+        <a [ngClass]="{'animation-shop': true, 'button': true}" routerLink="/shop" routerLinkActive="button-active">
+            <img src="../../../assets/shopping.png" class="button-icon" />
         </a>
-        <a class="button contact" routerLink="/contact" routerLinkActive="button-active">
-            <img src="../../../assets/home.png" class="button-icon"/>
+        <a [ngClass]="{'animation-contact': true, 'button': true}" routerLink="/contact"
+            routerLinkActive="button-active">
+            <img src="../../../assets/home.png" class="button-icon" />
         </a>
     </div>
 </div>
