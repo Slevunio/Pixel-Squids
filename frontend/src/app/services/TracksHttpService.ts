@@ -23,7 +23,6 @@ export class TracksHttpService {
         formdata.append('instrumentType', track.instrumentType as string);
         formdata.append('name', track.name as string);
 
-
         return this.http.post<ITrack>(`${this.baseDevUrl}/tracks`, formdata).pipe(
             catchError(error => {
                 console.error(error);

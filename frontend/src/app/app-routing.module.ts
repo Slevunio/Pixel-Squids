@@ -10,6 +10,7 @@ import { ShoppingPageComponent } from './pixel-squids/shopping-page/shopping-pag
 import { ContactPageComponent } from './pixel-squids/contact-page/contact-page.component';
 import { MainPageComponent } from './pixel-squids/main-page/main-page.component';
 import { StartPageComponent } from './pixel-squids/start-page/start-page.component';
+import { UploadCategoryPageComponent } from './pixel-squids/upload-page/upload-category-page/upload-category-page.component';
 
 const routes: Routes = [
   { path: '', component: StartPageComponent },
@@ -21,7 +22,8 @@ const routes: Routes = [
   { path: 'download/bass', component: BassComponent },
   { path: 'learn', component: LearningPageComponent },
   { path: 'shop', component: ShoppingPageComponent },
-  { path: 'contact', component: ContactPageComponent }
+  { path: 'contact', component: ContactPageComponent },
+  { path: 'upload/:uploadWay', component: UploadCategoryPageComponent }
 ];
 
 @NgModule({

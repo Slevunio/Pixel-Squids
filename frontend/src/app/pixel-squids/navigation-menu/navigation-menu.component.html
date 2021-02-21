@@ -1,19 +1,19 @@
 <div [ngClass]="wasStartPage ? 'animation-container' : 'container'">
     <div class="rounded-navbar">
-        <a [ngClass]="{'animation-download': true, 'button': true}" routerLink="/download"
+        <a [ngClass]="{'animation-download': wasStartPage, 'download': !wasStartPage, 'button': true}" routerLink="/download"
             routerLinkActive="button-active">
             <img src="../../../assets/download.png" class="button-icon" />
         </a>
-        <a [ngClass]="{'animation-upload': true, 'button': true}" routerLink="/upload" routerLinkActive="button-active">
+        <a [ngClass]="{'animation-upload': wasStartPage, 'upload': !wasStartPage, 'button': true}" routerLink="/upload" routerLinkActive="button-active">
             <img src="../../../assets/upload.png" class="button-icon" />
         </a>
-        <a [ngClass]="{'animation-learn': true, 'button': true}" routerLink="/learn" routerLinkActive="button-active">
+        <a [ngClass]="{'animation-learn': wasStartPage, 'learn': !wasStartPage, 'button': true}" routerLink="/learn" routerLinkActive="button-active">
             <img src="../../../assets/learning.png" class="button-icon" />
         </a>
-        <a [ngClass]="{'animation-shop': true, 'button': true}" routerLink="/shop" routerLinkActive="button-active">
+        <a [ngClass]="{'animation-shop': wasStartPage, 'shop': !wasStartPage, 'button': true}" routerLink="/shop" routerLinkActive="button-active">
             <img src="../../../assets/shopping.png" class="button-icon" />
         </a>
-        <a [ngClass]="{'animation-contact': true, 'button': true}" routerLink="/contact"
+        <a [ngClass]="{'animation-contact': wasStartPage, 'contact': !wasStartPage, 'button': true}" routerLink="/contact"
             routerLinkActive="button-active">
             <img src="../../../assets/home.png" class="button-icon" />
         </a>

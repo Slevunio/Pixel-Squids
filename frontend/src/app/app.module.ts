@@ -12,10 +12,12 @@ import { UploadPageComponent } from './pixel-squids/upload-page/upload-page.comp
 import { NavigationMenuComponent } from './pixel-squids/navigation-menu/navigation-menu.component';
 import { AcousticComponent } from './pixel-squids/download-page/acoustic/acoustic.component';
 import { BassComponent } from './pixel-squids/download-page/bass/bass.component';
+import { ElectricComponent } from './pixel-squids/download-page/electric/electric.component';
 import { TrackComponent } from './pixel-squids/download-page/track/track.component';
 import { TrackWrapperComponent } from './pixel-squids/download-page/track/track-wrapper/track-wrapper.component';
 import { MainPageComponent } from './pixel-squids/main-page/main-page.component';
 import { StartPageComponent } from './pixel-squids/start-page/start-page.component';
+import { UploadCategoryPageComponent } from './pixel-squids/upload-page/upload-category-page/upload-category-page.component';
 
 import { TracksHttpService } from './services/TracksHttpService';
 import { TracksService } from './services/TracksService';
@@ -29,11 +31,13 @@ import { RouterService } from './services/RouterService';
     NavigationMenuComponent,
     AcousticComponent,
     BassComponent,
+    ElectricComponent,
     TrackComponent,
     TrackWrapperComponent,
     UploadPageComponent,
     MainPageComponent,
-    StartPageComponent
+    StartPageComponent,
+    UploadCategoryPageComponent
   ],
   imports: [
     BrowserModule,

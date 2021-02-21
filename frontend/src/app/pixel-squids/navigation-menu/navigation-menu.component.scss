@@ -2,6 +2,7 @@
 
 :host {
     width: 25%;
+    min-width: 330px;
 }
 
 .container {
@@ -66,9 +67,9 @@
 }
 
 .download {
-    position: absolute;
-    top: 340px;
-    transform: rotate(0deg) translateY(-295px) rotate(0deg);
+    position: relative;
+    top: 260px;
+    transform: rotate(0deg) translateY(-300px) rotate(0deg);
 }
 
 .animation-download {
@@ -78,8 +79,8 @@
 }
 
 .upload {
-    position: absolute;
-    top: 340px;
+    position: relative;
+    top: 180px;
     transform: rotate(45deg) translateY(-275px) rotate(-45deg);
 }
 
@@ -92,18 +93,14 @@
 }
 
 @keyframes uploadAnimation {
-    from {
-        transform: rotate(0deg) translateY(-300px) rotate(0deg);
-    }
-    to {
-        transform: rotate(45deg) translateY(-275px) rotate(-45deg);
-    }
+    0% {transform: rotate(0deg) translateY(-300px) rotate(0deg);}
+    100% {transform: rotate(45deg) translateY(-275px) rotate(-45deg);}
 }
 
 .learn {
-    position: absolute;
-    bottom: 340px;
-    transform: rotate(90deg) translateY(-265px) rotate(-90deg);
+    position: relative;
+    top: 100px;
+    transform: rotate(90deg) translateY(-260px) rotate(-90deg);
 }
 
 .animation-learn {
@@ -114,18 +111,15 @@
 }
 
 @keyframes learnAnimation {
-    from {
-        transform: rotate(0deg) translateY(-300px) rotate(0deg);
-    }
-    to {
-        transform: rotate(90deg) translateY(-260px) rotate(-90deg);
-    }
+    0% {transform: rotate(0deg) translateY(-300px) rotate(0deg);}
+    50% {transform: rotate(45deg) translateY(-275px) rotate(-45deg);}
+    100% {transform: rotate(90deg) translateY(-260px) rotate(-90deg);}
 }
 
 .shop {
-    position: absolute;
-    bottom: 340px;
-    transform: rotate(135deg) translateY(-265px) rotate(-135deg);
+    position: relative;
+    top: 20px;
+    transform: rotate(135deg) translateY(-275px) rotate(-135deg);
 }
 
 .animation-shop {
@@ -140,17 +134,11 @@
     33% {transform: rotate(45deg) translateY(-275px) rotate(-45deg);}
     66% {transform: rotate(90deg) translateY(-260px) rotate(-90deg);}
     100% { transform: rotate(135deg) translateY(-275px) rotate(-135deg);}
-    // from {
-    //     transform: rotate(0deg) translateY(-300px) rotate(0deg);
-    // }
-    // to {
-    //     transform: rotate(135deg) translateY(-275px) rotate(-135deg);
-    // }
 }
 
 .contact {
-    position: absolute;
-    bottom: 340px;
+    position: relative;
+    top: -60px;
     transform: rotate(180deg) translateY(-300px) rotate(-180deg);
 }
 
