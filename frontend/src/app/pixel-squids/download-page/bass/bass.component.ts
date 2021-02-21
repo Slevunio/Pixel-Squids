@@ -18,6 +18,7 @@ export class BassComponent {
             take(1)
         ).subscribe(res => {
             this.tracks = res;
+            console.log(this.tracks);
         });
     }
 }

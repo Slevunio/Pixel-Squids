@@ -11,6 +11,7 @@ import { ContactPageComponent } from './pixel-squids/contact-page/contact-page.c
 import { MainPageComponent } from './pixel-squids/main-page/main-page.component';
 import { StartPageComponent } from './pixel-squids/start-page/start-page.component';
 import { UploadCategoryPageComponent } from './pixel-squids/upload-page/upload-category-page/upload-category-page.component';
+import { UploadFromRecordPageComponent } from './pixel-squids/upload-page/upload-from-record-page/upload-from-record-page.component';
 
 const routes: Routes = [
   { path: '', component: StartPageComponent },
@@ -23,7 +24,8 @@ const routes: Routes = [
   { path: 'learn', component: LearningPageComponent },
   { path: 'shop', component: ShoppingPageComponent },
   { path: 'contact', component: ContactPageComponent },
-  { path: 'upload/:uploadWay', component: UploadCategoryPageComponent }
+  { path: 'upload/:uploadWay', component: UploadCategoryPageComponent },
+  { path: 'upload/fromRecord/:instrumentType', component: UploadFromRecordPageComponent }
 ];
 
 @NgModule({

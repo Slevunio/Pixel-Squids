@@ -18,6 +18,7 @@ import { TrackWrapperComponent } from './pixel-squids/download-page/track/track-
 import { MainPageComponent } from './pixel-squids/main-page/main-page.component';
 import { StartPageComponent } from './pixel-squids/start-page/start-page.component';
 import { UploadCategoryPageComponent } from './pixel-squids/upload-page/upload-category-page/upload-category-page.component';
+import { UploadFromRecordPageComponent } from './pixel-squids/upload-page/upload-from-record-page/upload-from-record-page.component';
 
 import { TracksHttpService } from './services/TracksHttpService';
 import { TracksService } from './services/TracksService';
@@ -37,7 +38,8 @@ import { RouterService } from './services/RouterService';
     UploadPageComponent,
     MainPageComponent,
     StartPageComponent,
-    UploadCategoryPageComponent
+    UploadCategoryPageComponent,
+    UploadFromRecordPageComponent
   ],
   imports: [
     BrowserModule,

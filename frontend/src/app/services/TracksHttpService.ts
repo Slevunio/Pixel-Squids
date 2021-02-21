@@ -11,10 +11,8 @@ export class TracksHttpService {
 
     constructor(private http: HttpClient) { }
 
-    public getTracks(instrumentType?: string): Observable<ITrack[]> {
-        return this.http.get<ITrack[]>(`${this.baseDevUrl}/tracks`).pipe(
-            map(res => !!instrumentType ? res.filter((track: ITrack) => track.instrumentType === INSTRUMENT_TYPES.ACOUSTIC) : res)
-        );
+    public getTracks(instrumentType: string): Observable<ITrack[]> {
+        return this.http.get<ITrack[]>(`${this.baseDevUrl}/tracks`, { params: { 'instrumentType': instrumentType } });
     }
 
     public createTrack(track: ITrack): Observable<ITrack> {

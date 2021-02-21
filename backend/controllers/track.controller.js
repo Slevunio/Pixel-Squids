@@ -1,3 +1,4 @@
+// const { where } = require("sequelize/types");
 const db = require("../models");
 const Track = db.Track;
 const Op = db.Sequelize.Op;
@@ -37,16 +38,16 @@ exports.create = (req, res) => {
 
 // Retrieve all Tutorials from the database.
 exports.findAll = (req, res) => {
-    Track.findAll()
-        .then(data => {
-            res.send(data);
-        })
-        .catch(err => {
-            res.status(500).send({
-                message:
-                    err.message || "Some error occurred while retrieving tracks."
-            });
+    Track.findAll({
+        where: { instrumentType: req.query.instrumentType }
+    }).then(data => {
+        res.send(data);
+    }).catch(err => {
+        res.status(500).send({
+            message:
+                err.message || "Some error occurred while retrieving tracks."
         });
+    });
 
 };
 
