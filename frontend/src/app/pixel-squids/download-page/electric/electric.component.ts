@@ -14,7 +14,7 @@ export class ElectricComponent {
     constructor(private tracksHttpService: TracksHttpService) { }
 
     public ngOnInit() {
-        this.tracksHttpService.getTracks(INSTRUMENT_TYPES.ELECTRIC).pipe(
+        this.tracksHttpService.getTracksByInstrumentType(INSTRUMENT_TYPES.ELECTRIC.toLowerCase()).pipe(
             take(1)
         ).subscribe(res => {
             this.tracks = res;

@@ -3,7 +3,6 @@ import { Observable, of } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
 import { ITrack } from '../interfaces/ITrack';
 import { HttpClient } from '@angular/common/http';
-import { INSTRUMENT_TYPES } from '../shared/constants/instrumentTypes';
 @Injectable()
 export class TracksHttpService {
 
@@ -11,8 +10,12 @@ export class TracksHttpService {
 
     constructor(private http: HttpClient) { }
 
-    public getTracks(instrumentType: string): Observable<ITrack[]> {
-        return this.http.get<ITrack[]>(`${this.baseDevUrl}/tracks`, { params: { 'instrumentType': instrumentType } });
+    public getTracksByInstrumentType(instrumentType: string): Observable<ITrack[]> {
+        return this.http.get<ITrack[]>(`${this.baseDevUrl}/tracks/${instrumentType}`);
+    }
+
+    public getAllTracks(): Observable<ITrack[]> {
+        return this.http.get<ITrack[]>(`${this.baseDevUrl}/tracks`);
     }
 
     public createTrack(track: ITrack): Observable<ITrack> {
@@ -22,6 +25,15 @@ export class TracksHttpService {
         formdata.append('name', track.name as string);
 
         return this.http.post<ITrack>(`${this.baseDevUrl}/tracks`, formdata).pipe(
+            catchError(error => {
+                console.error(error);
+                return of(error);
+            })
+        );
+    }
+
+    public deleteTracks(ids: string[]) {
+        return this.http.delete<string[]>(`${this.baseDevUrl}/tracks`, { params: { 'ids': ['2'] } }).pipe(
             catchError(error => {
                 console.error(error);
                 return of(error);

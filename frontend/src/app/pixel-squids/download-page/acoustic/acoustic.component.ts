@@ -15,7 +15,7 @@ export class AcousticComponent implements OnInit {
     constructor(private tracksHttpService: TracksHttpService) { }
 
     public ngOnInit() {
-        this.tracksHttpService.getTracks(INSTRUMENT_TYPES.ACOUSTIC).pipe(
+        this.tracksHttpService.getTracksByInstrumentType(INSTRUMENT_TYPES.ACOUSTIC.toLowerCase()).pipe(
             take(1)
         ).subscribe(res => {
             this.tracks = res;

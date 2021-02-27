@@ -3,24 +3,19 @@ module.exports = app => {
     const upload = require('../config/multer.config.js');
     var router = require("express").Router();
   
-    // Create a new Tutorial
     router.post("/", upload.single("file"), tracks.create);
   
-    // Retrieve all Tutorials
     router.get("/", tracks.findAll);
+
+    router.get("/:instrumentType", tracks.findByInstrumentType);
   
-  
-    // Retrieve a single Tutorial with id
     router.get("/:id", tracks.findOneById);
 
-    // Update a Tutorial with id
     router.put("/:id", tracks.update);
   
-    // Delete a Tutorial with id
-    router.delete("/:id", tracks.delete);
+    router.delete("/:id", tracks.deleteById);
   
-    // Create a new Tutorial
-    router.delete("/", tracks.deleteAll);
+    router.delete("/", tracks.deleteSelected);
   
     app.use('/api/tracks', router);
   };

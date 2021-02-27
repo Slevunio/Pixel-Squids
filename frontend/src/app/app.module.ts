@@ -4,6 +4,11 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { FileUploadModule } from 'ng2-file-upload';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { MatTableModule } from '@angular/material/table';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatButtonModule } from '@angular/material/button';
 
 import { AppComponent } from './app.component';
 import { PixelSquidsComponent } from './pixel-squids/pixel-squids.component';
@@ -19,10 +24,13 @@ import { MainPageComponent } from './pixel-squids/main-page/main-page.component'
 import { StartPageComponent } from './pixel-squids/start-page/start-page.component';
 import { UploadCategoryPageComponent } from './pixel-squids/upload-page/upload-category-page/upload-category-page.component';
 import { UploadFromRecordPageComponent } from './pixel-squids/upload-page/upload-from-record-page/upload-from-record-page.component';
+import { AdminTracksPageComponent } from './pixel-squids/admin-page/tracks/admin-tracks-page.component';
+import { AdminShopPageComponent } from './pixel-squids/admin-page/shop/admin-shop-page.component';
 
 import { TracksHttpService } from './services/TracksHttpService';
 import { TracksService } from './services/TracksService';
 import { RouterService } from './services/RouterService';
+
 
 @NgModule({
   declarations: [
@@ -39,14 +47,20 @@ import { RouterService } from './services/RouterService';
     MainPageComponent,
     StartPageComponent,
     UploadCategoryPageComponent,
-    UploadFromRecordPageComponent
+    UploadFromRecordPageComponent,
+    AdminTracksPageComponent,
+    AdminShopPageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FileUploadModule,
-    CommonModule
+    CommonModule,
+    BrowserAnimationsModule,
+    MatTableModule,
+    MatCheckboxModule,
+    MatButtonModule
   ],
   providers: [TracksHttpService, TracksService, RouterService],
   bootstrap: [AppComponent]

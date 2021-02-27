@@ -14,7 +14,7 @@ export class BassComponent {
     constructor(private tracksHttpService: TracksHttpService) { }
 
     public ngOnInit() {
-        this.tracksHttpService.getTracks(INSTRUMENT_TYPES.BASS).pipe(
+        this.tracksHttpService.getTracksByInstrumentType(INSTRUMENT_TYPES.BASS.toLowerCase()).pipe(
             take(1)
         ).subscribe(res => {
             this.tracks = res;

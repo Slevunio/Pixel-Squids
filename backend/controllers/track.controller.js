@@ -1,11 +1,8 @@
-// const { where } = require("sequelize/types");
 const db = require("../models");
 const Track = db.Track;
 const Op = db.Sequelize.Op;
 
-// Create and Save a new Tutorial
 exports.create = (req, res) => {
-    // Validate request
     if (!req.body.instrumentType) {
         res.status(400).send({
             message: "Content can not be empty!"
@@ -13,7 +10,6 @@ exports.create = (req, res) => {
         return;
     }
 
-    // Create a Tutorial
     const track = {
         name: req.body.name,
         soundtrack: req.file.buffer,
@@ -23,7 +19,6 @@ exports.create = (req, res) => {
         updatedAt: Date.now()
     };
 
-    // Save Tutorial in the database
     Track.create(track)
         .then(data => {
             res.send(data);
@@ -36,10 +31,9 @@ exports.create = (req, res) => {
         });
 };
 
-// Retrieve all Tutorials from the database.
-exports.findAll = (req, res) => {
+exports.findByInstrumentType = (req, res) => {
     Track.findAll({
-        where: { instrumentType: req.query.instrumentType }
+        where: { instrumentType: req.params.instrumentType.toUpperCase() }
     }).then(data => {
         res.send(data);
     }).catch(err => {
@@ -51,7 +45,18 @@ exports.findAll = (req, res) => {
 
 };
 
-// Find a single Tutorial with an id
+exports.findAll = (req, res) => {
+    Track.findAll().then(data => {
+        res.send(data);
+    }).catch(err => {
+        res.status(500).send({
+            message:
+                err.message || "Some error occurred while retrieving tracks."
+        });
+    });
+
+};
+
 exports.findOneById = (req, res) => {
     const id = req.params.id;
 
@@ -66,7 +71,6 @@ exports.findOneById = (req, res) => {
         });
 };
 
-// Update a Tutorial by the id in the request
 exports.update = (req, res) => {
     const track = req.body;
     track.updatedAt = Date.now();
@@ -92,8 +96,7 @@ exports.update = (req, res) => {
         });
 };
 
-// Delete a Tutorial with the specified id in the request
-exports.delete = (req, res) => {
+exports.deleteById = (req, res) => {
     const id = req.params.id;
 
     Track.destroy({
@@ -117,10 +120,10 @@ exports.delete = (req, res) => {
         });
 };
 
-// Delete all Tutorials from the database.
-exports.deleteAll = (req, res) => {
+exports.deleteSelected = (req, res) => {
+
     Track.destroy({
-        where: {},
+        where: { id: [...req.query.ids] },
         truncate: false
     })
         .then(nums => {
