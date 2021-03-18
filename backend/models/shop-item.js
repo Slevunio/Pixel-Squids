@@ -4,8 +4,9 @@ const {
 } = require('sequelize');
 
 module.exports = (sequelize, DataTypes) => {
-  class Track extends Model { };
-  Track.init({
+  class ShopItem extends Model { };
+
+  ShopItem.init({
     id: {
       type: Sequelize.UUID,
       defaultValue: Sequelize.UUIDV4,
@@ -13,13 +14,14 @@ module.exports = (sequelize, DataTypes) => {
       primaryKey: true
     },
     name: DataTypes.STRING,
-    soundtrack: DataTypes.BLOB,
-    // notes: DataTypes.STRING,
-    instrumentType: DataTypes.STRING
+    description: DataTypes.STRING,
+    prize: DataTypes.DECIMAL(10, 2)
   }, {
     sequelize,
-    modelName: 'Track',
+    modelName: 'ShopItem',
   });
-
-  return Track;
+  ShopItem.associate = function(models) {
+    ShopItem.hasMany(models.Image, { as: 'Image' });
+  }
+  return ShopItem;
 };

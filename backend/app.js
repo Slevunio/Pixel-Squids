@@ -10,13 +10,13 @@ var corsOptions = {
 
 app.use(cors(corsOptions));
 
-// parse requests of content-type - application/json
 app.use(bodyParser.json());
 
-// parse requests of content-type - application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
 
 require("./routes/track.routes")(app);
+require("./routes/shop-item.routes")(app);
+require("./routes/image.routes")(app);
 const db = require("./models");
 db.sequelize.sync({force: true});
 

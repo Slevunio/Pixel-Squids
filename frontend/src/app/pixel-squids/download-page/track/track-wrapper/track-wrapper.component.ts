@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { take } from 'rxjs/operators';
 import { ITrack } from 'src/app/interfaces/ITrack';
 import { TracksService } from '../../../../services/TracksService';
-import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
+import { DomSanitizer } from '@angular/platform-browser';
 import { TracksHttpService } from '../../../../services/TracksHttpService';
 import { ISoundtrack } from 'src/app/interfaces/ISoundtrack';
 
@@ -28,7 +28,6 @@ export class TrackWrapperComponent implements OnInit {
         this.imgSrc = this.imgSrcPlay;
         var array = new Uint8Array((this.track.soundtrack! as ISoundtrack).data);
         this.blob = new Blob([array]);
-
         this.tracksService.generateBase64Audio(this.blob).pipe(
             take(1)
         ).subscribe(src => {

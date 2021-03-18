@@ -5,10 +5,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { FileUploadModule } from 'ng2-file-upload';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 
 import { MatTableModule } from '@angular/material/table';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 import { AppComponent } from './app.component';
 import { PixelSquidsComponent } from './pixel-squids/pixel-squids.component';
@@ -26,8 +30,11 @@ import { UploadCategoryPageComponent } from './pixel-squids/upload-page/upload-c
 import { UploadFromRecordPageComponent } from './pixel-squids/upload-page/upload-from-record-page/upload-from-record-page.component';
 import { AdminTracksPageComponent } from './pixel-squids/admin-page/tracks/admin-tracks-page.component';
 import { AdminShopPageComponent } from './pixel-squids/admin-page/shop/admin-shop-page.component';
+import { CreateShopItemDialogComponent } from './pixel-squids/admin-page/shop/create-shop-item-dialog/create-shop-item-dialog.component';
+import { ShoppingPageComponent } from './pixel-squids/shopping-page/shopping-page.component';
 
 import { TracksHttpService } from './services/TracksHttpService';
+import { ShopHttpService } from './services/ShopHttpService';
 import { TracksService } from './services/TracksService';
 import { RouterService } from './services/RouterService';
 
@@ -49,7 +56,9 @@ import { RouterService } from './services/RouterService';
     UploadCategoryPageComponent,
     UploadFromRecordPageComponent,
     AdminTracksPageComponent,
-    AdminShopPageComponent
+    AdminShopPageComponent,
+    CreateShopItemDialogComponent,
+    ShoppingPageComponent
   ],
   imports: [
     BrowserModule,
@@ -58,11 +67,15 @@ import { RouterService } from './services/RouterService';
     FileUploadModule,
     CommonModule,
     BrowserAnimationsModule,
+    FormsModule,
     MatTableModule,
     MatCheckboxModule,
-    MatButtonModule
+    MatButtonModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
-  providers: [TracksHttpService, TracksService, RouterService],
+  providers: [TracksHttpService, TracksService, RouterService, ShopHttpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,31 @@
+:host {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.shop-wrapper {
+    // display: flex;
+
+}
+
+.left-side-item, .right-side-item {
+    height: 150px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.left-side-item {
+    justify-content: flex-start;
+}
+
+.right-side-item {
+    justify-content: flex-end;
+}
+
+.shop-item-image {
+    height: 100px;
+}

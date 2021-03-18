@@ -3,8 +3,7 @@ import { ITrack } from '../../../interfaces/ITrack';
 import { TracksHttpService } from '../../../services/TracksHttpService';
 import {MatTableDataSource} from '@angular/material/table';
 import { SelectionModel } from '@angular/cdk/collections';
-import { map, tap } from 'rxjs/operators';
-import { NgModel } from '@angular/forms';
+import { map } from 'rxjs/operators';
 
 interface IAdminTrack {
     position: number,
@@ -46,8 +45,6 @@ public selection = new SelectionModel<IAdminTrack>(true, []);
 
   public deleteTracks() {
       const ids = this.selection.selected.map(adminTrack => adminTrack.model.id!);
-      this.tracksHttpService.deleteTracks(ids).subscribe(res => console.log(res));
+      this.tracksHttpService.deleteTracks(ids).subscribe();
   }
-
-
 }
