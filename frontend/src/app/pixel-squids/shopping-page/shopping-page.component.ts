@@ -24,6 +24,7 @@ export class ShoppingPageComponent implements OnInit {
     public ngOnInit() {
         this.shopHttpService.getAllShopItems().pipe(take(1)).subscribe(shopItems => {
             this.shopItems = shopItems.map(shopItem => ({ shopItem: shopItem, imageSrc$: this.generateBase64Image((shopItem.Image![0] as IImage).image.data)}));
+            console.log(shopItems);
         });
     }
 

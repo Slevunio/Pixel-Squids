@@ -2,15 +2,15 @@
 <mat-dialog-content>
   <mat-form-field class='form-field'>
     <mat-label>Name</mat-label>
-    <input matInput [(ngModel)]="shopItem.data!.name">
+    <input matInput [(ngModel)]="shopItem.name">
   </mat-form-field>
   <mat-form-field class='form-field'>
     <mat-label>Description</mat-label>
-    <input matInput [(ngModel)]="shopItem.data!.description">
+    <input matInput [(ngModel)]="shopItem.description">
   </mat-form-field>
   <mat-form-field class='form-field'>
     <mat-label>Prize</mat-label>
-    <input matInput [(ngModel)]="shopItem.data!.prize">
+    <input matInput [(ngModel)]="shopItem.prize">
   </mat-form-field>
   <div class="file-item" *ngFor="let file of chosenFiles, let i=index">
     <div>{{i+1}}.<span class="file-name">{{file.name}}</span></div>

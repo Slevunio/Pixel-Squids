@@ -8,6 +8,11 @@ export interface IShopItemData {
 }
 
 export interface IShopItem {
-    data?: IShopItemData,
-    Image?: File[] & IImage[]
+    Image?: File[] & IImage[],
+    createdAt?: string,
+    description: string,
+    id?: string,
+    name: string,
+    prize: number,
+    updatedAt?: string
 }

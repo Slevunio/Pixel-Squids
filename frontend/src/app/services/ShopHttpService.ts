@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { catchError } from 'rxjs/operators';
+import { catchError, tap } from 'rxjs/operators';
 import { IShopItem } from '../interfaces/IShopItem';
 import { HttpClient } from '@angular/common/http';
 @Injectable()
@@ -11,7 +11,11 @@ export class ShopHttpService {
     constructor(private http: HttpClient) { }
 
     public getAllShopItems(): Observable<IShopItem[]> {
-        return this.http.get<IShopItem[]>(`${this.baseDevUrl}/shopItems`);
+        return this.http.get<any[]>(`${this.baseDevUrl}/shopItems`).pipe(tap(res => console.log(res)));
+    }
+
+    public getShopItemById(id: string): Observable<IShopItem> {
+        return this.http.get<IShopItem>(`${this.baseDevUrl}/shopItems/${id}`);
     }
 
     public createShopItem(shopItem: IShopItem): Observable<IShopItem> {
@@ -19,9 +23,9 @@ export class ShopHttpService {
         (shopItem.Image! as Blob[]).forEach((picture: Blob) => {
             formdata.append('files', picture as Blob);
         });
-        formdata.append('prize', shopItem.data!.prize!.toString());
-        formdata.append('name', shopItem.data!.name as string);
-        formdata.append('description', shopItem.data!.description as string);
+        formdata.append('prize', shopItem.prize!.toString());
+        formdata.append('name', shopItem.name as string);
+        formdata.append('description', shopItem.description as string);
 
         return this.http.post<IShopItem>(`${this.baseDevUrl}/shopItems`, formdata).pipe(
             catchError(error => {

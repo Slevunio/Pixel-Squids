@@ -28,10 +28,11 @@
 .header-wrapper {
     display: flex;
     width: 100%;
+    height: 20%;
     justify-content: flex-end;
 }
 .header {
-    height: 20%;
+    height: 100%;
     width: 75%;
     padding-right: 16px;
     display: flex;
@@ -42,9 +43,9 @@
 .animate-header {
     height: 20%;
     width: 100%;
-    padding-right: 16px;
+    // padding-right: 16px;
     display: flex;
-    align-items: center;
+    // align-items: center;
     justify-content: flex-end;
     animation-name: headerAnimation;
     animation-duration: 3s;

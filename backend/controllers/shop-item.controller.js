@@ -28,15 +28,13 @@ exports.create = (req, res) => {
 
             return Promise.all(promises).then(imagesCreated => {
                 const shopItemCreated = {
-                    data: {
-                        id: data.id,
-                        name: data.name,
-                        description: data.description,
-                        prize: data.prize,
-                        createdAt: data.createdAt,
-                        updatedAt: data.updatedAt
-                    },
-                    pictures: imagesCreated
+                    id: data.id,
+                    name: data.name,
+                    description: data.description,
+                    prize: data.prize,
+                    createdAt: data.createdAt,
+                    updatedAt: data.updatedAt,
+                    Image: imagesCreated
                 }
                 res.send(shopItemCreated);
             });
@@ -51,7 +49,7 @@ exports.create = (req, res) => {
 };
 
 exports.findAll = (req, res) => {
-    ShopItem.findAll( {include: ['Image']}).then(data => {
+    ShopItem.findAll({ include: ['Image'] }).then(data => {
         res.send(data);
     }).catch(err => {
         res.status(500).send({
@@ -65,7 +63,7 @@ exports.findAll = (req, res) => {
 exports.findOneById = (req, res) => {
     const id = req.params.id;
 
-    ShopItem.findByPk(id)
+    ShopItem.findByPk(id, { include: ['Image'] })
         .then(data => {
             res.send(data);
         })

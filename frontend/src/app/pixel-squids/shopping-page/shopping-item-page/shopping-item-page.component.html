@@ -1,0 +1,23 @@
+<div class="shop-item-wrapper">
+    <div class="image">
+        <img [src]="selectedImage$ | async"/>
+    </div>
+    <div class="data">
+        <div class="images">
+            <div class="small-image" *ngFor="let image of images$; let i=index;">
+                <img [src]="image | async" (click)="setImage(i)"/>
+            </div>
+        </div>
+        <div class="description-wrapper">
+            <div class="name">
+                {{shopItem.name}}
+            </div>
+            <div class="description">
+                {{shopItem.description}}
+            </div>
+            <div class="prize">
+                {{shopItem.prize}} zł
+            </div>
+        </div>
+    </div>
+</div>

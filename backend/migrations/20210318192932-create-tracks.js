@@ -1,21 +1,18 @@
 'use strict';
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('Tracks', {
+    await queryInterface.createTable('Track', {
       id: {
+        type: Sequelize.UUID,
+        defaultValue: Sequelize.UUIDV4,
         allowNull: false,
-        autoIncrement: true,
-        primaryKey: true,
-        type: Sequelize.INTEGER
+        primaryKey: true
       },
       name: {
         type: Sequelize.STRING
       },
-      soundTrack: {
-        type: Sequelize.STRING
-      },
-      notes: {
-        type: Sequelize.STRING
+      soundtrack: {
+        type: Sequelize.BLOB
       },
       instrumentType: {
         type: Sequelize.STRING
@@ -31,6 +28,6 @@ module.exports = {
     });
   },
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('Tracks');
+    await queryInterface.dropTable('Track');
   }
 };

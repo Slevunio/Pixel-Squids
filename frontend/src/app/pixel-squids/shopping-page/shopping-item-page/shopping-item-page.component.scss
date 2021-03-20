@@ -1,0 +1,68 @@
+@import '../../../../styles/colors.scss';
+
+.shop-item-wrapper {
+    height: calc(80% - 26px);
+    display: flex;
+}
+
+.image {
+    height: 100%;
+    width: 50%;
+    img {
+        max-width: 100%;
+    }
+}
+
+.data {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+}
+
+.images {
+    height: 20%;
+    display: flex;
+    border-bottom: 1px solid $main-theme-orange;
+}
+
+.small-image{
+    img {
+        height: 80px;
+    }
+
+    img:hover {
+        cursor: pointer;
+    }
+}
+
+.description-wrapper {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.name {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 56px;
+    height: 33%;
+}
+
+.description {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 23px;
+    height: 25%;
+}
+
+.prize {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 23px;
+    height: 25%;
+}
+

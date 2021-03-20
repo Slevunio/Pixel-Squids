@@ -9,7 +9,7 @@ import { CreateShopItemDialogComponent } from './create-shop-item-dialog/create-
 
 interface IAdminShopItem {
   position: number,
-  model: IShopItemData
+  model: IShopItem
 }
 
 @Component({
@@ -30,7 +30,7 @@ export class AdminShopPageComponent implements OnInit {
 
   public ngOnInit() {
     this.shopHttpService.getAllShopItems().pipe(
-      map((shopItems: IShopItem[]) => shopItems.map((shopItem, index) => ({ position: index + 1, model: shopItem.data } as IAdminShopItem))
+      map((shopItems: IShopItem[]) => shopItems.map((shopItem, index) => ({ position: index + 1, model: shopItem } as IAdminShopItem))
       )).subscribe(adminShopItems => {
         this.data = new MatTableDataSource<IAdminShopItem>(adminShopItems);
       });
@@ -69,7 +69,8 @@ export class AdminShopPageComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(data => {
       this.shopHttpService.createShopItem(data).subscribe(res => {
-        this.data.data = this.data.data.concat({ position: this.data.data.length + 1, model: res.data! });
+        console.log(res);
+        this.data.data = this.data.data.concat({ position: this.data.data.length + 1, model: res });
       });
     });
 

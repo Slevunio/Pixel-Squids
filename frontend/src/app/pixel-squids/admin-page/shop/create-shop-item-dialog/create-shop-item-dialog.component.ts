@@ -6,20 +6,17 @@ import { ShopHttpService } from '../../../../services/ShopHttpService';
 import { IImage } from 'src/app/interfaces/IImage';
 
 class ShopItem implements IShopItem {
-    public data!: {
-        name: string,
-        description: string,
-        prize: number
-    }
+    public name!: string;
+    public description!: string;
+    public prize!: number;
     public Image!: File[] & IImage[];
 
     constructor() {
-        this.data = {
-            name: '',
-            description: '',
-            prize: 0
-        },
-            this.Image = [];
+
+        this.name = '';
+        this.description = '';
+        this.prize = 0;
+        this.Image = [];
     }
 }
 

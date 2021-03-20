@@ -14,6 +14,7 @@ import { UploadCategoryPageComponent } from './pixel-squids/upload-page/upload-c
 import { UploadFromRecordPageComponent } from './pixel-squids/upload-page/upload-from-record-page/upload-from-record-page.component';
 import { AdminTracksPageComponent } from './pixel-squids/admin-page/tracks/admin-tracks-page.component';
 import { AdminShopPageComponent } from './pixel-squids/admin-page/shop/admin-shop-page.component';
+import { ShoppingItemPageComponent } from './pixel-squids/shopping-page/shopping-item-page/shopping-item-page.component';
 
 const routes: Routes = [
   { path: '', component: StartPageComponent },
@@ -30,6 +31,7 @@ const routes: Routes = [
   { path: 'upload/fromRecord/:instrumentType', component: UploadFromRecordPageComponent },
   { path: 'admin/tracks', component: AdminTracksPageComponent },
   { path: 'admin/shop', component: AdminShopPageComponent },
+  { path: 'shop/:id', component: ShoppingItemPageComponent }
 ];
 
 @NgModule({

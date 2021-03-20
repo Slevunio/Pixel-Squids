@@ -32,11 +32,13 @@ import { AdminTracksPageComponent } from './pixel-squids/admin-page/tracks/admin
 import { AdminShopPageComponent } from './pixel-squids/admin-page/shop/admin-shop-page.component';
 import { CreateShopItemDialogComponent } from './pixel-squids/admin-page/shop/create-shop-item-dialog/create-shop-item-dialog.component';
 import { ShoppingPageComponent } from './pixel-squids/shopping-page/shopping-page.component';
+import { ShoppingItemPageComponent } from './pixel-squids/shopping-page/shopping-item-page/shopping-item-page.component';
 
 import { TracksHttpService } from './services/TracksHttpService';
 import { ShopHttpService } from './services/ShopHttpService';
 import { TracksService } from './services/TracksService';
 import { RouterService } from './services/RouterService';
+import { ImageService } from './services/ImageService';
 
 
 @NgModule({
@@ -58,7 +60,8 @@ import { RouterService } from './services/RouterService';
     AdminTracksPageComponent,
     AdminShopPageComponent,
     CreateShopItemDialogComponent,
-    ShoppingPageComponent
+    ShoppingPageComponent,
+    ShoppingItemPageComponent
   ],
   imports: [
     BrowserModule,
@@ -75,7 +78,7 @@ import { RouterService } from './services/RouterService';
     MatFormFieldModule,
     MatInputModule
   ],
-  providers: [TracksHttpService, TracksService, RouterService, ShopHttpService],
+  providers: [TracksHttpService, TracksService, RouterService, ShopHttpService, ImageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
