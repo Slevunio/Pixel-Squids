@@ -28,17 +28,15 @@ import { MainPageComponent } from './pixel-squids/main-page/main-page.component'
 import { StartPageComponent } from './pixel-squids/start-page/start-page.component';
 import { UploadCategoryPageComponent } from './pixel-squids/upload-page/upload-category-page/upload-category-page.component';
 import { UploadFromRecordPageComponent } from './pixel-squids/upload-page/upload-from-record-page/upload-from-record-page.component';
-import { AdminTracksPageComponent } from './pixel-squids/admin-page/tracks/admin-tracks-page.component';
-import { AdminShopPageComponent } from './pixel-squids/admin-page/shop/admin-shop-page.component';
-import { CreateShopItemDialogComponent } from './pixel-squids/admin-page/shop/create-shop-item-dialog/create-shop-item-dialog.component';
 import { ShoppingPageComponent } from './pixel-squids/shopping-page/shopping-page.component';
 import { ShoppingItemPageComponent } from './pixel-squids/shopping-page/shopping-item-page/shopping-item-page.component';
 
-import { TracksHttpService } from './services/TracksHttpService';
 import { ShopHttpService } from './services/ShopHttpService';
 import { TracksService } from './services/TracksService';
 import { RouterService } from './services/RouterService';
 import { ImageService } from './services/ImageService';
+
+import { TracksStoreService } from './store/tracks-store/tracksStoreService';
 
 
 @NgModule({
@@ -57,9 +55,6 @@ import { ImageService } from './services/ImageService';
     StartPageComponent,
     UploadCategoryPageComponent,
     UploadFromRecordPageComponent,
-    AdminTracksPageComponent,
-    AdminShopPageComponent,
-    CreateShopItemDialogComponent,
     ShoppingPageComponent,
     ShoppingItemPageComponent
   ],
@@ -78,7 +73,7 @@ import { ImageService } from './services/ImageService';
     MatFormFieldModule,
     MatInputModule
   ],
-  providers: [TracksHttpService, TracksService, RouterService, ShopHttpService, ImageService],
+  providers: [TracksService, RouterService, ShopHttpService, ImageService, TracksStoreService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

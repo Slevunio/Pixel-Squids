@@ -11,7 +11,7 @@ export class ShopHttpService {
     constructor(private http: HttpClient) { }
 
     public getAllShopItems(): Observable<IShopItem[]> {
-        return this.http.get<any[]>(`${this.baseDevUrl}/shopItems`).pipe(tap(res => console.log(res)));
+        return this.http.get<any[]>(`${this.baseDevUrl}/shopItems`);
     }
 
     public getShopItemById(id: string): Observable<IShopItem> {

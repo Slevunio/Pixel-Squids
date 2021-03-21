@@ -1,9 +1,9 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { FileItem, FileUploader } from 'ng2-file-upload';
-import { TracksHttpService } from '../../../services/TracksHttpService';
 import { INSTRUMENT_TYPES } from '../../../shared/constants/instrumentTypes';
-
+import { TracksStoreService } from '../../../store/tracks-store/tracksStoreService';
+import { TracksService } from '../../../services/TracksService';
 @Component({
     selector: 'upload-category-page-component',
     templateUrl: './upload-category-page.component.html',
@@ -24,7 +24,7 @@ export class UploadCategoryPageComponent implements OnInit {
     private instrumentType!: string;
     @ViewChild('fileSelect') private fileSelect!: ElementRef;
 
-    constructor(private route: ActivatedRoute, private tracksHttpService: TracksHttpService) { }
+    constructor(private route: ActivatedRoute, private tracksStoreService: TracksStoreService, private tracksService: TracksService) { }
 
     public ngOnInit() {
         this.uploadWay = this.route.snapshot.url[1].path;
@@ -32,15 +32,25 @@ export class UploadCategoryPageComponent implements OnInit {
     }
 
     private handleAddingFile(fileItem: FileItem) {
+        fileItem._file.arrayBuffer().then(buffer => {
+            const array = new Uint8Array(buffer);
+            const blob = new Blob([array]);
+            this.tracksService.generateBase64Audio(blob).subscribe(res => {
+                const track = {
+                    name: fileItem._file.name,
+                    fileType: fileItem._file.type,
+                    soundtrack: res,
+                    instrumentType: this.instrumentType,
+                    // notes: 'notes',
+                };
+                // console.log(track.soundtrack.data.length);
+                this.tracksStoreService.createTrack(track);
+            })
 
-        const track = {
-            name: fileItem._file.name,
-            soundtrack: fileItem._file,
-            instrumentType: this.instrumentType,
-            // notes: 'notes',
-        };
-        
-        this.tracksHttpService.createTrack(track).subscribe();
+        })
+
+
+
 
     }
 

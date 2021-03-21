@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { take } from 'rxjs/operators';
 import { ITrack } from 'src/app/interfaces/ITrack';
-import { TracksHttpService } from '../../../services/TracksHttpService';
 import { INSTRUMENT_TYPES } from '../../../shared/constants/instrumentTypes';
-
+import { TracksStoreService } from '../../../store/tracks-store/tracksStoreService';
 @Component({
     selector: 'acoustic-component',
     templateUrl: './acoustic.component.html',
@@ -12,13 +10,9 @@ import { INSTRUMENT_TYPES } from '../../../shared/constants/instrumentTypes';
 export class AcousticComponent implements OnInit {
     
     public tracks: ITrack[] = [];
-    constructor(private tracksHttpService: TracksHttpService) { }
+    constructor(private tracksStoreService: TracksStoreService) { }
 
     public ngOnInit() {
-        this.tracksHttpService.getTracksByInstrumentType(INSTRUMENT_TYPES.ACOUSTIC.toLowerCase()).pipe(
-            take(1)
-        ).subscribe(res => {
-            this.tracks = res;
-        });
+        this.tracks = this.tracksStoreService.getTracksByInstrumentType(INSTRUMENT_TYPES.ACOUSTIC);
     }
 }

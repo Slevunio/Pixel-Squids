@@ -1,10 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { take } from 'rxjs/operators';
 import { ITrack } from 'src/app/interfaces/ITrack';
 import { TracksService } from '../../../../services/TracksService';
 import { DomSanitizer } from '@angular/platform-browser';
-import { TracksHttpService } from '../../../../services/TracksHttpService';
-import { ISoundtrack } from 'src/app/interfaces/ISoundtrack';
+import { TracksStoreService } from '../../../../store/tracks-store/tracksStoreService';
 
 @Component({
     selector: 'track-wrapper-component',
@@ -20,22 +18,20 @@ export class TrackWrapperComponent implements OnInit {
     public imgSrc!: string;
     private audio!: HTMLAudioElement;
     private isPlaying: boolean = false;
-    private blob!: Blob;
+    private src: string;
 
-    constructor(private tracksService: TracksService, private domSanitizer: DomSanitizer, private tracksHttpService: TracksHttpService) { }
+    constructor(private tracksService: TracksService, private domSanitizer: DomSanitizer, private tracksStoreService: TracksStoreService) { }
 
     public ngOnInit() {
         this.imgSrc = this.imgSrcPlay;
-        var array = new Uint8Array((this.track.soundtrack! as ISoundtrack).data);
-        this.blob = new Blob([array]);
-        this.tracksService.generateBase64Audio(this.blob).pipe(
-            take(1)
-        ).subscribe(src => {
-            this.audio = new Audio(src);
-            this.audio.addEventListener('ended', () => { this.imgSrc = this.imgSrcPlay; this.isPlaying = false; });
-            this.audio.addEventListener('play', () => { this.imgSrc = this.imgSrcPause; this.isPlaying = true; });
-            this.audio.addEventListener('pause', () => { this.imgSrc = this.imgSrcPlay; this.isPlaying = false });
-        });
+        this.tracksStoreService.getSountrack(this.track)
+            .subscribe(src => {
+                this.src = src;
+                this.audio = new Audio(src);
+                this.audio.addEventListener('ended', () => { this.imgSrc = this.imgSrcPlay; this.isPlaying = false; });
+                this.audio.addEventListener('play', () => { this.imgSrc = this.imgSrcPause; this.isPlaying = true; });
+                this.audio.addEventListener('pause', () => { this.imgSrc = this.imgSrcPlay; this.isPlaying = false });
+            });
     }
 
     public toggle() {
@@ -47,8 +43,16 @@ export class TrackWrapperComponent implements OnInit {
     }
 
     public download() {
+        const base64EncodedTrack = this.src.split(',')[1];
+        const byteCharacters = atob(base64EncodedTrack);
+        const byteNumbers = new Array(byteCharacters.length);
+        for (let i = 0; i < byteCharacters.length; i++) {
+            byteNumbers[i] = byteCharacters.charCodeAt(i);
+        }
+        const byteArray = new Uint8Array(byteNumbers);
+        const blob = new Blob([byteArray]);
         const type = this.track.name?.split('.')[1];
-        this.tracksService.downloadFile(this.blob, this.track.name!, type!);
+        this.tracksService.downloadFile(blob, this.track.name!, type!);
     }
 
     public niepamietamco() {

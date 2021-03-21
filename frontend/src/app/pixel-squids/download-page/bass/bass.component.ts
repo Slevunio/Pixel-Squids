@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
-import { take } from 'rxjs/operators';
 import { ITrack } from 'src/app/interfaces/ITrack';
-import { TracksHttpService } from 'src/app/services/TracksHttpService';
 import { INSTRUMENT_TYPES } from 'src/app/shared/constants/instrumentTypes';
+import { TracksStoreService } from 'src/app/store/tracks-store/tracksStoreService';
 
 @Component({
     selector: 'bass-component',
@@ -11,13 +10,9 @@ import { INSTRUMENT_TYPES } from 'src/app/shared/constants/instrumentTypes';
 })
 export class BassComponent {
     public tracks: ITrack[] = [];
-    constructor(private tracksHttpService: TracksHttpService) { }
+    constructor(private tracksStoreService: TracksStoreService) { }
 
     public ngOnInit() {
-        this.tracksHttpService.getTracksByInstrumentType(INSTRUMENT_TYPES.BASS.toLowerCase()).pipe(
-            take(1)
-        ).subscribe(res => {
-            this.tracks = res;
-        });
+        this.tracks = this.tracksStoreService.getTracksByInstrumentType(INSTRUMENT_TYPES.BASS);
     }
 }
