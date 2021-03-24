@@ -10,9 +10,15 @@ import { TracksStoreService } from '../../../store/tracks-store/tracksStoreServi
 export class AcousticComponent implements OnInit {
     
     public tracks: ITrack[] = [];
+    public filteredTracks: ITrack[] = [];
     constructor(private tracksStoreService: TracksStoreService) { }
 
     public ngOnInit() {
         this.tracks = this.tracksStoreService.getTracksByInstrumentType(INSTRUMENT_TYPES.ACOUSTIC);
+        this.filteredTracks = this.tracks;
+    }
+
+    public setTag(tag: string) {
+        this.filteredTracks = !!tag ?  this.tracks.filter(track => track.tag === tag) : this.tracks;
     }
 }

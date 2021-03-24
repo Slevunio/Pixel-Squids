@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { FileUploadModule } from 'ng2-file-upload';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { MatTableModule } from '@angular/material/table';
 import { MatCheckboxModule } from '@angular/material/checkbox';
@@ -31,12 +32,14 @@ import { UploadFromRecordPageComponent } from './pixel-squids/upload-page/upload
 import { ShoppingPageComponent } from './pixel-squids/shopping-page/shopping-page.component';
 import { ShoppingItemPageComponent } from './pixel-squids/shopping-page/shopping-item-page/shopping-item-page.component';
 
-import { ShopHttpService } from './services/ShopHttpService';
+import { SearchComponent } from './shared/components/search.somponent';
+
 import { TracksService } from './services/TracksService';
 import { RouterService } from './services/RouterService';
 import { ImageService } from './services/ImageService';
 
 import { TracksStoreService } from './store/tracks-store/tracksStoreService';
+import { ShopItemsStoreService } from './store/shop-items-store/shopItemsStoreService';
 
 
 @NgModule({
@@ -56,7 +59,8 @@ import { TracksStoreService } from './store/tracks-store/tracksStoreService';
     UploadCategoryPageComponent,
     UploadFromRecordPageComponent,
     ShoppingPageComponent,
-    ShoppingItemPageComponent
+    ShoppingItemPageComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
@@ -71,9 +75,10 @@ import { TracksStoreService } from './store/tracks-store/tracksStoreService';
     MatButtonModule,
     MatDialogModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    ReactiveFormsModule
   ],
-  providers: [TracksService, RouterService, ShopHttpService, ImageService, TracksStoreService],
+  providers: [TracksService, RouterService, ImageService, TracksStoreService, ShopItemsStoreService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -33,7 +33,7 @@
 }
 .header {
     height: 100%;
-    width: 75%;
+    width: 100%;
     padding-right: 16px;
     display: flex;
     align-items: center;
@@ -43,9 +43,7 @@
 .animate-header {
     height: 20%;
     width: 100%;
-    // padding-right: 16px;
     display: flex;
-    // align-items: center;
     justify-content: flex-end;
     animation-name: headerAnimation;
     animation-duration: 3s;
@@ -72,7 +70,7 @@
 }
 
 .header-navigation {
-    width: 50%;
+    // width: 50%;
     display: flex;
     justify-content: flex-end;
 

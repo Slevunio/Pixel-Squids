@@ -3,3 +3,7 @@
     overflow: scroll;
     margin-top: 32px;
 }
+
+.container::-webkit-scrollbar {
+    display: none;
+}

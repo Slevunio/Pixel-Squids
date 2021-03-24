@@ -13,6 +13,7 @@ import { StartPageComponent } from './pixel-squids/start-page/start-page.compone
 import { UploadCategoryPageComponent } from './pixel-squids/upload-page/upload-category-page/upload-category-page.component';
 import { UploadFromRecordPageComponent } from './pixel-squids/upload-page/upload-from-record-page/upload-from-record-page.component';
 import { ShoppingItemPageComponent } from './pixel-squids/shopping-page/shopping-item-page/shopping-item-page.component';
+import { TrackComponent } from './pixel-squids/download-page/track/track.component';
 
 const routes: Routes = [
   { path: '', component: StartPageComponent },
@@ -22,12 +23,16 @@ const routes: Routes = [
   { path: 'download/acoustic', component: AcousticComponent },
   { path: 'download/electric', component: ElectricComponent },
   { path: 'download/bass', component: BassComponent },
+  { path: 'download/acoustic/:id', component: TrackComponent },
+  { path: 'download/electric/:id', component: TrackComponent },
+  { path: 'download/bass/:id', component: TrackComponent },
   { path: 'learn', component: LearningPageComponent },
   { path: 'shop', component: ShoppingPageComponent },
   { path: 'contact', component: ContactPageComponent },
   { path: 'upload/:uploadWay', component: UploadCategoryPageComponent },
   { path: 'upload/fromRecord/:instrumentType', component: UploadFromRecordPageComponent },
-  { path: 'shop/:id', component: ShoppingItemPageComponent }
+  { path: 'shop/:id', component: ShoppingItemPageComponent },
+  
 ];
 
 @NgModule({

@@ -1,4 +1,4 @@
-@import '../../../../../styles//colors.scss';
+@import "../../../../../styles//colors.scss";
 
 :host {
     display: flex;
@@ -21,7 +21,14 @@
     width: 60%;
     color: white;
     border-bottom: 2px solid $main-theme-orange;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
 }
+
+.track-name::-webkit-scrollbar {
+    display: none;
+  }
 
 .actions {
     display: flex;
@@ -33,7 +40,8 @@
     cursor: pointer;
 }
 
-.toggle-img, .download-img {
+.toggle-img,
+.download-img {
     height: 50px;
     width: 50px;
 }

@@ -25,6 +25,10 @@ export class TracksStoreService {
         return this.tracks.filter(track => track.instrumentType === instrumentType);
     }
 
+    public getTrackById(id: string): ITrack {
+        return this.tracks.find(track => track.id === id);
+    }
+
     public getSountrack(track: ITrack): Observable<string> {
         if (!!track.sountrackPath) {
             return this.httpClient.get(track.sountrackPath, { responseType: "arraybuffer" }).pipe(

@@ -1,3 +1,4 @@
+<search-component [tracks]="tracks" (tag)="setTag($event)"></search-component>
 <div class="container">
-    <track-wrapper-component *ngFor="let track of tracks" [track]="track"></track-wrapper-component>
+    <track-wrapper-component *ngFor="let track of filteredTracks" [track]="track"></track-wrapper-component>
 </div>

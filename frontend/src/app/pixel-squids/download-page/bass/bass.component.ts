@@ -10,9 +10,15 @@ import { TracksStoreService } from 'src/app/store/tracks-store/tracksStoreServic
 })
 export class BassComponent {
     public tracks: ITrack[] = [];
+    public filteredTracks: ITrack[] = [];
     constructor(private tracksStoreService: TracksStoreService) { }
 
     public ngOnInit() {
         this.tracks = this.tracksStoreService.getTracksByInstrumentType(INSTRUMENT_TYPES.BASS);
+        this.filteredTracks = this.tracks;
+    }
+
+    public setTag(tag: string) {
+        this.filteredTracks = !!tag ?  this.tracks.filter(track => track.tag === tag) : this.tracks;
     }
 }

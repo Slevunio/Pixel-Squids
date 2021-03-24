@@ -43,7 +43,6 @@ export class UploadCategoryPageComponent implements OnInit {
                     instrumentType: this.instrumentType,
                     // notes: 'notes',
                 };
-                // console.log(track.soundtrack.data.length);
                 this.tracksStoreService.createTrack(track);
             })
 
