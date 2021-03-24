@@ -29,6 +29,7 @@ import { MainPageComponent } from './pixel-squids/main-page/main-page.component'
 import { StartPageComponent } from './pixel-squids/start-page/start-page.component';
 import { UploadCategoryPageComponent } from './pixel-squids/upload-page/upload-category-page/upload-category-page.component';
 import { UploadFromRecordPageComponent } from './pixel-squids/upload-page/upload-from-record-page/upload-from-record-page.component';
+import { UploadChooseTagPageComponent } from './pixel-squids/upload-page/upload-choose-tag-page/upload-choose-tag-page.component';
 import { ShoppingPageComponent } from './pixel-squids/shopping-page/shopping-page.component';
 import { ShoppingItemPageComponent } from './pixel-squids/shopping-page/shopping-item-page/shopping-item-page.component';
 
@@ -58,6 +59,7 @@ import { ShopItemsStoreService } from './store/shop-items-store/shopItemsStoreSe
     StartPageComponent,
     UploadCategoryPageComponent,
     UploadFromRecordPageComponent,
+    UploadChooseTagPageComponent,
     ShoppingPageComponent,
     ShoppingItemPageComponent,
     SearchComponent

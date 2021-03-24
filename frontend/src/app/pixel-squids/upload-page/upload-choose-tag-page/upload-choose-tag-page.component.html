@@ -1,0 +1,14 @@
+<div class="tags-wrapper">
+    <div [ngClass]="{'tag': true, 'isTagChosen': tag === chosenTag}" *ngFor="let tag of tags" tabindex="1" (click)="chooseTag(tag)">
+        {{tag}}
+    </div>
+</div>
+<div *ngIf="uploadWay === UPLOAD_FROM_RECORD" class="add-record-button" [routerLink]="tagToRouteMap[chosenTag]">
+    Przejdź dalej
+</div>
+<div *ngIf="uploadWay === UPLOAD_FROM_DISC" class="add-record-button" (click)="upload()">
+    Dodaj utwór
+</div>
+<form enctype="multipart/form-data" style="display: none;">
+    <input #fileSelect class="file-select-button" allowedFileTypes="audio" [uploader]="uploader" type="file" ng2FileSelect />
+</form>

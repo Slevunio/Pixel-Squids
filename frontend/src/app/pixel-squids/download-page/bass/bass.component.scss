@@ -1,5 +1,7 @@
 .container {
-    height: calc(80% + 32px);
+    height: calc(80% - 58px);
     overflow: scroll;
     margin-top: 32px;
+    position: relative;
+    bottom: 21%;
 }

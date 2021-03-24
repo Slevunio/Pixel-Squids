@@ -38,9 +38,10 @@ ul {
     background-color: #e75d0c;
     margin-top: 0px;
     padding-left: 50px;
-    width: calc(100% - 48px);
+    width: calc(100% - 46px);
     position: relative;
     bottom: 50px;
+    z-index: 1;
 
     li {
         height: 50px;

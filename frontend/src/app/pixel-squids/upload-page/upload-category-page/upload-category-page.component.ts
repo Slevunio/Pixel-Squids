@@ -1,9 +1,9 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { FileItem, FileUploader } from 'ng2-file-upload';
+// import { FileItem, FileUploader } from 'ng2-file-upload';
 import { INSTRUMENT_TYPES } from '../../../shared/constants/instrumentTypes';
-import { TracksStoreService } from '../../../store/tracks-store/tracksStoreService';
-import { TracksService } from '../../../services/TracksService';
+// import { TracksStoreService } from '../../../store/tracks-store/tracksStoreService';
+// import { TracksService } from '../../../services/TracksService';
 @Component({
     selector: 'upload-category-page-component',
     templateUrl: './upload-category-page.component.html',
@@ -19,42 +19,41 @@ export class UploadCategoryPageComponent implements OnInit {
     public readonly BASS = INSTRUMENT_TYPES.BASS;
 
     public uploadWay!: string;
-    public uploader: FileUploader = new FileUploader({ url: '' });
+    // public uploader: FileUploader = new FileUploader({ url: '' });
 
-    private instrumentType!: string;
-    @ViewChild('fileSelect') private fileSelect!: ElementRef;
+    // private instrumentType!: string;
+    // @ViewChild('fileSelect') private fileSelect!: ElementRef;
 
-    constructor(private route: ActivatedRoute, private tracksStoreService: TracksStoreService, private tracksService: TracksService) { }
+    constructor(private route: ActivatedRoute) { }
 
     public ngOnInit() {
         this.uploadWay = this.route.snapshot.url[1].path;
-        this.uploader.onAfterAddingFile = (fileItem: FileItem) => this.handleAddingFile(fileItem);
+        // this.uploader.onAfterAddingFile = (fileItem: FileItem) => this.handleAddingFile(fileItem);
     }
 
-    private handleAddingFile(fileItem: FileItem) {
-        fileItem._file.arrayBuffer().then(buffer => {
-            const array = new Uint8Array(buffer);
-            const blob = new Blob([array]);
-            this.tracksService.generateBase64Audio(blob).subscribe(res => {
-                const track = {
-                    name: fileItem._file.name,
-                    fileType: fileItem._file.type,
-                    soundtrack: res,
-                    instrumentType: this.instrumentType,
-                    // notes: 'notes',
-                };
-                this.tracksStoreService.createTrack(track);
-            })
+    // private handleAddingFile(fileItem: FileItem) {
+    //     fileItem._file.arrayBuffer().then(buffer => {
+    //         const array = new Uint8Array(buffer);
+    //         const blob = new Blob([array]);
+    //         this.tracksService.generateBase64Audio(blob).subscribe(res => {
+    //             const track = {
+    //                 name: fileItem._file.name,
+    //                 fileType: fileItem._file.type,
+    //                 soundtrack: res,
+    //                 instrumentType: this.instrumentType,
+    //                 // notes: 'notes',
+    //             };
+    //             this.tracksStoreService.createTrack(track);
+    //         })
 
-        })
-
-
+    //     })
 
 
-    }
 
-    public upload(instrumentType: string) {
-        this.instrumentType = instrumentType;
-        this.fileSelect.nativeElement.click();
-    }
+
+    // }
+
+    // public upload(instrumentType: string) {
+    //     this.fileSelect.nativeElement.click();
+    // }
 }

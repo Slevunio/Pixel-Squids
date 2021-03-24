@@ -1,11 +1,11 @@
 <div *ngIf="uploadWay === UPLOAD_FROM_DISC" class="guitars">
-    <a class="guitar" (click)="upload(ACOUSTIC)">
+    <a class="guitar" routerLink="/upload/fromDisc/acoustic">
         <img class="guitar-image" src ='../../../assets/acoustic.png'/>
     </a>
-    <a class="guitar" (click)="upload(ELECTRIC)">
+    <a class="guitar" routerLink="/upload/fromDisc/electric">
         <img class="guitar-image" src ='../../../assets/electric.png'/>
     </a>
-    <a class="guitar" (click)="upload(BASS)">
+    <a class="guitar" routerLink="/upload/fromDisc/bass">
         <img class="guitar-image" src ='../../../assets/bass.png'/>
     </a>
 </div>
@@ -21,6 +21,6 @@
         <img class="guitar-image" src ='../../../assets/bass.png'/>
     </a>
 </div>
-<form enctype="multipart/form-data" style="display: none;">
+<!-- <form enctype="multipart/form-data" style="display: none;">
     <input #fileSelect class="file-select-button" allowedFileTypes="audio" [uploader]="uploader" type="file" ng2FileSelect />
-</form>
+</form> -->

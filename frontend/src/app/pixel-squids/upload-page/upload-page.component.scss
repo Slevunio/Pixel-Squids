@@ -7,17 +7,24 @@
     justify-content: center;
 }
 
+.upload-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 64%;
+    height: 250px;
+}
+
 .upload-option {
-    width: 436px;
-    height: 235px;
-    border: 2px solid $main-theme-orange;
+    width: 50%;
+    height: 100%;
+    border: 2px solid #e75d0c;
     margin: 16px;
     color: white;
-    font-size: 65px;
-    padding: 64px;
-    text-align: center;
     display: flex;
     align-items: center;
+    justify-content: center;
+    font-size: 30px;
 }
 
 .upload-option:hover {

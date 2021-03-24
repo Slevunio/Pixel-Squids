@@ -12,6 +12,7 @@ import { MainPageComponent } from './pixel-squids/main-page/main-page.component'
 import { StartPageComponent } from './pixel-squids/start-page/start-page.component';
 import { UploadCategoryPageComponent } from './pixel-squids/upload-page/upload-category-page/upload-category-page.component';
 import { UploadFromRecordPageComponent } from './pixel-squids/upload-page/upload-from-record-page/upload-from-record-page.component';
+import { UploadChooseTagPageComponent } from './pixel-squids/upload-page/upload-choose-tag-page/upload-choose-tag-page.component';
 import { ShoppingItemPageComponent } from './pixel-squids/shopping-page/shopping-item-page/shopping-item-page.component';
 import { TrackComponent } from './pixel-squids/download-page/track/track.component';
 
@@ -30,7 +31,8 @@ const routes: Routes = [
   { path: 'shop', component: ShoppingPageComponent },
   { path: 'contact', component: ContactPageComponent },
   { path: 'upload/:uploadWay', component: UploadCategoryPageComponent },
-  { path: 'upload/fromRecord/:instrumentType', component: UploadFromRecordPageComponent },
+  { path: 'upload/:uploadWay/:instrumentType', component: UploadChooseTagPageComponent },
+  { path: 'upload/fromRecord/:instrumentType/:tag', component: UploadFromRecordPageComponent },
   { path: 'shop/:id', component: ShoppingItemPageComponent },
   
 ];
