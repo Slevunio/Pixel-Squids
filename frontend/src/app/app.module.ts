@@ -32,8 +32,10 @@ import { UploadFromRecordPageComponent } from './pixel-squids/upload-page/upload
 import { UploadChooseTagPageComponent } from './pixel-squids/upload-page/upload-choose-tag-page/upload-choose-tag-page.component';
 import { ShoppingPageComponent } from './pixel-squids/shopping-page/shopping-page.component';
 import { ShoppingItemPageComponent } from './pixel-squids/shopping-page/shopping-item-page/shopping-item-page.component';
+import { LearningPageComponent } from './pixel-squids/learning-page/learning-page.component';
 
-import { SearchComponent } from './shared/components/search.somponent';
+import { GuitarCordComponent } from './shared/components/guitar-cord/guitar-cord.component';
+import { SearchComponent } from './shared/components/search-component/search.somponent';
 
 import { TracksService } from './services/TracksService';
 import { RouterService } from './services/RouterService';
@@ -41,6 +43,7 @@ import { ImageService } from './services/ImageService';
 
 import { TracksStoreService } from './store/tracks-store/tracksStoreService';
 import { ShopItemsStoreService } from './store/shop-items-store/shopItemsStoreService';
+import { GuitarCordsStoreService } from './store/guitar-cords-store/guitarCordsStoreService';
 
 
 @NgModule({
@@ -62,7 +65,9 @@ import { ShopItemsStoreService } from './store/shop-items-store/shopItemsStoreSe
     UploadChooseTagPageComponent,
     ShoppingPageComponent,
     ShoppingItemPageComponent,
-    SearchComponent
+    GuitarCordComponent,
+    SearchComponent,
+    LearningPageComponent
   ],
   imports: [
     BrowserModule,
@@ -80,7 +85,7 @@ import { ShopItemsStoreService } from './store/shop-items-store/shopItemsStoreSe
     MatInputModule,
     ReactiveFormsModule
   ],
-  providers: [TracksService, RouterService, ImageService, TracksStoreService, ShopItemsStoreService],
+  providers: [TracksService, RouterService, ImageService, TracksStoreService, ShopItemsStoreService, GuitarCordsStoreService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

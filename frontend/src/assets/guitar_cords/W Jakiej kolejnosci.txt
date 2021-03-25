@@ -1,0 +1,5 @@
+grupy patrzac od najwyzszej pozycji do tej na samym dole: E  A  D  C  G  F  H
+
+
+
+chwyty w danej grupie ida zawsze w kolejnosci:  X   Xm   X7   XMaj7  Xm7

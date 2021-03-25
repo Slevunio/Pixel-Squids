@@ -1,0 +1,20 @@
+<div class="wrapper">
+    <div class="cord-name">
+        {{guitarCord.name}}
+    </div>
+    <div class="sub-cords-wrapper">
+        <div class="sub-cord" *ngFor="let subCord of guitarSubCords; let i=index;">
+            <div class="name-play">
+                <div class="subcord-name">
+                    {{subCord.guitarSubCord.name}}
+                </div>
+                <div class="play">
+                    <img [src]="subCord.playPauseImageSrc" (click)="toggle(i)"/>
+                </div>
+            </div>
+            <div class="notes">
+                <img [src]="subCord.guitarSubCord.imagePath"/>
+            </div>
+        </div>
+    </div>
+</div>

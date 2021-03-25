@@ -1,0 +1,61 @@
+@import "../../../../styles/colors.scss";
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    height: 50%;
+    justify-content: space-evenly;
+    padding: 0px 16px 0px 128px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.cord-name {
+    color: $main-theme-orange;
+    font-size: 70px;
+    width: 90%;
+}
+
+.sub-cords-wrapper {
+    width: 100%;
+    display: flex;  
+    justify-content: space-between;
+}
+
+.sub-cord {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.name-play {
+    display: flex;
+    width: 95%;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.subcord-name {
+    color: white;
+    font-size: 25px;
+}
+
+.play {
+    display: flex;
+    align-items: center;
+    margin-left: 27px;
+    img {
+        height: 20px;
+    }
+
+    img:hover {
+        cursor: pointer;
+    }
+}
+
+
+.notes {
+    img {
+        height: 115px;
+    }
+}

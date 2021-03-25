@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from "@angular/core";
 import { ITrack } from 'src/app/interfaces/ITrack';
 import { FormControl } from '@angular/forms';
-import { TRACK_TAGS } from '../constants/trackTags';
+import { TRACK_TAGS } from '../../constants/trackTags';
 // import { ITag } from '../../interfaces/ITag';
 
 @Component({
