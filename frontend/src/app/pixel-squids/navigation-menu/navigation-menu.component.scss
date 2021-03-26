@@ -2,13 +2,13 @@
 
 :host {
     width: 25%;
-    min-width: 330px;
+    min-width: 450px;
 }
 
 .container {
     background-color: rgba(0, 0, 0, 0.2);
     height: 100%;
-    min-width: 330px;
+    min-width: 450px;
     display: flex;
     align-items: center;
     width: 100%;
@@ -17,12 +17,12 @@
 .animation-container {
     background-color: rgba(0, 0, 0, 0.2);
     height: 100%;
-    min-width: 330px;
+    min-width: 450px;
     display: flex;
     align-items: center;
     width: 100%;
     position: relative;
-    animation: navbarAnimation 1s ease-out;
+    animation: navbarAnimation 2s ease-out;
 }
 
 @keyframes navbarAnimation {
@@ -35,25 +35,25 @@
 }
 
 .rounded-navbar {
-    height: 600px;
-    width: 300px;
-    min-width: 300px;
-    border: 1px solid $main-theme-orange;
+    height: 800px;
+    width: 400px;
+    min-width: 400px;
+    border: 3px solid #e75d0c;
     border-left: none;
-    border-top-right-radius: calc(300px + 2px);
-    border-bottom-right-radius: calc(300px + 2px);
+    border-top-right-radius: calc(400px + 4px);
+    border-bottom-right-radius: calc(400px + 4px);
 }
 
 .button {
-    height: 80px;
-    width: 80px;
-    border-radius: 80px;
+    height: 180px;
+    width: 180px;
+    border-radius: 180px;
     display: flex;
     align-items: center;
     justify-content: center;
     .button-icon {
-        height: 50px;
-        width: 50px;
+        height: 120px;
+        width: 120px;
     }
 }
 
@@ -68,91 +68,119 @@
 
 .download {
     position: relative;
-    top: 260px;
-    transform: rotate(0deg) translateY(-300px) rotate(0deg);
+    top: 310px;
+    transform: rotate(0deg) translateY(-375px) rotate(0deg);
 }
 
 .animation-download {
     position: relative;
-    top: 260px;
-    transform: rotate(0deg) translateY(-300px) rotate(0deg);
+    top: 310px;
+    transform: rotate(0deg) translateY(-375px) rotate(0deg);
 }
 
 .upload {
     position: relative;
-    top: 180px;
-    transform: rotate(45deg) translateY(-275px) rotate(-45deg);
+    top: 130px;
+    transform: rotate(45deg) translateY(-350px) rotate(-45deg);
 }
 
 .animation-upload {
     position: relative;
-    top: 180px;
-    transform: rotate(45deg) translateY(-275px) rotate(-45deg);
+    top: 130px;
+    transform: rotate(45deg) translateY(-350px) rotate(-45deg);
 
-    animation: uploadAnimation 1s linear;
+    animation: uploadAnimation 0.5s linear;
 }
 
 @keyframes uploadAnimation {
-    0% {transform: rotate(0deg) translateY(-300px) rotate(0deg);}
-    100% {transform: rotate(45deg) translateY(-275px) rotate(-45deg);}
+    0% {
+        transform: rotate(0deg) translateY(-375px) rotate(0deg);
+    }
+    100% {
+        transform: rotate(45deg) translateY(-350px) rotate(-45deg);
+    }
 }
 
 .learn {
     position: relative;
-    top: 100px;
-    transform: rotate(90deg) translateY(-260px) rotate(-90deg);
+    top: -50px;
+    transform: rotate(90deg) translateY(-310px) rotate(-90deg);
 }
 
 .animation-learn {
     position: relative;
-    top: 100px;
-    transform: rotate(90deg) translateY(-260px) rotate(-90deg);
-    animation: learnAnimation 2s linear;
+    top: -50px;
+    transform: rotate(90deg) translateY(-310px) rotate(-90deg);
+    animation: learnAnimation 1s linear;
 }
 
 @keyframes learnAnimation {
-    0% {transform: rotate(0deg) translateY(-300px) rotate(0deg);}
-    50% {transform: rotate(45deg) translateY(-275px) rotate(-45deg);}
-    100% {transform: rotate(90deg) translateY(-260px) rotate(-90deg);}
+    0% {
+        transform: rotate(0deg) translateY(-375px) rotate(0deg);
+    }
+    50% {
+        transform: rotate(45deg) translateY(-350px) rotate(-45deg);
+    }
+    100% {
+        transform: rotate(90deg) translateY(-310px) rotate(-90deg);
+    }
 }
 
 .shop {
     position: relative;
-    top: 20px;
-    transform: rotate(135deg) translateY(-275px) rotate(-135deg);
+    bottom: 230px;
+    transform: rotate(135deg) translateY(-320px) rotate(-135deg);
 }
 
 .animation-shop {
     position: relative;
-    top: 20px;
-    transform: rotate(135deg) translateY(-275px) rotate(-135deg);
-    animation: shopAnimation 3s linear;
+    bottom: 230px;
+    transform: rotate(135deg) translateY(-320px) rotate(-135deg);
+    animation: shopAnimation 1.5s linear;
 }
 
 @keyframes shopAnimation {
-    0% {transform: rotate(0deg) translateY(-300px) rotate(0deg);}
-    33% {transform: rotate(45deg) translateY(-275px) rotate(-45deg);}
-    66% {transform: rotate(90deg) translateY(-260px) rotate(-90deg);}
-    100% { transform: rotate(135deg) translateY(-275px) rotate(-135deg);}
+    0% {
+        transform: rotate(0deg) translateY(-375px) rotate(0deg);
+    }
+    33% {
+        transform: rotate(45deg) translateY(-350px) rotate(-45deg);
+    }
+    66% {
+        transform: rotate(90deg) translateY(-310px) rotate(-90deg);
+    }
+    100% {
+        transform: rotate(135deg) translateY(-320px) rotate(-135deg);
+    }
 }
 
 .contact {
     position: relative;
-    top: -60px;
-    transform: rotate(180deg) translateY(-300px) rotate(-180deg);
+    bottom: 410px;
+    transform: rotate(180deg) translateY(-370px) rotate(-180deg);
 }
 
 .animation-contact {
     position: relative;
-    top: -60px;
-    transform: rotate(180deg) translateY(-300px) rotate(-180deg);
-    animation: contactAnimation 4s linear;
+    bottom: 410px;
+    transform: rotate(180deg) translateY(-370px) rotate(-180deg);
+    animation: contactAnimation 2s linear;
 }
 
 @keyframes contactAnimation {
-    0% {transform: rotate(0deg) translateY(-300px) rotate(0deg);}
-    25% {transform: rotate(45deg) translateY(-275px) rotate(-45deg);}
-    50% {transform: rotate(90deg) translateY(-260px) rotate(-90deg);}
-    75% { transform: rotate(135deg) translateY(-275px) rotate(-135deg);}
-    100% { transform: rotate(180deg) translateY(-300px) rotate(-180deg);}
+    0% {
+        transform: rotate(0deg) translateY(-375px) rotate(0deg);
+    }
+    25% {
+        transform: rotate(45deg) translateY(-350px) rotate(-45deg);
+    }
+    50% {
+        transform: rotate(90deg) translateY(-310px) rotate(-90deg);
+    }
+    75% {
+        transform: rotate(135deg) translateY(-320px) rotate(-135deg);
+    }
+    100% {
+        transform: rotate(180deg) translateY(-370px) rotate(-180deg);
+    }
 }
