@@ -15,6 +15,7 @@ PIERWSZY START
 
 
 UPDATE
+
 Zeby zobaczyc u siebie najnowsza wersje aplikacji, nie musisz za kazdym razem sciagac calosci, rozpakowywac itd.
 1. https://git-scm.com/download/win sciagnij git pod architekture swojego windowsa
 2. zainstaluj (przeklikaj wszystko na next)
