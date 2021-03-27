@@ -1,18 +1,24 @@
 .wrapper {
     height: calc(80% - 25px);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    overflow-y: scroll;
+    overflow: scroll;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.notes-wrapper {
+    position: relative;
+    bottom: 50%;
+}
+
+.background {
+    height: 46%;
+    filter: blur(60px);
+    background-color: rgba(255, 255, 255, 0.2);
+    position: relative;
+    bottom: 4%;
 }
 
 .notes {
-    background-color: rgba(255, 255, 255, 0.4);
     margin-top: 192px;
     padding: 32px 64px;
-    box-shadow: 32px rgba(255, 255, 255, 0.4);
-
-    img {
-        width: 100%;
-    }
 }

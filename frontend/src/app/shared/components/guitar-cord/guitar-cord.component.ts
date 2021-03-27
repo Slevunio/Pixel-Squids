@@ -29,7 +29,7 @@ export class GuitarCordComponent implements OnInit {
     private imgSrcPlay: string = '/assets/play.png';
     private imgSrcPause: string = '/assets/pause.png';
 
-    private guitarSubCords: IGuitarSubCordWrapper[] = [];
+    public guitarSubCords: IGuitarSubCordWrapper[] = [];
 
     constructor(private guitarCordsStore: GuitarCordsStoreService) { }
     public ngOnInit() {

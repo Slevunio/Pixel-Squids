@@ -1,0 +1,34 @@
+@import '../../../styles//colors.scss';
+
+.wrapper {
+    height: calc(80% - 26px);
+    color: #e75d0c;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 128px 64px;
+    justify-content: center;
+}
+
+.wyraz {
+    font-size: 150px;
+    width: 55%;
+    text-align: end;
+}
+
+.sie {
+    font-size: 80px;
+    width: 37%;
+    text-align: end;
+}
+
+.poprzez {
+    font-size: 120px;
+    width: 80%;
+    text-align: end;
+}
+
+.muzyke {
+    text-align: center;
+    font-size: 200px;
+}
