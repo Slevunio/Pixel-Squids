@@ -12,6 +12,7 @@ export class PixelSquidsComponent implements OnInit {
 
     public wasStartPage!: boolean;
     public isStartPage!: boolean;
+    public isMainPage!: boolean;
 
     public currentHeader!: string;
 
@@ -20,6 +21,7 @@ export class PixelSquidsComponent implements OnInit {
     public ngOnInit() {
         this.routerService.wasPreviousStartPage$.subscribe(wasStartPage => {
             this.isStartPage = window.location.href.split('/')[3] === '';
+            this.isMainPage = window.location.href.split('/')[3] === 'main';
             this.wasStartPage = wasStartPage;
         });
 
