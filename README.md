@@ -11,7 +11,8 @@ PIERWSZY START
 7. W terminalu wpisz 'npm i' -> enter
 8. Poczekaj az biblioteki sie zainstaluja (jak bedziesz mial do wyboru Y/n to wciskay Y i enter)
 10. Wpisz 'npm run start'
-11. W przegladarce idz pod adres localhost:4200
+11. Poczekaj az w konsoli wyswietli sie komunikat 'Compiles successfuly'
+12. W przegladarce idz pod adres localhost:4200
 
 
 UPDATE
