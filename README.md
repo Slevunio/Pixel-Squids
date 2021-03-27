@@ -9,9 +9,9 @@ PIERWSZY START
 5. Przejdz do folderu Pixel-Squids-master -> frontend
 6. Otwrz terminal w folderze  (windows+R -> type 'cmd' -> enter -> cd 'path', gdzie path to sciezka do folderu)
 7. W terminalu wpisz 'npm i' -> enter
-8. Poczekaj az biblioteki sie zainstaluja
-9. Wpisz 'npm run start'
-10. W przegladarce idz pod adres localhost:4200
+8. Poczekaj az biblioteki sie zainstaluja (jak bedziesz mial do wyboru Y/n to wciskay Y i enter)
+10. Wpisz 'npm run start'
+11. W przegladarce idz pod adres localhost:4200
 
 
 UPDATE
