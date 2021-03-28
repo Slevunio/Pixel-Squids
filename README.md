@@ -33,3 +33,7 @@ Zeby zobaczyc u siebie najnowsza wersje aplikacji, nie musisz za kazdym razem sc
 5. W teminalu wpisz 'npm run start'
 6. Poczekaj az w konsoli wyswietli sie komunikat 'Compiles successfuly'
 7. W przegladarce idz pod adres localhost:4200
+
+
+
+MISIACZQ KOTACZQ
