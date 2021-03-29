@@ -3,5 +3,8 @@
     overflow: scroll;
     margin-top: 32px;
     position: relative;
-    bottom: 21%;
+}
+
+.container::-webkit-scrollbar {
+    display: none;
 }
