@@ -1,3 +1,4 @@
+
 body {
     height: 100vh;
     margin: 0;
@@ -22,7 +23,7 @@ body {
         .file-name {
             margin-left: 8px;
         }
-    
+
         .delete {
             height: 40px;
             width: 80px;
@@ -32,10 +33,21 @@ body {
         }
         .delete:hover {
             cursor: pointer;
-            background-color: rgba(255,255,255, 0.3);
+            background-color: rgba(255, 255, 255, 0.3);
         }
     }
 }
 .form-field {
     width: 100%;
 }
+
+@font-face {
+    font-family: "dim";
+    src: url("/assets/fonts/DIN2014-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "dim_bold";
+    src: url("/assets/fonts/DIN2014-Bold.ttf") format("truetype");
+}
+
