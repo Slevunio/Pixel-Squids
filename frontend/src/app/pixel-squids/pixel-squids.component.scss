@@ -4,7 +4,7 @@
     display: flex;
     height: 100%;
     min-height: 650px;
-    overflow: hidden;
+    overflow: scroll;
     background-image: url("../../assets/main_background.png");
     background-size: cover;
 }
@@ -110,7 +110,7 @@
 }
 
 .paddings {
-    padding: 73px 54px 0px 0px;
+    padding: 66px 49px 0px 0px;
 }
 
 .start-page {

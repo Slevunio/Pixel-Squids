@@ -10,20 +10,20 @@
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-    height: 80px;
-    padding-right: 1px;
+    height: 76px;
+    margin-bottom: 8px;
 }
 
 .track-name {
     font-size: 48px;
     height: 100%;
-    width: 675px;
+    width: 608px;
     color: white;
     border-bottom: 3px solid #e75d0c;
     overflow-x: auto;
     overflow-y: hidden;
     white-space: nowrap;
-    margin-right: 124px;
+    margin-right: 85px;
 }
 
 .track-name::-webkit-scrollbar {
@@ -32,8 +32,7 @@
 
 .actions {
     display: flex;
-    justify-content: space-between;
-    width: 25%;
+    justify-content: flex-end;
 }
 
 .button {
@@ -45,17 +44,18 @@
 }
 
 .toggle-img {
-    width: 43px;
-    height: 57px;
-    margin-right: 63px;
+    width: 39px;
+    height: 51px;
+    margin-right: 57px;
 }
 
 .download-img {
-    width: 49px;
-    margin-right: 63px;
+    width: 44px;
+    margin-right: 57px;
 }
 
 .notes-img {
     // height: 50px;
-    width: 99px;
+    width: 89px;
+    margin-right: 1px;
 }
