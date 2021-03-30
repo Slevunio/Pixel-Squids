@@ -23,7 +23,7 @@ export const PREDEFINED_TRACKS: ITrack[] = [
         instrumentType: INSTRUMENT_TYPES.ACOUSTIC,
         sountrackPath: `${baseAcousticTracksPath}/utwor_2.wav`,
         notesPath: `${baseAcousticTracksPath}/tabulatura1.png`,
-        tag: TRACK_TAGS.JAZZ
+        tag: TRACK_TAGS.BLUES
     },
     {
         id: '82fce6bc-9dcc-49d3-bee6-79c63493681c',
@@ -68,7 +68,7 @@ export const PREDEFINED_TRACKS: ITrack[] = [
         instrumentType: INSTRUMENT_TYPES.BASS,
         sountrackPath: `${baseBassTracksPath}/utwor_2.wav`,
         notesPath: `${baseBassTracksPath}/tabulatura1.png`,
-        tag: TRACK_TAGS.JAZZ
+        tag: TRACK_TAGS.BLUES
     },
     {
         id: '6b344a21-a3f9-407b-acd7-1bdc8d41b76f',
@@ -113,7 +113,7 @@ export const PREDEFINED_TRACKS: ITrack[] = [
         instrumentType: INSTRUMENT_TYPES.ELECTRIC,
         sountrackPath: `${baseElectricTracksPath}/utwor_2.wav`,
         notesPath: `${baseElectricTracksPath}/tabulatura1.png`,
-        tag: TRACK_TAGS.JAZZ
+        tag: TRACK_TAGS.BLUES
     },
     {
         id: '65a42d37-48bc-4ddc-8aa8-485cb96f92ca',

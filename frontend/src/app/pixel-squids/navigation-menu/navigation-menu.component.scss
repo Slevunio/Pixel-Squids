@@ -22,7 +22,7 @@
     align-items: center;
     width: 100%;
     position: relative;
-    animation: navbarAnimation 2s ease-out;
+    animation: navbarAnimation 1.6s ease-out;
 }
 
 @keyframes navbarAnimation {
@@ -89,7 +89,7 @@
     top: 130px;
     transform: rotate(45deg) translateY(-350px) rotate(-45deg);
 
-    animation: uploadAnimation 0.5s linear;
+    animation: uploadAnimation 0.4s linear;
 }
 
 @keyframes uploadAnimation {
@@ -111,7 +111,7 @@
     position: relative;
     top: -50px;
     transform: rotate(90deg) translateY(-310px) rotate(-90deg);
-    animation: learnAnimation 1s linear;
+    animation: learnAnimation 0.8s linear;
 }
 
 @keyframes learnAnimation {
@@ -136,7 +136,7 @@
     position: relative;
     bottom: 230px;
     transform: rotate(135deg) translateY(-320px) rotate(-135deg);
-    animation: shopAnimation 1.5s linear;
+    animation: shopAnimation 1.2s linear;
 }
 
 @keyframes shopAnimation {
@@ -164,7 +164,7 @@
     position: relative;
     bottom: 410px;
     transform: rotate(180deg) translateY(-370px) rotate(-180deg);
-    animation: contactAnimation 2s linear;
+    animation: contactAnimation 1.6s linear;
 }
 
 @keyframes contactAnimation {

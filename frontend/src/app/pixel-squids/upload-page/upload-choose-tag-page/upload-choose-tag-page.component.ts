@@ -15,7 +15,7 @@ export class UploadChooseTagPageComponent implements OnInit {
 
     public tagToRouteMap = {
         [TRACK_TAGS.ROCK] : 'rock',
-        [TRACK_TAGS.JAZZ] : 'jazz',
+        [TRACK_TAGS.BLUES] : 'blues',
         [TRACK_TAGS.METAL] : 'metal',
         [TRACK_TAGS.FUNK] : 'funk',
         [TRACK_TAGS.REGGAE] : 'reggae',

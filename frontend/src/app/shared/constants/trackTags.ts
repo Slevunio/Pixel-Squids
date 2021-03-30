@@ -1,7 +1,7 @@
 export const TRACK_TAGS = {
     ROCK: '#Rock',
     METAL: '#Metal',
-    JAZZ: '#Jazz',
+    BLUES: '#Blues',
     FUNK: '#Funk',
     REGGAE: '#Reggae'
 }
