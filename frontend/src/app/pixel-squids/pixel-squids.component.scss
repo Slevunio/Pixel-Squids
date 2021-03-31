@@ -109,10 +109,15 @@
     height: calc(100% - 66px);
 }
 
+.start-page {
+    height: 100%;
+    width: 100%;
+}
+
 .paddings {
     padding: 66px 49px 0px 0px;
 }
 
-.start-page {
+.was-start-page {
     padding: 0px;
 }

@@ -12,6 +12,6 @@ export class StartPageComponent implements AfterViewInit {
     public ngAfterViewInit() {
         setTimeout(() => {
             this.router.navigate(['main']);
-        }, 3000)
+        }, 1000)
     }
 }
