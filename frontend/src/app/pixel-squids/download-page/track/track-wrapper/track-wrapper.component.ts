@@ -16,6 +16,7 @@ export class TrackWrapperComponent implements OnInit {
     private imgSrcPlay: string = '../../../../../assets/play.png';
     private imgSrcPause: string = '../../../../../assets/pause.png';
     public imgSrc!: string;
+    public showNotes = false;
     private audio!: HTMLAudioElement;
     private isPlaying: boolean = false;
     private src: string;
@@ -23,6 +24,7 @@ export class TrackWrapperComponent implements OnInit {
     constructor(private tracksService: TracksService, private domSanitizer: DomSanitizer, private tracksStoreService: TracksStoreService) { }
 
     public ngOnInit() {
+        console.log(this.track);
         this.imgSrc = this.imgSrcPlay;
         this.tracksStoreService.getSountrack(this.track)
             .subscribe(src => {
@@ -55,7 +57,7 @@ export class TrackWrapperComponent implements OnInit {
         this.tracksService.downloadFile(blob, this.track.name!, type!);
     }
 
-    public niepamietamco() {
-        //TODO
+    public toggleNotes() {
+        this.showNotes = !this.showNotes;
     }
 }

@@ -39,13 +39,14 @@
     outline: none;
 }
 
-.button:hover {
-    cursor: pointer;
-}
 
 .toggle-img {
     height: 51px;
     margin-right: 57px;
+}
+
+.toggle-img:hover {
+    cursor: pointer;
 }
 
 .download-img {
@@ -53,8 +54,32 @@
     margin-right: 57px;
 }
 
+.download-img:hover {
+    cursor: pointer;
+}
+
 .notes-img {
     // height: 50px;
     width: 89px;
     margin-right: 1px;
+}
+
+.notes-img:hover {
+    cursor: pointer;
+}
+
+.background {
+    height: 100%;
+    filter: blur(60px);
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 100%;
+    /* top: -80px; */
+    pointer-events: none;
+}
+
+.notes-wrapper {
+    position: relative;
+    bottom: 99%;
+    // filter: blur(60px);
+    // background-color: rgba(255, 255, 255, 0.2);
 }

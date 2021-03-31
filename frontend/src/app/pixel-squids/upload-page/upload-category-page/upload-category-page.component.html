@@ -1,23 +1,23 @@
 <div *ngIf="uploadWay === UPLOAD_FROM_DISC" class="guitars">
-    <a class="guitar" routerLink="/upload/fromDisc/acoustic">
+    <a class="guitar guitar-acoustic" routerLink="/upload/fromDisc/acoustic">
         <img class="guitar-image" src ='../../../assets/acoustic.png'/>
     </a>
-    <a class="guitar" routerLink="/upload/fromDisc/electric">
+    <a class="guitar  guitar-bass" routerLink="/upload/fromDisc/electric">
         <img class="guitar-image" src ='../../../assets/electric.png'/>
     </a>
-    <a class="guitar" routerLink="/upload/fromDisc/bass">
+    <a class="guitar  guitar-electric" routerLink="/upload/fromDisc/bass">
         <img class="guitar-image" src ='../../../assets/bass.png'/>
     </a>
 </div>
 
 <div *ngIf="uploadWay === UPLOAD_FROM_RECORD" class="guitars">
-    <a class="guitar" routerLink="/upload/fromRecord/acoustic">
+    <a class="guitar guitar-acoustic" routerLink="/upload/fromRecord/acoustic">
         <img class="guitar-image" src ='../../../assets/acoustic.png'/>
     </a>
-    <a class="guitar" routerLink="/upload/fromRecord/electric">
+    <a class="guitar guitar-bass" routerLink="/upload/fromRecord/electric">
         <img class="guitar-image" src ='../../../assets/electric.png'/>
     </a>
-    <a class="guitar" routerLink="/upload/fromRecord/bass">
+    <a class="guitar guitar-electric" routerLink="/upload/fromRecord/bass">
         <img class="guitar-image" src ='../../../assets/bass.png'/>
     </a>
 </div>

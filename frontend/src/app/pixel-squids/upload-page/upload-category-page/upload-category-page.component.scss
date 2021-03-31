@@ -1,18 +1,46 @@
-:host {
-    display: flex;
-    align-items: center;
-    height: 80%;
-}
-.guitars, .record-wrapper {
-    height: 75%;
+// :host {
+//     display: flex;
+//     align-items: center;
+//     height: 80%;
+// }
+// .guitars, .record-wrapper {
+//     height: 75%;
+//     width: 100%;
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: center;
+// }
+
+// .guitar {
+//     width: 20%;
+// }
+
+// .guitar:hover {
+//     cursor: pointer;
+// }
+
+// .guitar-image {
+//     height: 629px;
+// }
+.guitars {
+    height: calc(100% - 179px);
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-end;
+    margin-top: 109px;
 }
 
-.guitar {
-    width: 20%;
+.guitar-acoustic {
+    margin-right: 131px;
+}
+
+.guitar-bass {
+    margin-right: 126px;
+}
+
+.guitar-electric {
+    margin-right: 131px;
 }
 
 .guitar:hover {

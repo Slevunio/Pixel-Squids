@@ -3,14 +3,22 @@
         {{track.name}}
     </div>
     <div class="actions">
-        <div class="button" (click)="toggle()">
-            <img class="toggle-img" [src]="imgSrc"/>
+        <div class="button">
+            <img class="toggle-img" [src]="imgSrc" (click)="toggle()" />
         </div>
-        <div class="button" (click)="download()">
-            <img class="download-img" src="../../../../../assets/download.png"/>
+        <div class="button">
+            <img class="download-img" src="../../../../../assets/download.png" (click)="download()" />
         </div>
-        <div class="button" [routerLink]="track.id">
-            <img class="notes-img" src="../../../../../assets/notes.png"/>
+        <div class="button">
+            <img class="notes-img" src="../../../../../assets/notes.png" (click)="toggleNotes()" />
         </div>
     </div>
 </div>
+<ng-container *ngIf="showNotes">
+    <div class="background"></div>
+    <div class="notes-wrapper">
+        <div class="notes">
+            <img [src]="track.notesPath" />
+        </div>
+    </div>
+</ng-container>
