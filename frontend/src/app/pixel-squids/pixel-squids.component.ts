@@ -15,6 +15,7 @@ export class PixelSquidsComponent implements OnInit {
     public isMainPage!: boolean;
 
     public currentHeader!: string;
+    public isHeaderBlurred!: boolean;
 
     constructor(private routerService: RouterService, private route: ActivatedRoute, private router: Router, private location: Location) { }
 
@@ -27,6 +28,7 @@ export class PixelSquidsComponent implements OnInit {
 
         this.routerService.currentRoute$.subscribe(currentRoute => {
             this.currentHeader = routeToHeaderMap[currentRoute as string];
+            this.isHeaderBlurred = currentRoute === '/learn';
         });
     }
 

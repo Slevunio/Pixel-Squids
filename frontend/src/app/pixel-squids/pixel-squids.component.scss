@@ -27,10 +27,18 @@
 
 .header-wrapper {
     display: flex;
-    width: 100%;
+    width: calc(100% - 49px);
     height: 70px;
     justify-content: flex-end;
+    padding-top: 66px;
+    padding-right: 49px;
 }
+
+.blurred {
+    background-color: rgba(255, 255, 255, 0.2);
+    background-clip: padding-box;
+}
+
 .header {
     height: 100%;
     width: 76%;
@@ -115,7 +123,7 @@
 }
 
 .paddings {
-    padding: 66px 49px 0px 0px;
+    // padding: 66px 49px 0px 0px;
 }
 
 .was-start-page {

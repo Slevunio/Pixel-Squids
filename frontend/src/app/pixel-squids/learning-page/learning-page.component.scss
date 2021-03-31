@@ -1,25 +1,29 @@
 .wrapper {
     height: calc(100% - 70px);
-    overflow: scroll;
+    // overflow: scroll;
     position: relative;
     background-color: rgba(255, 255, 255, 0.2);
-}
-
-.wrapper::-webkit-scrollbar {
-    display: none;
+    padding-right: 49px;
 }
 
 .cords-wrapper {
-    position: relative;
     padding-top: 20%;
     bottom: 50%;
+    overflow: scroll;
+    height: calc(100% - 200px);
+}
+
+.cords-wrapper::-webkit-scrollbar {
+    display: none;
 }
 
 .background {
-
-    height: 46%;
+    height: 34%;
     filter: blur(60px);
     background-color: rgba(255, 255, 255, 0.2);
-    position: relative;
-    bottom: 4%;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    top: -80px;
+    pointer-events: none;
 }
