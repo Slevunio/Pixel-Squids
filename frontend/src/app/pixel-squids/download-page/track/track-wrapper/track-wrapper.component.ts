@@ -1,8 +1,9 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, ViewChild, ChangeDetectorRef } from '@angular/core';
 import { ITrack } from 'src/app/interfaces/ITrack';
 import { TracksService } from '../../../../services/TracksService';
 import { DomSanitizer } from '@angular/platform-browser';
 import { TracksStoreService } from '../../../../store/tracks-store/tracksStoreService';
+const _ = require('lodash');
 
 @Component({
     selector: 'track-wrapper-component',
@@ -17,14 +18,17 @@ export class TrackWrapperComponent implements OnInit {
     private imgSrcPause: string = '../../../../../assets/pause.png';
     public imgSrc!: string;
     public showNotes = false;
+    public backgroundHeight: number = 0;
     private audio!: HTMLAudioElement;
     private isPlaying: boolean = false;
     private src: string;
 
-    constructor(private tracksService: TracksService, private domSanitizer: DomSanitizer, private tracksStoreService: TracksStoreService) { }
+    @ViewChild('image', { static: false }) public imageElement!: ElementRef;
+
+
+    constructor(private tracksService: TracksService, private domSanitizer: DomSanitizer, private tracksStoreService: TracksStoreService, private cd: ChangeDetectorRef) { }
 
     public ngOnInit() {
-        console.log(this.track);
         this.imgSrc = this.imgSrcPlay;
         this.tracksStoreService.getSountrack(this.track)
             .subscribe(src => {
@@ -59,5 +63,11 @@ export class TrackWrapperComponent implements OnInit {
 
     public toggleNotes() {
         this.showNotes = !this.showNotes;
+        if (this.showNotes) {
+            this.cd.detectChanges();
+            _.delay(() => {
+                this.backgroundHeight = this.imageElement.nativeElement.offsetHeight;
+            }, 10);
+        }
     }
 }
