@@ -10,15 +10,13 @@
             <img class="download-img" src="../../../../../assets/download.png" (click)="download()" />
         </div>
         <div class="button">
-            <img class="notes-img" src="../../../../../assets/notes.png" (click)="toggleNotes()"/>
+            <img class="notes-img" src="../../../../../assets/notes.png" (click)="toggleNotes()" />
         </div>
     </div>
 </div>
-<ng-container *ngIf="showNotes">
+<div class="notes-wrapper" *ngIf="showNotes">
     <div class="background" [style.height.px]="backgroundHeight"></div>
-    <div class="notes-wrapper" [style.bottom.px]="backgroundHeight">
-        <div class="notes"  #image>
-            <img [src]="track.notesPath"/>
-        </div>
+    <div class="notes" #image>
+        <img [src]="track.notesPath" />
     </div>
-</ng-container>
+</div>

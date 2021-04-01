@@ -1,6 +1,5 @@
 @import "../../../../../styles//colors.scss";
 
-
 .track-wrapper {
     display: flex;
     flex-direction: row;
@@ -24,7 +23,7 @@
 
 .track-name::-webkit-scrollbar {
     display: none;
-  }
+}
 
 .actions {
     display: flex;
@@ -34,7 +33,6 @@
 .button {
     outline: none;
 }
-
 
 .toggle-img {
     height: 51px;
@@ -56,6 +54,10 @@
 
 .notes {
     position: absolute;
+    top: 0px;
+    img {
+        width: 900px;
+    }
 }
 
 .notes-img {
@@ -74,7 +76,10 @@
     pointer-events: none;
 }
 
+
 .notes-wrapper {
     position: relative;
     padding-left: 50px;
+    margin-top: 25px;
+    height: calc(100% - 73px);
 }
