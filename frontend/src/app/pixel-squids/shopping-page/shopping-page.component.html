@@ -1,9 +1,7 @@
 <div class="shop-wrapper">
     <ng-container *ngFor="let item of shopItems, let i=index">
         <div [ngClass]="{'left-side-item': i % 2 === 0, 'right-side-item': i % 2 !== 0}">
-            <div class="shop-item">
-                <img class="shop-item-image" [src]="item.imagesPaths[0]" [routerLink]="item.id"/>
-            </div>
+            <img class="shop-item-image" [src]="item.imagesPaths[0]" [routerLink]="item.id" />
         </div>
     </ng-container>
 </div>

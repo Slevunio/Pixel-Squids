@@ -1,34 +1,38 @@
 @import '../../../../styles/colors.scss';
 
 .shop-item-wrapper {
-    height: calc(80% - 26px);
+    height: calc(100% - 136px);
     display: flex;
 }
 
 .image {
-    height: 100%;
+    height: calc(100% - 195px);
     width: 50%;
+    margin-top: 195px;
     img {
-        max-width: 100%;
+        max-width: calc(100% - 50px);
+        margin-left: 50px;
     }
 }
 
 .data {
     display: flex;
     flex-direction: column;
-    height: 100%;
-    width: 50%;
+    height: calc(100% - 117px);
+    width: calc(50% - 71px);
+    margin-top: 117px;
+    margin-left: 71px;
 }
 
 .images {
-    height: 20%;
+    height: 91px;
     display: flex;
     border-bottom: 1px solid $main-theme-orange;
 }
 
 .small-image{
     img {
-        height: 80px;
+        width: 68px;
     }
 
     img:hover {
@@ -37,19 +41,19 @@
 }
 
 .description-wrapper {
-    height: 80%;
+    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
     color: white;
+    justify-content: flex-end;
 }
 
 .name {
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
     font-size: 56px;
-    height: 33%;
+    font-family: "dim_bold";
+    margin-bottom: 89px;
 }
 
 .description {
@@ -60,9 +64,8 @@
 }
 
 .prize {
-    display: flex;
-    justify-content: flex-start;
-    font-size: 23px;
-    height: 25%;
+    font-size: 40px;
+    font-family: 'dim_bold';
+    margin-bottom: 322px;
 }
 

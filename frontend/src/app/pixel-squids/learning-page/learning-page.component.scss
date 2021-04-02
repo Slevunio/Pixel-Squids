@@ -1,5 +1,5 @@
 .wrapper {
-    height: calc(100% - 70px);
+    height: calc(100% - 137px);
     // overflow: scroll;
     position: relative;
     background-color: rgba(255, 255, 255, 0.2);
@@ -7,10 +7,10 @@
 }
 
 .cords-wrapper {
-    padding-top: 20%;
-    bottom: 50%;
+    padding-top: 150px;
+    /* bottom: 50%; */
     overflow: scroll;
-    height: calc(100% - 200px);
+    height: calc(100% - 150px);
 }
 
 .cords-wrapper::-webkit-scrollbar {

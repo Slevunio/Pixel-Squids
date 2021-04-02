@@ -9,6 +9,10 @@
     background-size: cover;
 }
 
+.wrapper::-webkit-scrollbar {
+    display: none;
+}
+
 .start-page {
     background-image: url("../../assets/main_background.png");
     background-size: cover;
@@ -112,7 +116,9 @@
 }
 
 .main-container {
-    height: calc(100% - 66px);
+    // height: calc(100% - 66px);
+    // width: calc(100% - 450px);
+    height: 100%;
     width: calc(100% - 450px);
 }
 
