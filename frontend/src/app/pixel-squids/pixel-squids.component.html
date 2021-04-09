@@ -1,7 +1,7 @@
 <div [ngClass]="{'wrapper': true,'was-start-page': wasStartPage}">
     <navigation-menu-component *ngIf="!isStartPage"></navigation-menu-component>
     <div [ngClass]="{'main-container': !isStartPage, 'start-page': isStartPage, 'paddings': !isStartPage}">
-        <div [ngClass]="{'animate-header': wasStartPage, 'header-wrapper': !wasStartPage, 'blurred': isHeaderBlurred}" *ngIf="!isStartPage && !isMainPage">
+        <div [ngClass]="{'animate-header': wasStartPage, 'header-wrapper': !wasStartPage}" *ngIf="!isStartPage && !isMainPage">
             <div class="header">
                 <div [ngClass]="!!currentHeader ? 'header-name' : 'empty-header'">{{currentHeader}}</div>
                 <div class="header-navigation">

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
-import { ActivatedRoute, Router } from '@angular/router';
 import { RouterService } from '../services/RouterService';
 import { routeToHeaderMap } from '../shared/constants/routeToHeaderMap';
 @Component({
@@ -15,9 +14,8 @@ export class PixelSquidsComponent implements OnInit {
     public isMainPage!: boolean;
 
     public currentHeader!: string;
-    public isHeaderBlurred!: boolean;
 
-    constructor(private routerService: RouterService, private route: ActivatedRoute, private router: Router, private location: Location) { }
+    constructor(private routerService: RouterService, private location: Location) { }
 
     public ngOnInit() {
         this.routerService.wasPreviousStartPage$.subscribe(wasStartPage => {
@@ -28,7 +26,6 @@ export class PixelSquidsComponent implements OnInit {
 
         this.routerService.currentRoute$.subscribe(currentRoute => {
             this.currentHeader = routeToHeaderMap[currentRoute as string];
-            this.isHeaderBlurred = currentRoute === '/learn';
         });
     }
 
