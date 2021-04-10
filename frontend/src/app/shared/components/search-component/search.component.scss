@@ -38,14 +38,12 @@ ul {
     margin-top: 0px;
     padding-left: 70px;
     width: calc(100% - 69px);
-    position: relative;
-    bottom: 46px;
     z-index: 1;
 
     li {
         height: 50px;
         font-size: 40px;
-        font-family: 'dim_bold';
+        font-family: "dim_bold";
     }
 
     li:hover {
@@ -74,6 +72,18 @@ ul {
     align-items: center;
     font-size: 36px;
     justify-content: space-between;
-    font-family: 'dim_bold';
-    // padding: 16px 0px;
+    font-family: "dim_bold";
 }
+
+
+.list-wrapper {
+    transition:transform 0.3s ease-out;
+    height:500px;
+    z-index: 1;
+    position: relative;
+    bottom: 46px;
+    transform-origin:top;
+  }
+  .list-wrapper.collapsed {
+    transform:scaleY(0);
+  }

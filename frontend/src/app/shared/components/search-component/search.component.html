@@ -1,14 +1,18 @@
 <div class="search-wrapper">
     <div class="tags-wrapper">
-        <div [ngClass]="{'tag': true, 'isTagChosen': tag === chosenTag}" *ngFor="let tag of tags" tabindex="1" (click)="chooseTag(tag)">
+        <div [ngClass]="{'tag': true, 'isTagChosen': tag === chosenTag}" *ngFor="let tag of tags" tabindex="1"
+            (click)="chooseTag(tag)">
             {{tag}}
         </div>
     </div>
-    <img class="icon" src="/assets/magnifier.png"/>
-    <input class="text-input" type="text" [formControl]="searchInput" (focus)="onFocusEvent($event)" (focusout)="onFocusEvent($event)">
-    <ul *ngIf="isFocused">
-        <li *ngFor="let track of filteredTracks" [routerLink]="track.id" class="list-item">
-            {{track.name}}
-        </li>
-    </ul>
+    <img class="icon" src="/assets/magnifier.png" />
+    <input class="text-input" type="text" [formControl]="searchInput" (focus)="onFocusEvent($event)"
+        (focusout)="onFocusEvent($event)">
+    <div class="list-wrapper" [class.collapsed]="!isFocused">
+        <ul>
+            <li *ngFor="let track of filteredTracks" [routerLink]="track.id" class="list-item">
+                {{track.name}}
+            </li>
+        </ul>
+    </div>
 </div>
