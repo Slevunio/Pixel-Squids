@@ -14,9 +14,6 @@
         </div>
     </div>
 </div>
-<div class="notes-wrapper" *ngIf="showNotes">
-    <div class="background" [style.height.px]="backgroundHeight"></div>
-    <div class="notes" #image>
-        <img [src]="track.notesPath" />
-    </div>
+<div class="notes" [class.collapsed]="!showNotes">
+    <img [src]="track.notesPath" />
 </div>

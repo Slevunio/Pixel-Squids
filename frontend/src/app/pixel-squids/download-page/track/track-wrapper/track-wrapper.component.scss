@@ -53,12 +53,24 @@
 }
 
 .notes {
-    position: absolute;
-    top: 0px;
+    max-height: 1000px;
+    transition: max-height 0.5s ease-in;
     img {
-        width: 900px;
+        max-height: 1000px;
+        transition: max-height 0.5s ease-in;
     }
 }
+
+.notes.collapsed {
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+    overflow: hidden;
+    img {
+        max-height: 0;
+        transition: max-height 0.2s ease-out;
+    }
+}
+
 
 .notes-img {
     width: 89px;
@@ -70,15 +82,6 @@
 }
 
 .background {
-    filter: blur(30px);
-    background-color: rgba(255, 255, 255, 0.2);
     width: 100%;
     pointer-events: none;
-}
-
-
-.notes-wrapper {
-    position: relative;
-    padding-left: 50px;
-    margin-top: 25px;
 }

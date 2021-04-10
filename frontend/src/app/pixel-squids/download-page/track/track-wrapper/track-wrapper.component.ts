@@ -63,11 +63,5 @@ export class TrackWrapperComponent implements OnInit {
 
     public toggleNotes() {
         this.showNotes = !this.showNotes;
-        if (this.showNotes) {
-            this.cd.detectChanges();
-            _.delay(() => {
-                this.backgroundHeight = this.imageElement.nativeElement.offsetHeight;
-            }, 10);
-        }
     }
 }
