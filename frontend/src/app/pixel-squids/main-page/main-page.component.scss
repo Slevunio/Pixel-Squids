@@ -3,7 +3,7 @@
 .wrapper {
     height: calc(80% - 26px);
     color: #e75d0c;
-    width: 100%;
+    width: calc(100% - 128px);
     display: flex;
     flex-direction: column;
     padding: 107px 64px;
