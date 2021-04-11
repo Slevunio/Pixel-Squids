@@ -5,7 +5,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 70%;
+    height: calc(100% - 136px);
 }
 
 .record-wrapper {
@@ -23,9 +23,10 @@
     align-items: center;
     justify-content: center;
     height: 80px;
-    width:200px;
+    width:225px;
     background-color: $main-theme-orange;
-    font-size: 55px;
+    font-size: 56px;
+    font-family: "dim_bold";
     color: black;
 }
 
@@ -45,9 +46,10 @@
 
 .add-record-button {
     height: 80px;
-    width: 300px;
+    width: 325px;
     color: black;
-    font-size: 40px;
+    font-size: 56px;
+    font-family: "dim_bold";
     background-color: $main-theme-orange;
     display: flex;
     align-items: center;

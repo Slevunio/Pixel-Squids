@@ -1,27 +1,3 @@
-// :host {
-//     display: flex;
-//     align-items: center;
-//     height: 80%;
-// }
-// .guitars, .record-wrapper {
-//     height: 75%;
-//     width: 100%;
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: center;
-// }
-
-// .guitar {
-//     width: 20%;
-// }
-
-// .guitar:hover {
-//     cursor: pointer;
-// }
-
-// .guitar-image {
-//     height: 629px;
-// }
 .guitars {
     height: calc(100% - 245px);
     width: 100%;
