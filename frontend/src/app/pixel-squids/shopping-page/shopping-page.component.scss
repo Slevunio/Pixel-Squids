@@ -20,17 +20,16 @@
 .left-side-item {
     justify-content: flex-start;
     margin-left: 146px;
-    // width: calc(100% - 100px);
 }
 
 .right-side-item {
     justify-content: flex-end;
     margin-right: 151px;
-    // width: calc(100% - 136px);
 }
 
 .shop-item-image {
     width: 470px;
+    outline: none;
 }
 
 .shop-item-image:hover {

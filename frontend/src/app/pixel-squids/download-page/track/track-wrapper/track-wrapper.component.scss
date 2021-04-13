@@ -3,10 +3,11 @@
 .track-wrapper {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     height: 76px;
     margin-bottom: 8px;
+    margin-left: 23%;
 }
 
 .track-name {
@@ -55,20 +56,13 @@
 .notes {
     max-height: 1000px;
     transition: max-height 0.5s ease-in;
-    img {
-        max-height: 1000px;
-        transition: max-height 0.5s ease-in;
-    }
+    overflow: hidden;
 }
 
 .notes.collapsed {
     max-height: 0;
     transition: max-height 0.2s ease-out;
     overflow: hidden;
-    img {
-        max-height: 0;
-        transition: max-height 0.2s ease-out;
-    }
 }
 
 

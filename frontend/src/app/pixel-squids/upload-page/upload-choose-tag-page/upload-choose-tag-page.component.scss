@@ -32,6 +32,11 @@
     background-color: rgba(255, 255, 255, 0.3);
 }
 
+.tag:active {
+    border: 1px solid white;
+    padding: 7px;
+}
+
 .isTagChosen {
     background-color: rgba(255, 255, 255, 0.3);
 }

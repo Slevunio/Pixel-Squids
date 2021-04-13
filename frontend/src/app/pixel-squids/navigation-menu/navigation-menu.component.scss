@@ -62,6 +62,13 @@
     cursor: pointer;
 }
 
+.button:active {
+    border: 1px solid white;
+    height: 178px;
+    width: 178px;
+    border-radius: 178px;
+}
+
 .button-active {
     background-color: rgba(255, 255, 255, 0.3);
 }
