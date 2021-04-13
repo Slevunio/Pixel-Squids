@@ -57,6 +57,9 @@
     max-height: 1000px;
     transition: max-height 0.5s ease-in;
     overflow: hidden;
+    img {
+        padding: 120px 0px;
+    }
 }
 
 .notes.collapsed {
