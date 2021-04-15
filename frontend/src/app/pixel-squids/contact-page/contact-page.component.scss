@@ -14,7 +14,7 @@
 }
 
 .contact {
-    width: 40%;
+    width: 50%;
     height: 150px;
     display: flex;
     align-items: center;
@@ -22,12 +22,17 @@
     font-size: 62px;
 }
 
-.email-contact {
+.email-contact-img {
     position: relative;
     right: 37px;
 }
 .contact-icon {
     height: 100px;
+    width: 120px;
+
+    img {
+        height: 100px;
+    }
 }
 
 .facebook {
