@@ -5,6 +5,7 @@ import { FileItem, FileUploader } from 'ng2-file-upload';
 import { ActivatedRoute } from '@angular/router';
 import { TracksStoreService } from 'src/app/store/tracks-store/tracksStoreService';
 import { TracksService } from 'src/app/services/TracksService';
+const _ = require("lodash");
 
 @Component({
     selector: 'upload-choose-tag-page-component',
@@ -14,11 +15,11 @@ import { TracksService } from 'src/app/services/TracksService';
 export class UploadChooseTagPageComponent implements OnInit {
 
     public tagToRouteMap = {
-        [TRACK_TAGS.ROCK] : 'rock',
-        [TRACK_TAGS.BLUES] : 'blues',
-        [TRACK_TAGS.METAL] : 'metal',
-        [TRACK_TAGS.FUNK] : 'funk',
-        [TRACK_TAGS.REGGAE] : 'reggae',
+        [TRACK_TAGS.ROCK]: 'rock',
+        [TRACK_TAGS.BLUES]: 'blues',
+        [TRACK_TAGS.METAL]: 'metal',
+        [TRACK_TAGS.FUNK]: 'funk',
+        [TRACK_TAGS.REGGAE]: 'reggae',
     }
 
     public readonly UPLOAD_FROM_DISC = 'fromDisc';
@@ -31,11 +32,12 @@ export class UploadChooseTagPageComponent implements OnInit {
     public tags: string[];
     public chosenTag: string;
     public uploadWay: string;
+    public message: string;
     private instrumentType: string;
     public uploader: FileUploader = new FileUploader({ url: '' });
     @ViewChild('fileSelect') private fileSelect!: ElementRef;
-    
-    constructor(private route: ActivatedRoute,  private tracksStoreService: TracksStoreService, private tracksService: TracksService) { }
+
+    constructor(private route: ActivatedRoute, private tracksStoreService: TracksStoreService, private tracksService: TracksService) { }
 
     public ngOnInit() {
         this.uploadWay = this.route.snapshot.url[1].path;
@@ -60,15 +62,27 @@ export class UploadChooseTagPageComponent implements OnInit {
                     soundtrack: res,
                     instrumentType: this.instrumentType,
                     tag: this.chosenTag
-                    // notes: 'notes',
                 };
-                this.tracksStoreService.createTrack(track);
-            })
+                const response = this.tracksStoreService.createTrack(track);
+                if (response instanceof Error) {
+                    this.showMessage('Nie udało się dodać utworu');
+                } else {
+                    this.showMessage('Dodano do moderacji');
+                }
+            });
 
         });
     }
 
     public upload() {
         this.fileSelect.nativeElement.click();
+    }
+
+    public showMessage(message: string) {
+        this.message = message;
+
+        _.delay(() => {
+            this.message = null;
+        }, 2000);
     }
 }

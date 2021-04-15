@@ -1,3 +1,6 @@
+<div class="alert-wrapper">
+    <div class="alert" *ngIf="!!message">{{message}}</div>
+</div>
 <div class="tags-wrapper">
     <div [ngClass]="{'tag': true, 'isTagChosen': tag === chosenTag}" *ngFor="let tag of tags" tabindex="1" (click)="chooseTag(tag)">
         {{tag}}

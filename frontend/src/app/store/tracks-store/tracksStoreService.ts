@@ -47,7 +47,11 @@ export class TracksStoreService {
     public createTrack(track: ITrack): ITrack {
         track.id = uuid();
         const trackToString = JSON.stringify(track);
-        localStorage.setItem(track.id, trackToString);
+        try {
+            localStorage.setItem(track.id, trackToString);
+        } catch(error) {
+            return error;
+        }
         this.tracks.push(track);
         return track;
     }
