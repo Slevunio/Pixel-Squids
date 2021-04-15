@@ -1,7 +1,21 @@
 <div class="shop-wrapper">
-    <ng-container *ngFor="let item of shopItems, let i=index">
+    <!-- <ng-container *ngFor="let item of shopItems, let i=index">
         <div [ngClass]="{'left-side-item': i % 2 === 0, 'right-side-item': i % 2 !== 0}">
             <img class="shop-item-image" [src]="item.imagesPaths[0]" [routerLink]="item.id" />
+        </div>
+    </ng-container> -->
+    <ng-container>
+        <div class="left-side-item">
+            <img class="shop-item-image" [src]="shopItems[0].imagesPaths[0]" [routerLink]="shopItems[0].id" />
+        </div>
+        <div class="right-side-item">
+            <img class="shop-item-image bag" [src]="shopItems[1].imagesPaths[0]" [routerLink]="shopItems[1].id" />
+        </div>
+        <div class="left-side-item">
+            <img class="shop-item-image pick" [src]="shopItems[2].imagesPaths[0]" [routerLink]="shopItems[2].id" />
+        </div>
+        <div class="right-side-item">
+            <img class="shop-item-image pick-guard" [src]="shopItems[3].imagesPaths[0]" [routerLink]="shopItems[3].id" />
         </div>
     </ng-container>
 </div>

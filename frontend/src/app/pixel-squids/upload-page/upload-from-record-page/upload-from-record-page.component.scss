@@ -30,6 +30,12 @@
     color: black;
 }
 
+.record:active {
+    border: 1px solid white;
+    height: 78px;
+    width: 223px;
+}
+
 .play, .delete {
     display: flex;
     align-items: center;
@@ -60,4 +66,10 @@
 
 .add-record-button:hover {
     cursor: pointer;
+}
+
+.add-record-button:active {
+    border: 1px solid white;
+    height: 78px;
+    width: 323px;
 }

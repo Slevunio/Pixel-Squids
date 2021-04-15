@@ -25,6 +25,7 @@
 .tag {
     padding: 8px;
     outline: none;
+    border-radius: 30px;
 }
 
 .tag:hover {
@@ -58,4 +59,10 @@
 
 .add-record-button:hover {
     cursor: pointer;
+}
+
+.add-record-button:active {
+    border: 1px solid white;
+    height: 98px;
+    width: 348px;
 }

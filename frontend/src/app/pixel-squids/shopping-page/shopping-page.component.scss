@@ -1,5 +1,6 @@
 .shop-wrapper {
     height: calc(100% - 236px);
+    min-height: 764px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -34,4 +35,18 @@
 
 .shop-item-image:hover {
     cursor: pointer;
+}
+
+.bag {
+    width: 600px;
+    position: relative;
+    left: 50px;
+}
+
+.pick {
+    width: 450px;
+}
+
+.pick-guard {
+    width: 480px;
 }
