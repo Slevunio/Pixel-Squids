@@ -1,6 +1,23 @@
-<div class="wrapper">
-    <div class="wyraz">WYRAŹ</div>
-    <div class="sie">SIĘ</div>
-    <div class="poprzez">POPRZEZ</div>
-    <div class="muzyke">MUZYKĘ</div>
-</div>
+<mat-carousel
+timings="250ms ease-in"
+[autoplay]="true"
+interval="3500"
+color="accent"
+maxWidth="auto"
+[loop]="true"
+[hideArrows]="true"
+[hideIndicators]="true"
+[useKeyboard]="true"
+[useMouseWheel]="false"
+orientation="ltr"
+proportion="75"
+[maintainAspectRatio]="true"
+>
+<mat-carousel-slide
+  #matCarouselSlide
+  *ngFor="let slide of slides; let i = index"
+  [image]="slide.path"
+  overlayColor="#00000040"
+  [hideOverlay]="false"
+></mat-carousel-slide>
+</mat-carousel>

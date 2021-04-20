@@ -41,6 +41,10 @@ body {
     width: 100%;
 }
 
+.carousel-slide {
+    background-size: 100% 100% !important;
+}
+
 @font-face {
     font-family: "dim";
     src: url("/assets/fonts/DIN2014-Regular.ttf") format("truetype");

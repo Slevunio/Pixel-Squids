@@ -45,6 +45,8 @@ import { TracksStoreService } from './store/tracks-store/tracksStoreService';
 import { ShopItemsStoreService } from './store/shop-items-store/shopItemsStoreService';
 import { GuitarCordsStoreService } from './store/guitar-cords-store/guitarCordsStoreService';
 
+import { MatCarouselModule } from '@ngmodule/material-carousel';
+
 
 @NgModule({
   declarations: [
@@ -83,7 +85,8 @@ import { GuitarCordsStoreService } from './store/guitar-cords-store/guitarCordsS
     MatDialogModule,
     MatFormFieldModule,
     MatInputModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatCarouselModule
   ],
   providers: [TracksService, RouterService, ImageService, TracksStoreService, ShopItemsStoreService, GuitarCordsStoreService],
   bootstrap: [AppComponent]
