@@ -9,11 +9,11 @@
     background-size: cover;
 }
 
-.wrapper::-webkit-scrollbar {
-    display: none;
-}
-
-.start-page {
+.was-start-page-wrapper {
+    display: flex;
+    height: 100%;
+    min-height: 650px;
+    overflow: scroll;
     background-image: url("../../assets/main_background.png");
     background-size: cover;
     animation-name: backgroundAnimation;
@@ -29,6 +29,10 @@
     }
 }
 
+.wrapper::-webkit-scrollbar {
+    display: none;
+}
+
 .header-wrapper {
     display: flex;
     width: calc(100% - 49px);
@@ -37,7 +41,6 @@
     padding-top: 66px;
     padding-right: 49px;
 }
-
 
 .header {
     height: 100%;
@@ -74,7 +77,7 @@
 }
 
 .empty-header {
-    width: 50%; 
+    width: 50%;
 }
 
 .header-navigation {

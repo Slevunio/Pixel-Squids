@@ -1,5 +1,21 @@
-@import '../../../styles//colors.scss';
+@import "../../../styles//colors.scss";
 
 .carousel-slide {
     background-size: 100% 100% !important;
+}
+
+.main-was-start-page {
+    height: 100%;
+    width: 100%;
+    animation-name: mainBackgroundAnimation;
+    animation-duration: 3s;
+}
+
+@keyframes mainBackgroundAnimation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
