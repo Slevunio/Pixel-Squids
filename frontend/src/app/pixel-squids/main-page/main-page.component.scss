@@ -1,14 +1,24 @@
 @import "../../../styles//colors.scss";
 
-.carousel-slide {
-    background-size: 100% 100% !important;
-}
-
-.main-was-start-page {
+// .carousel-slide {
+//     background-size: 100% 100% !important;
+// }
+:host {
+    display: flex;
     height: 100%;
     width: 100%;
-    animation-name: mainBackgroundAnimation;
-    animation-duration: 3s;
+    justify-content: center;
+    align-items: center;
+}
+.main {
+    height: 60%;
+    width: 75%;
+}
+.main-was-start-page {
+    height: 60%;
+    width: 75%;
+    // animation-name: mainBackgroundAnimation;
+    // animation-duration: 3s;
 }
 
 @keyframes mainBackgroundAnimation {

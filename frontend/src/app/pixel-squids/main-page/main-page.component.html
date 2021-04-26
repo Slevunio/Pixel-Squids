@@ -1,7 +1,7 @@
-<div [ngClass]="{'main-was-start-page': wasStartPage}">
+<div [ngClass]="{'main-was-start-page': wasStartPage, 'main': !wasStartPage}">
   <mat-carousel timings="1000ms ease-in" [autoplay]="true" [interval]="3500" color="accent" maxWidth="auto"
-    [loop]="true" [hideArrows]="true" [hideIndicators]="true" [useKeyboard]="true" [useMouseWheel]="false"
-    orientation="ltr" [proportion]="75" [maintainAspectRatio]="true">
+    [loop]="true" [hideArrows]="true" [hideIndicators]="false" [useKeyboard]="true" [useMouseWheel]="false" [proportion]="70"
+    orientation="ltr">
     <mat-carousel-slide #matCarouselSlide *ngFor="let slide of slides; let i = index" [image]="slide.path"
       overlayColor="#00000040" [hideOverlay]="false"></mat-carousel-slide>
   </mat-carousel>

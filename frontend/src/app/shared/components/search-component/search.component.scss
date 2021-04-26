@@ -5,21 +5,16 @@
     justify-content: flex-start;
     position: relative;
     bottom: 58px;
-    /* left: 25%; */
-    width: calc(75% - 50px);
-    /* padding: 0px 50px; */
+    width: 600px;
     padding-left: 25%;
     padding-right: 50px;
 }
 
 .search-wrapper {
     height: 140px;
-    width: 608px;
+    width: 600px;
     display: flex;
     flex-direction: column;
-    // position: relative;
-    // bottom: 58px;
-    // left: 315px;
 }
 
 .text-input {

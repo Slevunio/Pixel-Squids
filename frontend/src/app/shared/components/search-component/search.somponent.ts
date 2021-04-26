@@ -13,6 +13,7 @@ export class SearchComponent implements OnInit {
 
     @Input() public tracks: ITrack[];
     @Output() public tag = new EventEmitter<string>();
+    @Output() public searchValue = new EventEmitter<string>();
 
     public searchInput = new FormControl('');
     public filteredTracks: ITrack[];
@@ -25,6 +26,7 @@ export class SearchComponent implements OnInit {
         this.tags = Object.values(TRACK_TAGS).map(value => value);
         this.filteredTracks = this.tracks;
         this.searchInput.valueChanges.subscribe(val => {
+            this.searchValue.emit(val);
             this.filteredTracks = this.tracks.filter(track => track.name.startsWith(val) && (!!this.chosenTag ? track.tag === this.chosenTag : true));
         });
     }
