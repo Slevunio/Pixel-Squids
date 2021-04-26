@@ -42,9 +42,7 @@
 .header {
     height: 100%;
     width: 87%;
-    // padding-right: 16px;
     display: flex;
-    // align-items: center;
     justify-content: flex-end;
 }
 
@@ -80,7 +78,6 @@
 }
 
 .header-navigation {
-    // width: 50%;
     display: flex;
     justify-content: flex-end;
 
@@ -100,7 +97,6 @@
     .logo {
         height: 70px;
         width: 100px;
-        // padding-right: 16px;
     }
 
     .logo:hover {
@@ -113,8 +109,6 @@
 }
 
 .main-container {
-    // height: calc(100% - 66px);
-    // width: calc(100% - 450px);
     height: 100%;
     width: calc(100% - 450px);
 }
@@ -122,10 +116,6 @@
 .start-page {
     height: 100%;
     width: 100%;
-}
-
-.paddings {
-    // padding: 66px 49px 0px 0px;
 }
 
 .was-start-page {
