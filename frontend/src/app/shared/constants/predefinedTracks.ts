@@ -97,48 +97,176 @@ export const PREDEFINED_TRACKS: ITrack[] = [
         notesPath: `${baseBassTracksPath}/tabulatura1.png`,
         tag: TRACK_TAGS.ROCK
     },
+
+
+
+
+/** ELEKTRYK BLUES */
+
     {
         id: '0b152d83-72eb-4d48-b19e-09d795b389c7',
-        name: 'utwor_1.wav',
+        name: 'utwor_1',
         soundtrack: null,
         instrumentType: INSTRUMENT_TYPES.ELECTRIC,
-        sountrackPath: `${baseElectricTracksPath}/utwor_1.wav`,
+        sountrackPath: `${baseElectricTracksPath}/blues/1_elektrykblues1.wav`,
         notesPath: `${baseElectricTracksPath}/tabulatura1.png`,
-        tag: TRACK_TAGS.FUNK
+        tag: TRACK_TAGS.BLUES
     },
     {
         id: '025b65d1-b6d6-4828-9bbb-fe2de93b971b',
-        name: 'utwor_2.wav',
+        name: 'utwor_2',
         soundtrack: null,
         instrumentType: INSTRUMENT_TYPES.ELECTRIC,
-        sountrackPath: `${baseElectricTracksPath}/utwor_2.wav`,
+        sountrackPath: `${baseElectricTracksPath}/blues/1_elektrykblues2.wav`,
         notesPath: `${baseElectricTracksPath}/tabulatura1.png`,
         tag: TRACK_TAGS.BLUES
     },
     {
         id: '65a42d37-48bc-4ddc-8aa8-485cb96f92ca',
-        name: 'utwor_3.wav',
+        name: 'utwor_3',
         soundtrack: null,
         instrumentType: INSTRUMENT_TYPES.ELECTRIC,
-        sountrackPath: `${baseElectricTracksPath}/utwor_3.wav`,
+        sountrackPath: `${baseElectricTracksPath}/blues/1_elektrykblues3.wav`,
+        notesPath: `${baseElectricTracksPath}/tabulatura1.png`,
+        tag: TRACK_TAGS.BLUES
+    },
+    {
+        id: 'f0d2abe2-6d3b-4f16-8138-0045f05d9d69',
+        name: 'utwor_4',
+        soundtrack: null,
+        instrumentType: INSTRUMENT_TYPES.ELECTRIC,
+        sountrackPath: `${baseElectricTracksPath}/blues/1_elektrykblues4.wav`,
+        notesPath: `${baseElectricTracksPath}/tabulatura1.png`,
+        tag: TRACK_TAGS.BLUES
+    },
+    {
+        id: '4bbc2efe-9976-4781-b95b-d024c76be35a',
+        name: 'utwor_5',
+        soundtrack: null,
+        instrumentType: INSTRUMENT_TYPES.ELECTRIC,
+        sountrackPath: `${baseElectricTracksPath}/blues/1_elektrykblues5.wav`,
+        notesPath: `${baseElectricTracksPath}/tabulatura1.png`,
+        tag: TRACK_TAGS.BLUES
+    },
+    {
+        id: 'f18b011d-7577-40b1-86be-73c3f33f891b',
+        name: 'utwor_6',
+        soundtrack: null,
+        instrumentType: INSTRUMENT_TYPES.ELECTRIC,
+        sountrackPath: `${baseElectricTracksPath}/blues/1_elektrykblues6.wav`,
+        notesPath: `${baseElectricTracksPath}/tabulatura1.png`,
+        tag: TRACK_TAGS.BLUES
+    },
+
+    /** ELEKTRYK METAL */
+    {
+        id: '1f35e5fe-9e6c-4e2e-9099-cd98ffaa6ea9',
+        name: 'utwor_7',
+        soundtrack: null,
+        instrumentType: INSTRUMENT_TYPES.ELECTRIC,
+        sountrackPath: `${baseElectricTracksPath}/metal/1wav_elektrykmetal1.wav`,
         notesPath: `${baseElectricTracksPath}/tabulatura1.png`,
         tag: TRACK_TAGS.METAL
     },
     {
-        id: 'f0d2abe2-6d3b-4f16-8138-0045f05d9d69',
-        name: 'utwor_4.wav',
+        id: 'a94341a4-af68-4260-be53-b1a61a6ea89c',
+        name: 'utwor_8',
         soundtrack: null,
         instrumentType: INSTRUMENT_TYPES.ELECTRIC,
-        sountrackPath: `${baseElectricTracksPath}/utwor_4.wav`,
+        sountrackPath: `${baseElectricTracksPath}/metal/1wav_elektrykmetal2.wav`,
         notesPath: `${baseElectricTracksPath}/tabulatura1.png`,
-        tag: TRACK_TAGS.REGGAE
+        tag: TRACK_TAGS.METAL
     },
     {
-        id: '4bbc2efe-9976-4781-b95b-d024c76be35a',
-        name: 'utwor_5.wav',
+        id: '660252f0-1be2-48e5-9568-742139d133d6',
+        name: 'utwor_9',
         soundtrack: null,
         instrumentType: INSTRUMENT_TYPES.ELECTRIC,
-        sountrackPath: `${baseElectricTracksPath}/utwor_5.wav`,
+        sountrackPath: `${baseElectricTracksPath}/metal/1wav_elektrykmetal3.wav`,
+        notesPath: `${baseElectricTracksPath}/tabulatura1.png`,
+        tag: TRACK_TAGS.METAL
+    },
+    {
+        id: 'b684af48-0ae1-4d7a-b92f-5765d74d579f',
+        name: 'utwor_10',
+        soundtrack: null,
+        instrumentType: INSTRUMENT_TYPES.ELECTRIC,
+        sountrackPath: `${baseElectricTracksPath}/metal/1wav_elektrykmetal4.wav`,
+        notesPath: `${baseElectricTracksPath}/tabulatura1.png`,
+        tag: TRACK_TAGS.METAL
+    },
+    {
+        id: '1a0ca7f0-812a-4fd0-ba4b-3db928b1a82e',
+        name: 'utwor_11',
+        soundtrack: null,
+        instrumentType: INSTRUMENT_TYPES.ELECTRIC,
+        sountrackPath: `${baseElectricTracksPath}/metal/1wav_elektrykmetal5.wav`,
+        notesPath: `${baseElectricTracksPath}/tabulatura1.png`,
+        tag: TRACK_TAGS.METAL
+    },
+    {
+        id: '73aab73a-cd14-461d-8d35-f8445cc08b56',
+        name: 'utwor_12',
+        soundtrack: null,
+        instrumentType: INSTRUMENT_TYPES.ELECTRIC,
+        sountrackPath: `${baseElectricTracksPath}/metal/1wav_elektrykmetal6.wav`,
+        notesPath: `${baseElectricTracksPath}/tabulatura1.png`,
+        tag: TRACK_TAGS.METAL
+    },
+
+    /** ELEKTRYK ROCK */
+
+    {
+        id: 'c91362ee-7037-4179-955b-103820c8dbd5',
+        name: 'utwor_13',
+        soundtrack: null,
+        instrumentType: INSTRUMENT_TYPES.ELECTRIC,
+        sountrackPath: `${baseElectricTracksPath}/rock/1_elektrykrock1.wav`,
+        notesPath: `${baseElectricTracksPath}/tabulatura1.png`,
+        tag: TRACK_TAGS.ROCK
+    },
+    {
+        id: 'd77ce203-19f0-411a-a186-64797b0845a4',
+        name: 'utwor_14',
+        soundtrack: null,
+        instrumentType: INSTRUMENT_TYPES.ELECTRIC,
+        sountrackPath: `${baseElectricTracksPath}/rock/1_elektrykrock2.wav`,
+        notesPath: `${baseElectricTracksPath}/tabulatura1.png`,
+        tag: TRACK_TAGS.ROCK
+    },
+    {
+        id: '39c0e96b-96f5-486e-9c9d-722141c32e3d',
+        name: 'utwor_15',
+        soundtrack: null,
+        instrumentType: INSTRUMENT_TYPES.ELECTRIC,
+        sountrackPath: `${baseElectricTracksPath}/rock/1_elektrykrock3.wav`,
+        notesPath: `${baseElectricTracksPath}/tabulatura1.png`,
+        tag: TRACK_TAGS.ROCK
+    },
+    {
+        id: '6be3edbc-a985-450b-b648-39377fa837d1',
+        name: 'utwor_16',
+        soundtrack: null,
+        instrumentType: INSTRUMENT_TYPES.ELECTRIC,
+        sountrackPath: `${baseElectricTracksPath}/rock/1_elektrykrock4.wav`,
+        notesPath: `${baseElectricTracksPath}/tabulatura1.png`,
+        tag: TRACK_TAGS.ROCK
+    },
+    {
+        id: 'b0635281-e1bd-4713-bc7d-6b1015c2f1f1',
+        name: 'utwor_17',
+        soundtrack: null,
+        instrumentType: INSTRUMENT_TYPES.ELECTRIC,
+        sountrackPath: `${baseElectricTracksPath}/rock/1_elektrykrock5.wav`,
+        notesPath: `${baseElectricTracksPath}/tabulatura1.png`,
+        tag: TRACK_TAGS.ROCK
+    },
+    {
+        id: 'b0635281-e1bd-4713-bc7d-6b1015c2f1f1',
+        name: 'utwor_18',
+        soundtrack: null,
+        instrumentType: INSTRUMENT_TYPES.ELECTRIC,
+        sountrackPath: `${baseElectricTracksPath}/rock/1_elektrykrock6.wav`,
         notesPath: `${baseElectricTracksPath}/tabulatura1.png`,
         tag: TRACK_TAGS.ROCK
     }

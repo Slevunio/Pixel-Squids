@@ -3,7 +3,7 @@
 .wrapper {
     display: flex;
     height: 100%;
-    min-height: 650px;
+    min-height: 570px;
     overflow: scroll;
     background-image: url("../../assets/main_background.png");
     background-size: cover;
@@ -12,7 +12,7 @@
 .was-start-page-wrapper {
     display: flex;
     height: 100%;
-    min-height: 650px;
+    min-height: 570px;
     overflow: scroll;
     background-image: url("../../assets/main_background.png");
     background-size: cover;
@@ -44,7 +44,7 @@
 
 .header {
     height: 100%;
-    width: 87%;
+    width: 75%;
     display: flex;
     justify-content: flex-end;
 }
@@ -113,7 +113,8 @@
 
 .main-container {
     height: 100%;
-    width: calc(100% - 450px);
+    // width: calc(100% - 450px);
+    width: 85%;
 }
 
 .start-page {

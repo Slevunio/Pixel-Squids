@@ -1,10 +1,11 @@
 .container {
-    height: calc(100% - 308px);
+    height: calc(100% - 358px);
     overflow: scroll;
     margin-top: 32px;
     position: relative;
     padding-right: 50px;
-    padding-left: 50px
+    padding-left: 50px;
+    padding-bottom: 50px;
 }
 
 .container::-webkit-scrollbar {

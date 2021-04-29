@@ -1,14 +1,14 @@
 @import "../../../styles/colors.scss";
 
 :host {
-    width: 25%;
-    min-width: 450px;
+    width: 15%;
+    min-width: 290px;
 }
 
 .container {
     height: 100%;
-    min-width: 450px;
-    min-height: 1000px;
+    min-width: 370px;
+    // min-height: 1000px;
     display: flex;
     align-items: center;
     width: 100%;
@@ -16,8 +16,8 @@
 
 .animation-container {
     height: 100%;
-    min-width: 450px;
-    min-height: 1000px;
+    min-width: 370px;
+    // min-height: 1000px;
     display: flex;
     align-items: center;
     width: 100%;
@@ -35,25 +35,26 @@
 }
 
 .rounded-navbar {
-    height: 800px;
-    width: 400px;
-    min-width: 400px;
+    height: 570px;
+    width: 285px;
+    min-width: 285px;
+    min-height: 570px;
     border: 3px solid #e75d0c;
     border-left: none;
-    border-top-right-radius: calc(400px + 4px);
-    border-bottom-right-radius: calc(400px + 4px);
+    border-top-right-radius: calc(285px + 4px);
+    border-bottom-right-radius: calc(285px + 4px);
 }
 
 .button {
-    height: 180px;
-    width: 180px;
-    border-radius: 180px;
+    height: 160px;
+    width: 160px;
+    border-radius: 160px;
     display: flex;
     align-items: center;
     justify-content: center;
     .button-icon {
-        height: 120px;
-        width: 120px;
+        height: 100px;
+        // width: 120px;
     }
 }
 
@@ -64,9 +65,9 @@
 
 .button:active {
     border: 1px solid white;
-    height: 178px;
-    width: 178px;
-    border-radius: 178px;
+    height: 158px;
+    width: 158px;
+    border-radius: 158px;
 }
 
 .button-active {
@@ -87,14 +88,14 @@
 
 .upload {
     position: relative;
-    top: 130px;
-    transform: rotate(45deg) translateY(-350px) rotate(-45deg);
+    top: 10px;
+    transform: rotate(45deg) translateY(-212px) rotate(-45deg);
 }
 
 .animation-upload {
     position: relative;
-    top: 130px;
-    transform: rotate(45deg) translateY(-350px) rotate(-45deg);
+    top: 10px;
+    transform: rotate(45deg) translateY(-212px) rotate(-45deg);
 
     animation: uploadAnimation 0.4s linear;
 }
@@ -104,20 +105,20 @@
         transform: rotate(0deg) translateY(-375px) rotate(0deg);
     }
     100% {
-        transform: rotate(45deg) translateY(-350px) rotate(-45deg);
+        transform: rotate(45deg) translateY(-212px) rotate(-45deg);
     }
 }
 
 .learn {
     position: relative;
-    top: -50px;
-    transform: rotate(90deg) translateY(-310px) rotate(-90deg);
+    top: -115px;
+    transform: rotate(90deg) translateY(-210px) rotate(-90deg);
 }
 
 .animation-learn {
     position: relative;
-    top: -50px;
-    transform: rotate(90deg) translateY(-310px) rotate(-90deg);
+    top: -115px;
+    transform: rotate(90deg) translateY(-210px) rotate(-90deg);
     animation: learnAnimation 0.8s linear;
 }
 
@@ -126,23 +127,23 @@
         transform: rotate(0deg) translateY(-375px) rotate(0deg);
     }
     50% {
-        transform: rotate(45deg) translateY(-350px) rotate(-45deg);
+        transform: rotate(45deg) translateY(-212px) rotate(-45deg);
     }
     100% {
-        transform: rotate(90deg) translateY(-310px) rotate(-90deg);
+        transform: rotate(90deg) translateY(-210px) rotate(-90deg);
     }
 }
 
 .shop {
     position: relative;
-    bottom: 230px;
-    transform: rotate(135deg) translateY(-320px) rotate(-135deg);
+    bottom: 235px;
+    transform: rotate(135deg) translateY(-185px) rotate(-135deg);
 }
 
 .animation-shop {
     position: relative;
-    bottom: 230px;
-    transform: rotate(135deg) translateY(-320px) rotate(-135deg);
+    bottom: 235px;
+    transform: rotate(135deg) translateY(-185px) rotate(-135deg);
     animation: shopAnimation 1.2s linear;
 }
 
@@ -151,26 +152,26 @@
         transform: rotate(0deg) translateY(-375px) rotate(0deg);
     }
     33% {
-        transform: rotate(45deg) translateY(-350px) rotate(-45deg);
+        transform: rotate(45deg) translateY(-212px) rotate(-45deg);
     }
     66% {
-        transform: rotate(90deg) translateY(-310px) rotate(-90deg);
+        transform: rotate(90deg) translateY(-210px) rotate(-90deg);
     }
     100% {
-        transform: rotate(135deg) translateY(-320px) rotate(-135deg);
+        transform: rotate(135deg) translateY(-185px) rotate(-135deg);
     }
 }
 
 .contact {
     position: relative;
     bottom: 410px;
-    transform: rotate(180deg) translateY(-370px) rotate(-180deg);
+    transform: rotate(180deg) translateY(-245px) rotate(-180deg);
 }
 
 .animation-contact {
     position: relative;
     bottom: 410px;
-    transform: rotate(180deg) translateY(-370px) rotate(-180deg);
+    transform: rotate(180deg) translateY(-245px) rotate(-180deg);
     animation: contactAnimation 1.6s linear;
 }
 
@@ -179,15 +180,15 @@
         transform: rotate(0deg) translateY(-375px) rotate(0deg);
     }
     25% {
-        transform: rotate(45deg) translateY(-350px) rotate(-45deg);
+        transform: rotate(45deg) translateY(-212px) rotate(-45deg);
     }
     50% {
-        transform: rotate(90deg) translateY(-310px) rotate(-90deg);
+        transform: rotate(90deg) translateY(-210px) rotate(-90deg);
     }
     75% {
-        transform: rotate(135deg) translateY(-320px) rotate(-135deg);
+        transform: rotate(135deg) translateY(-185px) rotate(-135deg);
     }
     100% {
-        transform: rotate(180deg) translateY(-370px) rotate(-180deg);
+        transform: rotate(180deg) translateY(-245px) rotate(-180deg);
     }
 }
