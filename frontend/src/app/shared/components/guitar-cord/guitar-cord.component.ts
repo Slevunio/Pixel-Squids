@@ -29,6 +29,9 @@ export class GuitarCordComponent implements OnInit {
     private imgSrcPlay: string = '/assets/play.png';
     private imgSrcPause: string = '/assets/pause.png';
 
+    public firstRowFakeArray = new Array(3);
+    public secondRowFakeArray = new Array(2);
+
     public guitarSubCords: IGuitarSubCordWrapper[] = [];
 
     constructor(private guitarCordsStore: GuitarCordsStoreService) { }
