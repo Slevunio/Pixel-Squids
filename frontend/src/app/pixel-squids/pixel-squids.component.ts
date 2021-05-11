@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { Location } from '@angular/common';
 import { RouterService } from '../services/RouterService';
 import { routeToHeaderMap } from '../shared/constants/routeToHeaderMap';
+import { combineLatest } from 'rxjs';
+import { Router } from '@angular/router';
 @Component({
     selector: 'pixel-squids-component',
     templateUrl: './pixel-squids.component.html',
@@ -9,19 +11,28 @@ import { routeToHeaderMap } from '../shared/constants/routeToHeaderMap';
 })
 export class PixelSquidsComponent implements OnInit {
 
+    private readonly MAIN_BACKGROUND_IMAGE = '../../assets/main_background.png';
     public wasStartPage!: boolean;
     public isStartPage!: boolean;
     public isMainPage!: boolean;
 
     public currentHeader!: string;
+    private currentRoute: string;
 
-    constructor(private routerService: RouterService, private location: Location) { }
+    @ViewChild('wrapper', { static: false }) public wrapper: ElementRef;
+
+    constructor(private routerService: RouterService, private location: Location, private renderer: Renderer2, private router: Router) { }
 
     public ngOnInit() {
         this.routerService.wasPreviousStartPage$.subscribe(wasStartPage => {
             this.isStartPage = window.location.href.split('/')[3] === '';
             this.isMainPage = window.location.href.split('/')[3] === 'main';
             this.wasStartPage = wasStartPage;
+            this.currentRoute = this.router.url;
+            if(!!this.wrapper) {
+                this.renderer.setStyle(this.wrapper.nativeElement, 'background-color', this.getCurrentBackgroundColor(this.currentRoute as string));
+                this.renderer.setStyle(this.wrapper.nativeElement, 'background-image', `url(${this.getCurrentBackgroundImage(this.currentRoute as string)})`);
+            }
         });
 
         this.routerService.currentRoute$.subscribe(currentRoute => {
@@ -29,8 +40,31 @@ export class PixelSquidsComponent implements OnInit {
         });
     }
 
+    public ngAfterViewInit() {
+        this.renderer.setStyle(this.wrapper.nativeElement, 'background-color', this.getCurrentBackgroundColor(this.currentRoute as string));
+        this.renderer.setStyle(this.wrapper.nativeElement, 'background-image', `url(${this.getCurrentBackgroundImage(this.currentRoute as string)})`);
+    }
+
     public navigateBack() {
         this.location.back();
     }
 
+    private getCurrentBackgroundColor(currentRoute: string) {
+        console.log(currentRoute);
+        switch (currentRoute) {
+            case '/learn':
+                return 'black';
+            default:
+                return '';
+        }
+    }
+
+    private getCurrentBackgroundImage(currentRoute: string) {
+        switch (currentRoute) {
+            case '/learn':
+                return '';
+            default:
+                return this.MAIN_BACKGROUND_IMAGE;
+        }
+    }
 }
