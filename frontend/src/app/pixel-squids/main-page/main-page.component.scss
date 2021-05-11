@@ -1,31 +1,197 @@
-@import "../../../styles//colors.scss";
+@import "../../../styles/colors.scss";
 
-// .carousel-slide {
-//     background-size: 100% 100% !important;
-// }
-:host {
-    display: flex;
+.main {
     height: 100%;
     width: 100%;
-    justify-content: center;
-    align-items: center;
-}
-.main {
-    height: 60%;
-    width: 75%;
-}
-.main-was-start-page {
-    height: 60%;
-    width: 75%;
-    // animation-name: mainBackgroundAnimation;
-    // animation-duration: 3s;
+    overflow: visible;
 }
 
-@keyframes mainBackgroundAnimation {
-    from {
-        opacity: 0;
+.first-orange-div {
+    width: 1000px;
+    height: 290px;
+    background-color: #e75d0c;
+    margin-top: 380px;
+    margin-left: 140px;
+    span {
+        font-family: "dim_bold";
+        font-size: 75px;
+        position: relative;
+        bottom: 25px;
+        left: 100px;
+        color: white;
+        line-height: 65px;
     }
-    to {
-        opacity: 1;
+}
+
+.second-orange-div {
+    width: 1200px;
+    height: 120px;
+    background-color: $main-theme-orange;
+    margin-left: 140px;
+    margin-top: 50px;
+    span {
+        font-family: "dim_bold";
+        font-size: 75px;
+        position: relative;
+        bottom: 18px;
+        left: 125px;
+        color: white;
+        line-height: 65px;
+    }
+}
+
+.jak-to-dziala-wrapper1,
+.jak-to-dziala-wrapper2 {
+    width: calc(100% + 298px);
+    background-color: black;
+    position: relative;
+    right: 298px;
+    margin-top: 281px;
+}
+
+.jak-to-dziala {
+    height: 300px;
+    span {
+        position: relative;
+        bottom: 94px;
+        left: 70px;
+        -webkit-text-stroke: 4px $main-theme-orange;
+        font-family: "dim_bold";
+        color: rgba(0, 0, 0, 0);
+        font-size: 142px;
+    }
+
+    img {
+        height: 1000px;
+        position: absolute;
+        right: 60px;
+        bottom: 755px;
+    }
+}
+
+.menu-download-wrapper {
+    display: flex;
+}
+
+.menu {
+    display: flex;
+    margin-left: 70px;
+    img {
+        height: 140px;
+    }
+    span {
+        font-size: 40px;
+        color: white;
+        margin-left: 94px;
+        line-height: 60px;
+    }
+}
+
+.download {
+    margin-left: 100px;
+    display: flex;
+    margin-top: 128px;
+    img {
+        height: 140px;
+    }
+    span {
+        font-size: 40px;
+        color: white;
+        margin-left: 94px;
+        line-height: 60px;
+    }
+}
+
+.upload-wrapper {
+    width: 100%;
+    padding-bottom: 128px;
+}
+
+.upload {
+    width: 100%;
+    margin-left: 100px;
+    display: flex;
+    justify-content: center;
+    margin-top: 128px;
+    img {
+        height: 140px;
+    }
+    span {
+        font-size: 40px;
+        color: white;
+        margin-left: 94px;
+        line-height: 60px;
+    }
+}
+
+.jak-to-dziala-wrapper2 {
+    background-color: $main-theme-orange;
+    margin-top: 0px;
+}
+
+.akustyczna-wrapper {
+    height: 130px;
+    img {
+        height: 550px;
+        position: relative;
+        bottom: 327px;
+        left: 60px;
+    }
+}
+
+.learn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    left: 500px;
+
+    img {
+        height: 140px;
+    }
+    span {
+        font-size: 40px;
+        color: white;
+        margin-left: 94px;
+        line-height: 60px;
+    }
+}
+
+.shop {
+    width: 100%;
+    display: flex;
+    margin-top: 150px;
+    margin-left: 70px;
+
+    img {
+        height: 140px;
+    }
+    span {
+        font-size: 40px;
+        color: white;
+        margin-left: 94px;
+        line-height: 60px;
+    }
+}
+
+.contact {
+    width: 100%;
+    display: flex;
+    margin-top: 150px;
+    margin-left: 900px;
+    padding-bottom: 128px;
+
+    img {
+        height: 140px;
+    }
+    span {
+        font-size: 40px;
+        color: white;
+        margin-left: 94px;
+        line-height: 60px;
+    }
+
+    .bottom-img {
+        
     }
 }

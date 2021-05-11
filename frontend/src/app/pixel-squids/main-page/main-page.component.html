@@ -1,8 +1,69 @@
-<div [ngClass]="{'main-was-start-page': wasStartPage, 'main': !wasStartPage}">
-  <mat-carousel timings="1000ms ease-in" [autoplay]="true" [interval]="3500" color="accent" maxWidth="auto"
-    [loop]="true" [hideArrows]="true" [hideIndicators]="false" [useKeyboard]="true" [useMouseWheel]="false" [proportion]="55"
-    orientation="ltr">
-    <mat-carousel-slide #matCarouselSlide *ngFor="let slide of slides; let i = index" [image]="slide.path"
-      overlayColor="#00000040" [hideOverlay]="false"></mat-carousel-slide>
-  </mat-carousel>
+<div class="main">
+  <div class="first-orange-div">
+    <span>DOPIERO ZACZYNASZ SWOJĄ
+      PRZYGODĘ Z GITARĄ?
+      SZUKASZ INSPIRACJI?</span>
+  </div>
+  <div class="second-orange-div">
+    <span>JEŻELI TAK, TO DOBRZE TRAFIŁEŚ!</span>
+  </div>
+  <div class="jak-to-dziala-wrapper1">
+    <div class="jak-to-dziala">
+      <span>JAK TO DZIAŁA?</span>
+      <img src="../../../assets/main-page/elektryczna.png" />
+    </div>
+    <div class="menu-download-wrapper">
+      <div class="menu">
+        <img src="../../../assets/main-page/pixel squid.png" />
+        <span>NAJEDŹ KURSOREM NA LOGO,<br>
+          ŻEBY ROZWINĄĆ MENU</span>
+      </div>
+      <div class="download">
+        <img src="../../../assets/main-page/download (1).png" />
+        <span>
+          WYSZUKAJ UTWÓR, PRZESLUCHAJ<br>
+          GO, NASTĘPNIE POBIERZ I UCZ SIĘ<br>
+          GRANIA Z POMOCĄ TABULATURY<br>
+          DANEGO UTWORU
+        </span>
+      </div>
+    </div>
+    <div class="upload-wrapper">
+      <div class="upload">
+        <img src="../../../assets/main-page/upload (1).png" />
+        <span>
+          UDOSTĘPNIAJ SWOJE RIFFY, DZIEL<br>
+          SIĘ Z INNYMI SWOIMI POMYSŁAMI
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="jak-to-dziala-wrapper2">
+    <div class="akustyczna-wrapper">
+      <img src="../../../assets/main-page/akustyczna.png" />
+    </div>
+    <div class="learn">
+      <img src="../../../assets/main-page/ksiazki.png" />
+      <span>
+        UCZ SIĘ CHWYTÓW GITAROWYCH,<br>
+        ODTWÓRZ NAGRANIE I SPRAWDŹ,<br>
+        CZY ROBISZ TO DOBRZE
+      </span>
+    </div>
+    <div class="shop">
+      <img src="../../../assets/main-page/sklep.png" />
+      <span>
+        TUTAJ ZNAJDZIESZ GADŻETY<br>
+        ZWIĄZANE Z MARKĄ
+      </span>
+    </div>
+    <div class="contact">
+      <img src="../../../assets/main-page/kontakt (2).png" />
+      <span>
+        MASZ PYTANIA ALBO SUGESTIE?<br>
+        PISZ DO NAS
+      </span>
+    </div>
+  </div>
+  <img class="bottom-img" src="../../../assets/main-page/basowa.png"/>
 </div>
