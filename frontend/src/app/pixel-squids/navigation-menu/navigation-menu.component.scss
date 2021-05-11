@@ -3,6 +3,7 @@
 :host {
     width: 15%;
     min-width: 290px;
+    position: relative;
 }
 
 .container {
@@ -191,4 +192,20 @@
     100% {
         transform: rotate(180deg) translateY(-245px) rotate(-180deg);
     }
+}
+
+.logo {
+    height: 70px;
+    width: 100px;
+    position: relative;
+    bottom: 550px;
+    left: 50px;
+}
+
+.logo:hover {
+    cursor: pointer;
+}
+
+.logo:focus {
+    outline: 0;
 }
