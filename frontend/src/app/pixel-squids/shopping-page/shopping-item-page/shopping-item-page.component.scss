@@ -68,11 +68,25 @@
     margin-bottom: 5%;
 }
 
+.prize_and_button {
+    display: flex;
+    justify-content: space-between;
+}
+
 .prize {
     font-size: 40px;
     font-family: 'dim_bold';
     display: flex;
     justify-content: flex-start;
     align-items: center;
+}
+
+.button {
+    font-size: 25px;
+    font-family: 'dim_bold';
+    padding-right: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 

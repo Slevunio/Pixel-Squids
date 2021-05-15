@@ -15,8 +15,9 @@
             <div *ngIf="shopItem.description.length > 0" class="description">
                 <div class="description_piece" *ngFor="let piece of shopItem.description"> {{piece}} <br></div>
             </div>
-            <div class="prize">
-                Cena: {{shopItem.prize}} zł
+            <div class="prize_and_button">
+                <div class="prize">Cena: {{shopItem.prize}} zł</div>
+                <div class="button">Dodaj do koszyka</div>
             </div>
         </div>
     </div>
