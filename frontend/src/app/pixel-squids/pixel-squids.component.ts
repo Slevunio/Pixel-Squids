@@ -18,6 +18,7 @@ export class PixelSquidsComponent implements OnInit {
 
     public currentHeader!: string;
     private currentRoute: string;
+    
 
     @ViewChild('wrapper', { static: false }) public wrapper: ElementRef;
 
@@ -29,7 +30,7 @@ export class PixelSquidsComponent implements OnInit {
             this.isMainPage = window.location.href.split('/')[3] === 'main';
             this.wasStartPage = wasStartPage;
             this.currentRoute = this.router.url;
-            if(!!this.wrapper) {
+            if (!!this.wrapper) {
                 this.renderer.setStyle(this.wrapper.nativeElement, 'background-color', this.getCurrentBackgroundColor(this.currentRoute as string));
                 this.renderer.setStyle(this.wrapper.nativeElement, 'background-image', `url(${this.getCurrentBackgroundImage(this.currentRoute as string)})`);
             }
@@ -50,10 +51,15 @@ export class PixelSquidsComponent implements OnInit {
     }
 
     private getCurrentBackgroundColor(currentRoute: string) {
-        console.log(currentRoute);
         switch (currentRoute) {
             case '/learn':
                 return 'black';
+            case '/download/acoustic':
+                return 'white';
+            case '/download/bass':
+                return 'white';
+            case '/download/electric':
+                return 'white';
             default:
                 return '';
         }
@@ -62,6 +68,12 @@ export class PixelSquidsComponent implements OnInit {
     private getCurrentBackgroundImage(currentRoute: string) {
         switch (currentRoute) {
             case '/learn':
+                return '';
+            case '/download/acoustic':
+                return '';
+            case '/download/bass':
+                return '';
+            case '/download/electric':
                 return '';
             default:
                 return this.MAIN_BACKGROUND_IMAGE;

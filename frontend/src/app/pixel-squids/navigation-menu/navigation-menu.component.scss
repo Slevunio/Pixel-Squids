@@ -194,11 +194,15 @@
     }
 }
 
+.logo-wrapper {
+    height: 0px;
+}
+
 .logo {
     height: 70px;
     width: 100px;
-    position: absolute;
-    bottom: 520px;
+    position: relative;
+    bottom: 540px;
     left: 50px;
 }
 
