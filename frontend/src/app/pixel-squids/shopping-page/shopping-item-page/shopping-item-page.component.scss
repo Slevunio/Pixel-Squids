@@ -83,10 +83,31 @@
 
 .button {
     font-size: 25px;
-    font-family: 'dim_bold';
-    padding-right: 75px;
+    font-family: "dim_bold";
+    margin-right: 75px;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 250px;
+    height: 64px;
+
+    img {
+        width: 250px;
+        height: 64px;
+    }
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.button:active {
+    border: 1px solid white;
+    height: 62px;
+    width: 248px;
+     img {
+        width: 248px;
+        height: 62px;
+     }
 }
 
