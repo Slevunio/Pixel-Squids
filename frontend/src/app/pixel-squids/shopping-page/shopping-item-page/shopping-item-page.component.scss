@@ -41,12 +41,12 @@
 }
 
 .description-wrapper {
-    height: calc(100% - 130px);
+    height: calc(65% - 130px);
     width: 100%;
     display: flex;
     flex-direction: column;
     color: white;
-    justify-content: flex-start;
+    justify-content: space-between;
     padding-top: 130px;
 }
 
@@ -54,24 +54,23 @@
     display: flex;
     font-size: 56px;
     font-family: "dim_bold";
-    // height: 33%;
     align-items: center;
     margin-bottom: 5%;
 }
 
 .description {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    font-size: 23px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-family: 'dim_demibold';
+    font-size: 40px;
     margin-bottom: 5%;
-    // height: 25%;
 }
 
 .prize {
     font-size: 40px;
     font-family: 'dim_bold';
-    // height: 33%;
     display: flex;
     justify-content: flex-start;
     align-items: center;

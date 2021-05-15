@@ -13,7 +13,7 @@
                 {{shopItem.name}}
             </div>
             <div *ngIf="shopItem.description.length > 0" class="description">
-                {{shopItem.description}}
+                <div class="description_piece" *ngFor="let piece of shopItem.description"> {{piece}} <br></div>
             </div>
             <div class="prize">
                 Cena: {{shopItem.prize}} zł
