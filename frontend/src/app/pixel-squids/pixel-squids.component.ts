@@ -18,7 +18,7 @@ export class PixelSquidsComponent implements OnInit {
 
     public currentHeader!: string;
     private currentRoute: string;
-    
+
 
     @ViewChild('wrapper', { static: false }) public wrapper: ElementRef;
 
@@ -51,6 +51,8 @@ export class PixelSquidsComponent implements OnInit {
     }
 
     private getCurrentBackgroundColor(currentRoute: string) {
+        currentRoute = currentRoute.split('/')[2] === 'fromRecord' && currentRoute.split('/').length > 4 ? currentRoute.split('/')[2] : currentRoute;
+
         switch (currentRoute) {
             case '/learn':
                 return 'black';
@@ -60,12 +62,16 @@ export class PixelSquidsComponent implements OnInit {
                 return 'white';
             case '/download/electric':
                 return 'white';
+            case 'fromRecord':
+                return 'white';
             default:
                 return '';
         }
     }
 
     private getCurrentBackgroundImage(currentRoute: string) {
+        currentRoute = currentRoute.split('/')[2] === 'fromRecord' && currentRoute.split('/').length > 4 ? currentRoute.split('/')[2] : currentRoute;
+
         switch (currentRoute) {
             case '/learn':
                 return '';
@@ -74,6 +80,8 @@ export class PixelSquidsComponent implements OnInit {
             case '/download/bass':
                 return '';
             case '/download/electric':
+                return '';
+            case 'fromRecord':
                 return '';
             default:
                 return this.MAIN_BACKGROUND_IMAGE;
