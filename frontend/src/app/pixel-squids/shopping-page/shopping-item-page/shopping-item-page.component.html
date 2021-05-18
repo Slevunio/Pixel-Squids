@@ -13,7 +13,7 @@
                 {{shopItem.name}}
             </div>
             <div *ngIf="shopItem.description.length > 0" class="description">
-                <div class="description_piece" *ngFor="let piece of shopItem.description"> {{piece}} <br></div>
+                <div class="description-piece" *ngFor="let piece of shopItem.description"> <img src="../../../../assets/punktor do tekstu.png" /> {{piece}} <br></div>
             </div>
             <div class="prize_and_button">
                 <div class="prize">Cena: {{shopItem.prize}} zł</div>

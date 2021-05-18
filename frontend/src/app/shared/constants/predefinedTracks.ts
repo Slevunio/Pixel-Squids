@@ -457,7 +457,7 @@ export const PREDEFINED_TRACKS: ITrack[] = [
         name: 'utwor_49',
         soundtrack: null,
         instrumentType: INSTRUMENT_TYPES.BASS,
-        sountrackPath: `${baseBassTracksPath}/funk/1_bassfunk1.wav`,
+        sountrackPath: `${baseBassTracksPath}/funk/1wav_bassfunk1.wav`,
         notesPath: ``,
         tag: TRACK_TAGS.FUNK
     },
@@ -466,7 +466,7 @@ export const PREDEFINED_TRACKS: ITrack[] = [
         name: 'utwor_50',
         soundtrack: null,
         instrumentType: INSTRUMENT_TYPES.BASS,
-        sountrackPath: `${baseBassTracksPath}/funk/1_bassfunk2.wav`,
+        sountrackPath: `${baseBassTracksPath}/funk/1wav_bassfunk2.wav`,
         notesPath: ``,
         tag: TRACK_TAGS.FUNK
     },
@@ -475,7 +475,7 @@ export const PREDEFINED_TRACKS: ITrack[] = [
         name: 'utwor_51',
         soundtrack: null,
         instrumentType: INSTRUMENT_TYPES.BASS,
-        sountrackPath: `${baseBassTracksPath}/funk/1_bassfunk3.wav`,
+        sountrackPath: `${baseBassTracksPath}/funk/1wav_bassfunk3.wav`,
         notesPath: ``,
         tag: TRACK_TAGS.FUNK
     },
@@ -484,7 +484,7 @@ export const PREDEFINED_TRACKS: ITrack[] = [
         name: 'utwor_52',
         soundtrack: null,
         instrumentType: INSTRUMENT_TYPES.BASS,
-        sountrackPath: `${baseBassTracksPath}/funk/1_bassfunk4.wav`,
+        sountrackPath: `${baseBassTracksPath}/funk/1wav_bassfunk4.wav`,
         notesPath: ``,
         tag: TRACK_TAGS.FUNK
     },
@@ -493,7 +493,7 @@ export const PREDEFINED_TRACKS: ITrack[] = [
         name: 'utwor_53',
         soundtrack: null,
         instrumentType: INSTRUMENT_TYPES.BASS,
-        sountrackPath: `${baseBassTracksPath}/funk/1_bassfunk5.wav`,
+        sountrackPath: `${baseBassTracksPath}/funk/1wav_bassfunk5.wav`,
         notesPath: ``,
         tag: TRACK_TAGS.FUNK
     },
@@ -502,7 +502,7 @@ export const PREDEFINED_TRACKS: ITrack[] = [
         name: 'utwor_54',
         soundtrack: null,
         instrumentType: INSTRUMENT_TYPES.BASS,
-        sountrackPath: `${baseBassTracksPath}/funk/1_bassfunk6.wav`,
+        sountrackPath: `${baseBassTracksPath}/funk/1wav_bassfunk6.wav`,
         notesPath: ``,
         tag: TRACK_TAGS.FUNK
     },

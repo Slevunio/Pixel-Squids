@@ -68,6 +68,16 @@
     margin-bottom: 5%;
 }
 
+.description-piece {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    img {
+        height: 10px;
+        padding-right: 10px;
+    }
+}
+
 .prize_and_button {
     display: flex;
     justify-content: space-between;
