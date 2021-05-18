@@ -2,7 +2,6 @@ import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/co
 import { Location } from '@angular/common';
 import { RouterService } from '../services/RouterService';
 import { routeToHeaderMap } from '../shared/constants/routeToHeaderMap';
-import { combineLatest } from 'rxjs';
 import { Router } from '@angular/router';
 @Component({
     selector: 'pixel-squids-component',
