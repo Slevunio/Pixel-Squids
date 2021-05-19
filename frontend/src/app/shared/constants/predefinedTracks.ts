@@ -180,7 +180,7 @@ export const PREDEFINED_TRACKS: ITrack[] = [
         soundtrack: null,
         instrumentType: INSTRUMENT_TYPES.ACOUSTIC,
         sountrackPath: `${baseAcousticTracksPath}/rock/1_akustykrock1.wav`,
-        notesPath: ``,
+        notesPath: `${baseAcousticTracksPath}/rock/AkuRock1.png`,
         tag: TRACK_TAGS.ROCK
     },
     {
@@ -189,7 +189,7 @@ export const PREDEFINED_TRACKS: ITrack[] = [
         soundtrack: null,
         instrumentType: INSTRUMENT_TYPES.ACOUSTIC,
         sountrackPath: `${baseAcousticTracksPath}/rock/1_akustykrock2.wav`,
-        notesPath: ``,
+        notesPath: `${baseAcousticTracksPath}/rock/AkuRock2.png`,
         tag: TRACK_TAGS.ROCK
     },
     {
@@ -198,7 +198,7 @@ export const PREDEFINED_TRACKS: ITrack[] = [
         soundtrack: null,
         instrumentType: INSTRUMENT_TYPES.ACOUSTIC,
         sountrackPath: `${baseAcousticTracksPath}/rock/1_akustykrock3.wav`,
-        notesPath: ``,
+        notesPath: `${baseAcousticTracksPath}/rock/AkuRock3.png`,
         tag: TRACK_TAGS.ROCK
     },
     {
@@ -207,7 +207,7 @@ export const PREDEFINED_TRACKS: ITrack[] = [
         soundtrack: null,
         instrumentType: INSTRUMENT_TYPES.ACOUSTIC,
         sountrackPath: `${baseAcousticTracksPath}/rock/1_akustykrock4.wav`,
-        notesPath: ``,
+        notesPath: `${baseAcousticTracksPath}/rock/AkuRock4.png`,
         tag: TRACK_TAGS.ROCK
     },
     {
@@ -216,7 +216,7 @@ export const PREDEFINED_TRACKS: ITrack[] = [
         soundtrack: null,
         instrumentType: INSTRUMENT_TYPES.ACOUSTIC,
         sountrackPath: `${baseAcousticTracksPath}/rock/1_akustykrock5.wav`,
-        notesPath: ``,
+        notesPath: `${baseAcousticTracksPath}/rock/AkuRock5.png`,
         tag: TRACK_TAGS.ROCK
     },
     {
@@ -225,7 +225,7 @@ export const PREDEFINED_TRACKS: ITrack[] = [
         soundtrack: null,
         instrumentType: INSTRUMENT_TYPES.ACOUSTIC,
         sountrackPath: `${baseAcousticTracksPath}/rock/1_akustykrock6.wav`,
-        notesPath: ``,
+        notesPath: `${baseAcousticTracksPath}/rock/AkuRock6.png`,
         tag: TRACK_TAGS.ROCK
     },
 

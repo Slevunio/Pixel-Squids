@@ -9,13 +9,14 @@
 .container {
     height: 100%;
     min-width: 370px;
-    min-height: 1040px;
+    // min-height: 1000px;
     display: flex;
     align-items: center;
     width: 100%;
+    position: relative;
 }
 
-.animation-container {
+.animation-container-on {
     height: 100%;
     min-width: 370px;
     // min-height: 1000px;
@@ -23,16 +24,41 @@
     align-items: center;
     width: 100%;
     position: relative;
-    animation: navbarAnimation 1.6s ease-out;
+    animation: navbarAnimationOn 1.6s ease-out;
 }
 
-@keyframes navbarAnimation {
+@keyframes navbarAnimationOn {
     from {
         left: -360px;
     }
     to {
         left: 0px;
     }
+}
+
+.animation-container-off {
+    height: 100%;
+    min-width: 370px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    left: -360px;
+    animation: navbarAnimationOn 1.6s ease-out;
+}
+
+@keyframes navbarAnimationOff {
+    from {
+        left: 0px;
+    }
+    to {
+        left: -360px;
+    }
+}
+
+.rounded-navbar-wrapper {
+    height: 650px;
+    width: 400px;
 }
 
 .rounded-navbar {
@@ -44,6 +70,28 @@
     border-left: none;
     border-top-right-radius: calc(285px + 4px);
     border-bottom-right-radius: calc(285px + 4px);
+}
+
+.rounded-navbar-animated {
+    height: 570px;
+    width: 285px;
+    min-width: 285px;
+    min-height: 570px;
+    border: 3px solid #e75d0c;
+    border-left: none;
+    border-top-right-radius: calc(285px + 4px);
+    border-bottom-right-radius: calc(285px + 4px);
+    animation: roundedNavbarAnimated 1.6s ease-out;
+    position: relative;
+}
+
+@keyframes roundedNavbarAnimated {
+    from {
+        right: 200px;
+    }
+    to {
+        right: 0px;
+    }
 }
 
 .button {
@@ -199,17 +247,62 @@
 }
 
 .logo {
+    // height: 70px;
+    // width: 100px;
+    // position: relative;
+    // bottom: 40px;
+    // right: 250px;
     height: 70px;
     width: 100px;
     position: relative;
-    bottom: 540px;
-    left: 50px;
+    bottom: 40px;
+    // right: -38px;
+    right: 232px;
 }
 
-.logo:hover {
+.hidden {
+    display: none;
+}
+
+.logo-on-animation {
+    height: 70px;
+    width: 100px;
+    position: relative;
+    bottom: 40px;
+    right: 250px;
+    // animation: logoOnAnimation 1.6s ease-out;
+}
+
+@keyframes logoOnAnimation {
+    from {
+        right: 300px;
+    }
+    to {
+        right: 250px;
+    }
+}
+
+.logo-off-animation {
+    height: 70px;
+    width: 100px;
+    position: relative;
+    bottom: 40px;
+    right: -38px;
+    animation: logoOffAnimation 1.6s ease-out;
+}
+
+@keyframes logoOffAnimation {
+    from {
+        right: -38px;
+    }
+    to {
+        right: 250px;
+    }
+}
+.logo:hover, .logo-on-animation:hover {
     cursor: pointer;
 }
 
-.logo:focus {
+.logo:focus, .logo-on-animation:focus {
     outline: 0;
 }

@@ -7,11 +7,12 @@ import { BehaviorSubject, Subject } from 'rxjs';
 export class RouterService {
 
     public wasPreviousStartPage$ = new BehaviorSubject(false);
-    public currentRoute$ = new Subject();
+    public currentRoute$ = new BehaviorSubject<string>('');
     private wasPreviousStartPage!: boolean;
     
     constructor(private router: Router, private route: ActivatedRoute) {
         this.router.events.subscribe((event: Event) => {
+            
             if (event instanceof NavigationEnd) {
                 this.wasPreviousStartPage$.next(this.wasPreviousStartPage);
                 this.wasPreviousStartPage = window.location.href.split('/')[3] === '';

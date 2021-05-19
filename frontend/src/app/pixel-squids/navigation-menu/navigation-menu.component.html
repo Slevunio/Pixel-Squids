@@ -1,32 +1,52 @@
-<div [ngClass]="wasStartPage ? 'animation-container' : 'container'">
+<!-- <div [ngClass]="wasStartPage ? 'animation-container' : 'container'">
     <div class="rounded-navbar">
         <a [ngClass]="{'animation-download': wasStartPage, 'download': !wasStartPage, 'button': true}"
             routerLink="/download" routerLinkActive="button-active">
-            <!-- <img src="../../../assets/download.png" class="button-icon" /> -->
             <img [src]="currentIcons[0]" class="button-icon" />
         </a>
         <a [ngClass]="{'animation-upload': wasStartPage, 'upload': !wasStartPage, 'button': true}" routerLink="/upload"
             routerLinkActive="button-active">
-            <!-- <img src="../../../assets/upload.png" class="button-icon" /> -->
             <img [src]="currentIcons[1]" class="button-icon" />
         </a>
         <a [ngClass]="{'animation-learn': wasStartPage, 'learn': !wasStartPage, 'button': true}" routerLink="/learn"
             routerLinkActive="button-active">
-            <!-- <img src="../../../assets/learning.png" class="button-icon" /> -->
             <img [src]="currentIcons[2]" class="button-icon" />
         </a>
         <a [ngClass]="{'animation-shop': wasStartPage, 'shop': !wasStartPage, 'button': true}" routerLink="/shop"
             routerLinkActive="button-active">
-            <!-- <img src="../../../assets/shopping.png" class="button-icon" /> -->
             <img [src]="currentIcons[3]" class="button-icon" />
         </a>
         <a [ngClass]="{'animation-contact': wasStartPage, 'contact': !wasStartPage, 'button': true}"
             routerLink="/contact" routerLinkActive="button-active">
-            <!-- <img src="../../../assets/email.png" class="button-icon" /> -->
             <img [src]="currentIcons[4]" class="button-icon" />
         </a>
         <div class="logo-wrapper">
             <img class="logo" [src]="currentPixelSquidIcon" routerLink="/main" />
         </div>
+    </div>
+</div> -->
+<div [ngClass]="isMainPage ? 'animation-container-on' : 'container'">
+    <!-- <div [ngClass]="isMainPage ? 'rounded-navbar' : 'hidden'"> -->
+    <div class="rounded-navbar-wrapper"  (mouseleave)="hideNavbar()">
+        <div [ngClass]="roundedNavbarClass">
+            <a class="download button" routerLink="/download" routerLinkActive="button-active">
+                <img [src]="currentIcons[0]" class="button-icon" />
+            </a>
+            <a class="upload button" routerLink="/upload" routerLinkActive="button-active">
+                <img [src]="currentIcons[1]" class="button-icon" />
+            </a>
+            <a class="learn button" routerLink="/learn" routerLinkActive="button-active">
+                <img [src]="currentIcons[2]" class="button-icon" />
+            </a>
+            <a class="shop button" routerLink="/shop" routerLinkActive="button-active">
+                <img [src]="currentIcons[3]" class="button-icon" />
+            </a>
+            <a class="contact button" routerLink="/contact" routerLinkActive="button-active">
+                <img [src]="currentIcons[4]" class="button-icon" />
+            </a>
+        </div>
+    </div>
+    <div class="logo-wrapper">
+        <img [ngClass]="logoClass" [src]="currentPixelSquidIcon" routerLink="/main" (mouseenter)="showNavbar()" />
     </div>
 </div>
