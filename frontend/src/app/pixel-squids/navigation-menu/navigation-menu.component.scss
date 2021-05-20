@@ -24,7 +24,7 @@
     align-items: center;
     width: 100%;
     position: relative;
-    animation: navbarAnimationOn 1.6s ease-out;
+    animation: navbarAnimationOn 0.8s ease-out;
 }
 
 @keyframes navbarAnimationOn {
@@ -44,7 +44,7 @@
     width: 100%;
     position: relative;
     left: -360px;
-    animation: navbarAnimationOn 1.6s ease-out;
+    animation: navbarAnimationOn 0.8s ease-out;
 }
 
 @keyframes navbarAnimationOff {
@@ -81,7 +81,7 @@
     border-left: none;
     border-top-right-radius: calc(285px + 4px);
     border-bottom-right-radius: calc(285px + 4px);
-    animation: roundedNavbarAnimated 1.6s ease-out;
+    animation: roundedNavbarAnimated 0.8s ease-out;
     position: relative;
 }
 
@@ -121,6 +121,19 @@
 
 .button-active {
     background-color: rgba(255, 255, 255, 0.3);
+}
+
+.button-active-black {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.black:hover {
+    background-color: rgba(0, 0, 0, 0.3) !important;
+    cursor: pointer;
+}
+
+.black:active {
+    border: 1px solid black !important;
 }
 
 .download {
@@ -288,7 +301,7 @@
     position: relative;
     bottom: 40px;
     right: -38px;
-    animation: logoOffAnimation 1.6s ease-out;
+    animation: logoOffAnimation 0.8s ease-out;
 }
 
 @keyframes logoOffAnimation {

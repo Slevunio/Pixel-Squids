@@ -29,19 +29,19 @@
     <!-- <div [ngClass]="isMainPage ? 'rounded-navbar' : 'hidden'"> -->
     <div class="rounded-navbar-wrapper"  (mouseleave)="hideNavbar()">
         <div [ngClass]="roundedNavbarClass">
-            <a class="download button" routerLink="/download" routerLinkActive="button-active">
+            <a [ngClass]="{'black': isBlack, 'download': true, 'button': true}" routerLink="/download" routerLinkActive="button-active">
                 <img [src]="currentIcons[0]" class="button-icon" />
             </a>
-            <a class="upload button" routerLink="/upload" routerLinkActive="button-active">
+            <a [ngClass]="{'black': isBlack, 'upload': true, 'button': true}" routerLink="/upload" routerLinkActive="button-active">
                 <img [src]="currentIcons[1]" class="button-icon" />
             </a>
-            <a class="learn button" routerLink="/learn" routerLinkActive="button-active">
+            <a [ngClass]="{'black': isBlack, 'learn': true, 'button': true}" routerLink="/learn" routerLinkActive="button-active">
                 <img [src]="currentIcons[2]" class="button-icon" />
             </a>
-            <a class="shop button" routerLink="/shop" routerLinkActive="button-active">
+            <a [ngClass]="{'black': isBlack, 'shop': true, 'button': true}" routerLink="/shop" routerLinkActive="button-active">
                 <img [src]="currentIcons[3]" class="button-icon" />
             </a>
-            <a class="contact button" routerLink="/contact" routerLinkActive="button-active">
+            <a [ngClass]="{'black': isBlack, 'contact': true, 'button': true}" routerLink="/contact" routerLinkActive="button-active">
                 <img [src]="currentIcons[4]" class="button-icon" />
             </a>
         </div>
