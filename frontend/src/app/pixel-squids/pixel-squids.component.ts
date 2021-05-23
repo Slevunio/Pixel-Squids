@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 export class PixelSquidsComponent implements OnInit {
 
     private readonly MAIN_BACKGROUND_IMAGE = '../../assets/main_background.png';
+    private readonly BLURRED_MAIN_BACKGROUND_IMAGE = '../../assets/tlo_z_blurem.jpg';
     public wasStartPage!: boolean;
     public isStartPage!: boolean;
     public isMainPage!: boolean;
@@ -69,19 +70,43 @@ export class PixelSquidsComponent implements OnInit {
     }
 
     private getCurrentBackgroundImage(currentRoute: string) {
-        currentRoute = currentRoute.split('/')[2] === 'fromRecord' && currentRoute.split('/').length > 4 ? currentRoute.split('/')[2] : currentRoute;
+        let route;
+        if (currentRoute.split('/')[2] === 'fromRecord' && currentRoute.split('/').length > 4) {
+            route = 'fromRecordLast';
+        } else if (currentRoute.split('/')[2] === 'fromRecord' && currentRoute.split('/').length === 4) {
+            route = 'fromRecord';
+        }else if (currentRoute.split('/')[2] === 'fromDisc' && currentRoute.split('/').length === 4) {
+            route = 'fromDisc';
+        }
+        else if (currentRoute.split('/')[1] === 'shop' && currentRoute.split('/').length > 2) {
+            route = 'shopItem';
+        } else {
+            route = currentRoute
+        }
 
-        switch (currentRoute) {
+        switch (route) {
             case '/learn':
                 return '';
+            case '/download':
+                return this.BLURRED_MAIN_BACKGROUND_IMAGE;
             case '/download/acoustic':
                 return '';
             case '/download/bass':
                 return '';
             case '/download/electric':
                 return '';
+            case '/upload/fromRecord':
+                return this.BLURRED_MAIN_BACKGROUND_IMAGE;
+            case '/upload/fromDisc':
+                return this.BLURRED_MAIN_BACKGROUND_IMAGE;
             case 'fromRecord':
+                return this.BLURRED_MAIN_BACKGROUND_IMAGE;
+            case 'fromDisc':
+                return this.BLURRED_MAIN_BACKGROUND_IMAGE;
+            case 'fromRecordLast':
                 return '';
+            case 'shopItem':
+                return this.BLURRED_MAIN_BACKGROUND_IMAGE;
             default:
                 return this.MAIN_BACKGROUND_IMAGE;
         }
