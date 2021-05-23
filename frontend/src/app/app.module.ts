@@ -7,6 +7,7 @@ import { FileUploadModule } from 'ng2-file-upload';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 import { MatTableModule } from '@angular/material/table';
 import { MatCheckboxModule } from '@angular/material/checkbox';
@@ -86,7 +87,8 @@ import { MatCarouselModule } from '@ngmodule/material-carousel';
     MatFormFieldModule,
     MatInputModule,
     ReactiveFormsModule,
-    MatCarouselModule
+    MatCarouselModule,
+    RouterModule
   ],
   providers: [TracksService, RouterService, ImageService, TracksStoreService, ShopItemsStoreService, GuitarCordsStoreService],
   bootstrap: [AppComponent]
