@@ -173,7 +173,7 @@
 
 .learn {
     position: relative;
-    top: -115px;
+    top: -120px;
     transform: rotate(90deg) translateY(-210px) rotate(-90deg);
 }
 
@@ -198,8 +198,8 @@
 
 .shop {
     position: relative;
-    bottom: 235px;
-    transform: rotate(135deg) translateY(-185px) rotate(-135deg);
+    bottom: 260px;
+    transform: rotate(135deg) translateY(-206px) rotate(-135deg);
 }
 
 .animation-shop {
@@ -268,7 +268,7 @@
     height: 70px;
     width: 100px;
     position: relative;
-    bottom: 40px;
+    bottom: 60px;
     // right: -38px;
     right: 232px;
 }
@@ -281,7 +281,7 @@
     height: 70px;
     width: 100px;
     position: relative;
-    bottom: 40px;
+    bottom: 60px;
     right: 250px;
     // animation: logoOnAnimation 1.6s ease-out;
 }
@@ -312,10 +312,12 @@
         right: 250px;
     }
 }
-.logo:hover, .logo-on-animation:hover {
+.logo:hover,
+.logo-on-animation:hover {
     cursor: pointer;
 }
 
-.logo:focus, .logo-on-animation:focus {
+.logo:focus,
+.logo-on-animation:focus {
     outline: 0;
 }
