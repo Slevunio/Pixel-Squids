@@ -211,6 +211,15 @@ export const PREDEFINED_TRACKS: ITrack[] = [
         tag: TRACK_TAGS.ROCK
     },
     {
+        id: '75949713-a436-4012-82d4-a6f3a182b6z7',
+        name: 'utwor_222.wav',
+        soundtrack: null,
+        instrumentType: INSTRUMENT_TYPES.ACOUSTIC,
+        sountrackPath: `${baseAcousticTracksPath}/rock/1_akustykrock4.wav`,
+        notesPath: `${baseAcousticTracksPath}/rock/AkuRock4.png`,
+        tag: TRACK_TAGS.ROCK
+    },
+    {
         id: '0775b07d-6b9a-4a24-b5ca-2f6d369d16fe',
         name: 'utwor_23.wav',
         soundtrack: null,
